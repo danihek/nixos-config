@@ -62,6 +62,7 @@
       bindkey "^[[1;5D" backward-word
       bindkey '^H' backward-kill-word
       bindkey "^[[H" beginning-of-line
+      bindkey "^K" forward-kill-line
     '';
     
     envExtra = ''

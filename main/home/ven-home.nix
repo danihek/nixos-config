@@ -12,14 +12,22 @@
   home.packages = [
     pkgs.alacritty
     pkgs.nodejs_22
+    pkgs.pywal
   ];
 
-  programs.fzf = {
-    enable = true;
-  };
+  programs.alacritty.enable = true;
+  #programs.pywal.enable = true;
+  programs.fzf.enable = true;
 
   programs.git = {
     enable = true;
+    userName = "danihek";
+    userEmail = "danihek07@gmail.com";
+
+    extraConfig = {
+      init.defaultBranch = "main";
+      credential.helper = "oauth";
+    };
 
     aliases = {
       pu = "push";
@@ -27,13 +35,6 @@
       co = "commit";
     };
   }; 
-
-  gtk = {
-    enable = true;
-    theme.name = "adw-gtk3";
-    cursorTheme.name = "Bibata-Modern-Ice";
-    iconTheme.name = "GruvBoxPlus";
-  };
 
   xdg.mimeApps.defaultApplications = {
     "image/*" = [ "sxiv.desktop" ];

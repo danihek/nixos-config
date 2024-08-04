@@ -16,6 +16,23 @@
     };
   };
 
+  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+  
+  fonts.packages = with pkgs; [
+    dina-font
+    fira-code
+    nerdfonts
+    noto-fonts
+    minecraftia
+    proggyfonts
+    jetbrains-mono
+    noto-fonts-cjk
+    liberation_ttf
+    noto-fonts-emoji
+    fira-code-symbols
+    mplus-outline-fonts.githubRelease
+  ];
+
   # Nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
@@ -60,6 +77,7 @@
     vim 
     kitty
     neovide
+    hyprlock
     alacritty
     vimPlugins.vim-plug 
     
@@ -76,6 +94,10 @@
 
     # Dev
     git
+    wlroots
+    libclang
+    clang-tools
+    git-credential-oauth
     
     # Utility
     mpv
@@ -84,7 +106,9 @@
     mupdf
     upower
     libnotify
+    pavucontrol
     brightnessctl
+    cinnamon.nemo
     
     # Tools
     lf
@@ -104,8 +128,12 @@
     fastfetch
   ];
 
-  # Pipewire
+  # Sec
   security.rtkit.enable = true;
+  security.polkit.enable = true;
+  security.pam.services.hyprlock = {};
+
+  # Pipewire
   services.pipewire = {
     enable = true;
     alsa.enable = true;
@@ -117,6 +145,8 @@
   # Programs
   programs.zsh.enable = true;
   programs.mtr.enable = true;
+  programs.dconf.enable = true;
+
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
@@ -127,7 +157,7 @@
   services.upower.enable = true;
 
   # OpenGL
-  #hardware.opengl.enable = true;
+  hardware.opengl.enable = true;
 
   system.stateVersion = "24.05";
 }
