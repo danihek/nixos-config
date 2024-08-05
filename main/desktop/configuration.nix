@@ -33,6 +33,7 @@
 
   # Nix
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -112,6 +113,7 @@
     libclang
     libclang
     libinput 
+    libsecret
     pkg-config
     clang-tools
     xorg.libxcb
@@ -140,10 +142,7 @@
     lxqt.lxqt-policykit
 
     # Media
-    #viber
-    vencord
-    #whatsapp
-    youtube-tui
+    vesktop
     element-desktop
 
     
