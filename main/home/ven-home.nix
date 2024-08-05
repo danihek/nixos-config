@@ -16,7 +16,6 @@
   ];
 
   programs.alacritty.enable = true;
-  #programs.pywal.enable = true;
   programs.fzf.enable = true;
 
   programs.git = {
@@ -26,7 +25,7 @@
 
     extraConfig = {
       init.defaultBranch = "main";
-      credential.helper = "oauth";
+      credential.helper = "libsecret";
     };
 
     aliases = {

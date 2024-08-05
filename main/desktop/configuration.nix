@@ -16,8 +16,6 @@
     };
   };
 
-  #stylix.base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-  
   fonts.packages = with pkgs; [
     dina-font
     fira-code
@@ -73,6 +71,7 @@
 
   # List packages installed in system profile:
   environment.systemPackages = with pkgs; [
+    
     # Shell, Terminal, Text Editor etc.
     vim 
     kitty
@@ -89,26 +88,64 @@
     htop
     
     # Browsers
+    links2
     firefox
     librewolf 
 
     # Dev
+    gdb
     git
+    lua
+    udev
+    clang
+    libGL
+    libgcc
+    libGLU
+    pixman
+    seatd 
+    glxinfo
+    gnumake
+    libllvm
+    llvm_18
+    wayland
     wlroots
     libclang
+    libclang
+    libinput 
+    pkg-config
     clang-tools
+    xorg.libxcb
+    libxkbcommon
+    xorg.xcbutilwm
+    wayland-scanner
+    wayland-protocols
+    gitAndTools.gitFull
     git-credential-oauth
+    wlroots_0_18
     
     # Utility
     mpv
     imv
     mako
+    wofi
     mupdf
     upower
     libnotify
     pavucontrol
     brightnessctl
-    cinnamon.nemo
+    #cinnamon.nemo
+    xfce.thunar
+
+    # Polkit
+    lxqt.lxqt-policykit
+
+    # Media
+    #viber
+    vencord
+    #whatsapp
+    youtube-tui
+    element-desktop
+
     
     # Tools
     lf
@@ -126,6 +163,13 @@
     cmatrix
     neofetch
     fastfetch
+
+    # Rest..
+    libsForQt5.qt5ct
+    gnome-themes-extra
+    tokyonight-gtk-theme
+    gsettings-desktop-schemas
+    libsForQt5.qtstyleplugin-kvantum
   ];
 
   # Sec
@@ -142,10 +186,16 @@
     jack.enable = true;
   };
 
+  qt = {
+    enable = true;
+    platformTheme = "gnome";
+    style = "adwaita-dark";
+  };
+
   # Programs
+  programs.dconf.enable = true;
   programs.zsh.enable = true;
   programs.mtr.enable = true;
-  programs.dconf.enable = true;
 
   programs.gnupg.agent = {
     enable = true;
@@ -157,7 +207,7 @@
   services.upower.enable = true;
 
   # OpenGL
-  hardware.opengl.enable = true;
+  hardware.graphics.enable = true;
 
   system.stateVersion = "24.05";
 }

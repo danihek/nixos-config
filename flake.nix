@@ -10,13 +10,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:donovanglover/stylix";
-      inputs = {
-        nixpkgs.follows = "nixpkgs";
-        home-manager.follows = "home-manager";
-      };
-    };
   };
 
   outputs = 
@@ -36,9 +29,6 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./main/desktop/configuration.nix
-          ./main/modules/modulesEnabled.nix
-
-          inputs.stylix.nixosModules.stylix
           inputs.home-manager.nixosModules.default
         ];
       };

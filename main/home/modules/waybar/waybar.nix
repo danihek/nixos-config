@@ -3,13 +3,11 @@
 {
   programs.waybar = {
     enable = true;
-    systemd.enable = true;
 
     settings = [{
       height = 30;
       layer = "top";
       position = "top";
-      tray = { spacing = 10; };
       modules-center = [ "hyprland/window" ];
       modules-left = [ "hyprland/workspaces" ];
       modules-right = [
@@ -37,7 +35,7 @@
         tooltip-format = "{:%Y-%m-%d | %H:%M}";
       };
       cpu = {
-        format = "{usage}% ";
+        format = "{usage}%  ";
         tooltip = false;
       };
       memory = { format = "{}% "; };
@@ -47,7 +45,7 @@
         format-disconnected = "Disconnected ⚠";
         format-ethernet = "{ifname}: {ipaddr}/{cidr}   up: {bandwidthUpBits} down: {bandwidthDownBits}";
         format-linked = "{ifname} (No IP) ";
-        format-wifi = "{essid} ({signalStrength}%) ";
+        format-wifi = "{essid} ({signalStrength}%)  ";
       };
       pulseaudio = {
         format = "{volume}% {icon} {format_source}";
@@ -73,8 +71,98 @@
         format-icons = [ "" "" "" ];
       };
     }];
-    #style = (import ./style.css.nix {
-    #  inherit pkgs;
-    #});
+
+    style = ''
+      ${builtins.readFile "${pkgs.waybar}/etc/xdg/waybar/style.css"}
+
+     *{
+          font-family: "JetBrains Mono";
+          font-size: 14px;
+      }
+
+      window#waybar {
+          border: 2px;
+      }
+
+      #pulseaudio,
+      #network,
+      #cpu,
+      #memory,
+      #temperature,
+      #battery,
+      #clock {
+          padding: 0 10px;
+          margin: 6px 3px;
+          border-radius: 4px;
+          border: 1px solid Black;
+          font-weight: bold;
+          background-color: Black;
+          color: White;
+          transition: opacity .3s ease-out;
+          opacity: 1;
+      }
+
+      #custom-coretemp,
+      #language,
+      #network,
+      #bluetooth,
+      #cpu {
+          margin-right: 0px;
+          padding-right: 3px;
+          border-top-right-radius: 0px;
+          border-bottom-right-radius: 0px;
+      }
+
+      #temperature,
+      #network,
+      #pulseaudio,
+      #memory {
+          margin-left: 0px;
+          padding-left: 3px;
+          border-top-left-radius: 0px;
+          border-bottom-left-radius: 0px;
+      }
+
+      #cpu {
+          padding-right: 0;
+      }
+
+      #mode {
+          border-color: transparent;
+          background-color: transparent;
+          color: Black;
+      }
+
+      #workspaces button {
+          transition: background-color .3s ease-out;
+      }
+
+      #workspaces button.focused {
+          color: Black;
+          background-color: White;
+      }
+
+      #workspaces button.active {
+        transition: background-color .3s ease-out;
+        background-color: White;
+        color: Black;
+      }
+
+      #battery.warning {
+          border-color: #EF6C00;
+          background-color: #EF6C00;
+          color: white;
+      }
+      #battery.critical {
+          border-color: #F44336;
+          background-color: #F44336;
+          color: white;
+      }
+      #battery.charging {
+          background-color: #4EFF63;
+          border-color: #4EFF63;
+          color: white;
+      }
+    '';
   };
 }
