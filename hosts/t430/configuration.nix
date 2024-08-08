@@ -223,8 +223,9 @@
   };
   
   # Services
-  services.openssh.enable = true;
   services.upower.enable = true;
+  services.openssh.enable = true;
+  services.gnome.gnome-keyring.enable = true;
 
   # OpenGL
   hardware.graphics.enable = true;
