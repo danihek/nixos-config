@@ -182,6 +182,7 @@
     fastfetch
 
     # Rest..
+    gnome-keyring
     libsForQt5.qt5ct
     gnome-themes-extra
     tokyonight-gtk-theme
