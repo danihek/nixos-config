@@ -44,13 +44,13 @@
 
       label = [
         {
-          text = "Hello my fellow, $USER";
-    text_align = "center";
+          text = "ヤッホー, ダニシェク";
+          text_align = "center";
           color = "$foreground";
-          font_size = "27";
-          font_family = "minecraftia";
+          font_size = "30";
+          font_family = "Hack";
 
-          position = "0, 100";
+          position = "0, 50";
           halign = "center";
           valign = "center";
         }
@@ -69,7 +69,7 @@
           font_color = "rgb(10, 10, 10)";
           fade_on_empty = "true";
           fade_timeout = "1000";
-          placeholder_text = "<i>Password sweetie <3<i>";
+          placeholder_text = "";
           hide_input = "false";
           rounding = "-1";
           check_color = "rgb(204, 136, 34)";

@@ -12,7 +12,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      ven = import ../home/ven-home.nix;
+      ven = import ../../home/ven-home.nix;
     };
   };
 
@@ -78,6 +78,7 @@
     kitty
     neovide
     hyprlock
+    obsidian
     alacritty
     vimPlugins.vim-plug 
     
@@ -100,10 +101,11 @@
     udev
     clang
     libGL
+    seatd
     libgcc
     libGLU
     pixman
-    seatd 
+    godot_4
     glxinfo
     gnumake
     libllvm
@@ -142,6 +144,7 @@
     lxqt.lxqt-policykit
 
     # Media
+    #viber
     vesktop
     element-desktop
 
@@ -149,18 +152,33 @@
     # Tools
     lf
     lsd
+    eza
     fzf
+    bat
+    wtf
+    vimv
     tree
     tldr
     tmux
     wget
     curl
+    entr
+    tlrc
     unzip
+    pstree
+    zoxide
     killall
+    ripgrep
+    openscad
+    linuxPackages.usbip
 
     # Flex
+    cowsay
+    cbonsai
     cmatrix
+    fortune
     neofetch
+    pipes-rs
     fastfetch
 
     # Rest..

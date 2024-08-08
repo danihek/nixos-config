@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./homeModulesEnabled.nix
+    ./available.nix
   ];
 
   home.username = "ven";
@@ -16,24 +16,8 @@
   ];
 
   programs.alacritty.enable = true;
+  programs.zoxide.enable = true;
   programs.fzf.enable = true;
-
-  programs.git = {
-    enable = true;
-    userName = "danihek";
-    userEmail = "danihek07@gmail.com";
-
-    extraConfig = {
-      init.defaultBranch = "main";
-      credential.helper = "libsecret";
-    };
-
-    aliases = {
-      pu = "push";
-      ch = "checkout";
-      co = "commit";
-    };
-  }; 
 
   xdg.mimeApps.defaultApplications = {
     "image/*" = [ "sxiv.desktop" ];

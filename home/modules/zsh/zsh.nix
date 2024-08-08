@@ -8,9 +8,8 @@
     pkgs.zsh-fzf-history-search
   ];
   
-  programs.fzf = {
-    enableZshIntegration = true;
-  };
+  programs.fzf.enableZshIntegration = true;
+  programs.zoxide.enableZshIntegration = true;
 
   programs.zsh = {
     enable = true;
@@ -34,18 +33,19 @@
     shellAliases = {
       g = "git";
       sl = "ls";
+      ls = "eza";
       tm = "tmux";
+      l = "eza -l";
+      ll = "eza -lh";
       nv = "neovide";
+      la = "eza -alh";
       cl = "clear & l";
       fucking = "sudo";
+      lla = "eza -alh";
+      tree = "eza --tree";
       mkcl = "make clean";
       TODO = "vim ~/.TODO.md";
-      l = "lsd --group-dirs=first";
-      hellwm = "~/code/c/hellwm/hellwm";
-      la = "lsd -la --group-dirs=first";
-      ll = "lsd -lh --group-dirs=first";
-      lla = "lsd -lha --group-dirs=first";
-      cpl = "make clean ; make && ./hellwm";
+      cpl = "make clean ; clear; make";
     };
 
     initExtra = ''

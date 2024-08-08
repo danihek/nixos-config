@@ -1,0 +1,1 @@
+# danihek NixOS configuration.

@@ -25,10 +25,18 @@
       pkgs = nixpkgs.legacyPackages.${system};
     in
     {
-      nixosConfigurations.desktop = nixpkgs.lib.nixosSystem {
+      nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./main/desktop/configuration.nix
+          ./hosts/t430/configuration.nix
+          inputs.home-manager.nixosModules.default
+        ];
+      };
+      
+      nixosConfigurations.mainpc = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
         ];
       };
