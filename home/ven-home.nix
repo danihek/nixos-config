@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ./available.nix
+    ../modules/modules.nix
   ];
 
   home.username = "ven";
@@ -18,15 +18,6 @@
   programs.alacritty.enable = true;
   programs.zoxide.enable = true;
   programs.fzf.enable = true;
-
-  xdg.mimeApps.defaultApplications = {
-    "image/*" = [ "sxiv.desktop" ];
-    "video/*" = [ "mpv.desktop" ];
-    "video/png" = [ "mpv.desktop" ];
-    "video/jpg" = [ "mpv.desktop" ];
-    "text/plain" = [ "neovide.desktop" ];
-    "application/pdf" = [ "zathura.desktop" ];
-  };
 
   programs.home-manager.enable = true;
 }

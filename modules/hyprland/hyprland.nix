@@ -10,9 +10,20 @@
     wl-clipboard
   ];
 
+  xdg.portal = {
+    enable = true;
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+      xdg-desktop-portal-hyprland
+    ];
+  };
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = true;
+    xwayland.enable = true;
+    
     settings = {
 
       monitor = [

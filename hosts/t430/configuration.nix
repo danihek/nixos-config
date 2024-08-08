@@ -159,6 +159,7 @@
     vimv
     tree
     tldr
+    yazi
     tmux
     wget
     curl
@@ -170,6 +171,7 @@
     killall
     ripgrep
     openscad
+    obs-studio
     linuxPackages.usbip
 
     # Flex
