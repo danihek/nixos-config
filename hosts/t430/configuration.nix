@@ -32,6 +32,7 @@
   ];
 
   # Nix
+  programs.nix-ld.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
 
@@ -72,7 +73,6 @@
 
   # List packages installed in system profile:
   environment.systemPackages = with pkgs; [
-    
     # Shell, Terminal, Text Editor etc.
     vim 
     kitty
@@ -148,7 +148,6 @@
     vesktop
     element-desktop
 
-    
     # Tools
     lf
     lsd
@@ -165,13 +164,16 @@
     curl
     entr
     tlrc
+    file
     unzip
     pstree
     zoxide
     killall
     ripgrep
     openscad
+    vscodium
     obs-studio
+    android-tools
     linuxPackages.usbip
 
     # Flex

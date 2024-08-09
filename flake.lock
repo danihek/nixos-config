@@ -39,7 +39,28 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "themecord": "themecord"
+      }
+    },
+    "themecord": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1723129780,
+        "narHash": "sha256-BTibEsUh9z8Pe99hthroUaeE+bJxRb/gxcXTWsBfmDY=",
+        "owner": "danihek",
+        "repo": "themecord",
+        "rev": "fc2b296a6eee860c646636f4a97ac6aeed085ead",
+        "type": "github"
+      },
+      "original": {
+        "owner": "danihek",
+        "repo": "themecord",
+        "type": "github"
       }
     }
   },
