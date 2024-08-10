@@ -18,7 +18,7 @@ let
       --transition-type="any" \
       --transition-duration=0.3
 
-    copythemecord
+    themecord
     pywalfox update
   '';
 in {

@@ -27,7 +27,8 @@
     settings = {
 
       monitor = [
-        ",preferred,auto,auto"
+        "DP-1,2560x1440@165,0x0,1"
+        "DP-2,2560x1440@165,2560x320,1,transform,1"
       ];
 
       "$terminal" = "alacritty";
@@ -123,8 +124,10 @@
 
         "$mod, U, exec, setwall"
         
-        "$mod,V, togglefloating"
-        "$mod,J, togglesplit"
+        "$mod, V, togglefloating"
+        "$mod, J, togglesplit"
+        "$mod, F, fullscreen"
+
           
         "$mod, left, movefocus, l"
         "$mod, right, movefocus, r"

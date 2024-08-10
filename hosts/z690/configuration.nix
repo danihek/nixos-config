@@ -28,6 +28,7 @@
     liberation_ttf
     noto-fonts-emoji
     fira-code-symbols
+    terminus-nerdfont
     mplus-outline-fonts.githubRelease
   ];
 
@@ -37,9 +38,8 @@
   nixpkgs.config.allowUnfree = true;
 
   # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/nvme0n1p1";
-  boot.loader.grub.useOSProber = true;
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
   networking.networkmanager.enable = true;
@@ -166,8 +166,10 @@
     tlrc
     file
     unzip
+    ffmpeg
     pstree
     zoxide
+    ani-cli
     killall
     ripgrep
     openscad
@@ -193,6 +195,17 @@
     gsettings-desktop-schemas
     libsForQt5.qtstyleplugin-kvantum
   ];
+
+  # Networking
+  networking = {
+    defaultGateway = "192.168.1.1";
+    nameservers = [ "1.1.1.1" ];
+
+    interfaces.enp4s0.ipv4.addresses = [ {
+      address = "192.168.1.113";
+      prefixLength = 24;
+    } ];
+  };
 
   # Sec
   security.rtkit.enable = true;
