@@ -165,6 +165,7 @@
     entr
     tlrc
     file
+    zola
     unzip
     ffmpeg
     pstree
@@ -191,6 +192,7 @@
     gnome-keyring
     libsForQt5.qt5ct
     gnome-themes-extra
+    graphite-gtk-theme
     tokyonight-gtk-theme
     gsettings-desktop-schemas
     libsForQt5.qtstyleplugin-kvantum

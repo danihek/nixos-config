@@ -16,8 +16,8 @@
     };
 
     theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
+      name = "GTK_THEME=Tokyonight-Dark-B";
+      package = pkgs.tokyonight-gtk-theme;
     };
 
     cursorTheme = {
@@ -38,5 +38,5 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "palenight";
+  home.sessionVariables.GTK_THEME = "tokyonight-gtk-theme";
 }

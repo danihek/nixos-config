@@ -13,7 +13,7 @@
 
   programs.zsh = {
     enable = true;
-    #enableCompletion = true;
+    autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
     oh-my-zsh = {
@@ -27,7 +27,7 @@
           "git-extras"
           "zsh-navigation-tools"
       ];
-      theme = "robbyrussell";
+      theme = "kphoen";
     };
 
     shellAliases = {
@@ -54,6 +54,7 @@
 
       # Keys
       bindkey '5~' kill-word
+      bindkey '^K' kill-line
       bindkey "^[[F" end-of-line
       bindkey "^[[3~" delete-char
       bindkey "^[[1;3C" forward-word
@@ -62,7 +63,6 @@
       bindkey "^[[1;5D" backward-word
       bindkey '^H' backward-kill-word
       bindkey "^[[H" beginning-of-line
-      bindkey "^K" forward-kill-line
     '';
     
     envExtra = ''

@@ -27,8 +27,8 @@
     settings = {
 
       monitor = [
-        "DP-1,2560x1440@165,0x0,1"
-        "DP-2,2560x1440@165,2560x320,1,transform,1"
+        "DP-1,2560x1440@165,0x50,1"
+        "DP-2,2560x1440@165,2560x0,1,transform,1"
       ];
 
       "$terminal" = "alacritty";
@@ -58,6 +58,8 @@
         "NIXOS_OZONE_WL,1"
         "MOZ_ENABLE_WAYLAND,1"
         "WLR_NO_HARDWARE_CURSORS,1"
+
+        "GTK_THEME, Tokyonight-Dark"
         
         "XDG_SESSION_TYPE,wayland"
         "XDG_CURRENT_DESKTOP,Hyprland"
@@ -68,7 +70,7 @@
         rounding = 20;
 
         active_opacity = 1.0;
-        inactive_opacity = 0.7;
+        inactive_opacity = 1.0;
 
         drop_shadow = true;
         shadow_range = 4;

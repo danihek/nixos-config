@@ -4,6 +4,8 @@
       ./gtk/gtk.nix
       ./git/git.nix
       ./zsh/zsh.nix
+      #./omp/omp.nix i dot have time to configure it
+      ./wofi/wofi.nix
       ./mako/mako.nix
       ./tgpt/tgpt.nix
       ./cava/cava.nix
