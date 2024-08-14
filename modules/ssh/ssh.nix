@@ -19,6 +19,7 @@
       Host phone
       HostName 192.168.1.185
       User u0_a315
+      Port 8022
     '';
   };
 }
