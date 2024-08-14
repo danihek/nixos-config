@@ -96,10 +96,8 @@
     packages = with pkgs; [];
   };
 
-  users.extraUsers.ven = {
-    openssh.authorizedKeys.keys = [
-        "ssh-ed25519 AAAA[...] ven@192.168.1.120"
-    ];
+  environment.variables = {
+    NIX_FLAKE_CURRENT_CONFIG = "laptop";
   };
 
   # List packages installed in system profile:
