@@ -214,7 +214,7 @@
     nameservers = [ "1.1.1.1" ];
 
     interfaces.enp4s0.ipv4.addresses = [ {
-      address = "192.168.1.190";
+      address = "192.168.1.195";
       prefixLength = 24;
     } ];
   };
