@@ -41,9 +41,34 @@
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
-  # Networking
-  networking.networkmanager.enable = true;
-  networking.hostName = "nix";
+
+  networking = {
+    networkmanager.enable = true;
+    hostName = "nix";
+
+    defaultGateway = "192.168.1.1";
+    nameservers = [ "1.1.1.1" ];
+
+    interfaces.enp4s0.ipv4.addresses = [ {
+      address = "192.168.1.190";
+      prefixLength = 24;
+    } ];
+  };
+
+  networking.firewall = { 
+    enable = false;
+    allowedTCPPorts = [ 9001 ];
+    allowedUDPPorts = [ 9001 ];
+
+    allowedTCPPortRanges = [ 
+      { from = 1700; to = 1764; } # KDE Connect and Weylus
+    ];  
+    allowedUDPPortRanges = [ 
+      { from = 1700; to = 1764; } # KDE Connect and Weylus
+    ];  
+  };
+
+
 
   # TimeZone.
   time.timeZone = "Europe/Warsaw";
@@ -69,6 +94,12 @@
     description = "ven";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
+  };
+
+  users.extraUsers.ven = {
+    openssh.authorizedKeys.keys = [
+        "ssh-ed25519 AAAA[...] ven@192.168.1.120"
+    ];
   };
 
   # List packages installed in system profile:
@@ -225,8 +256,9 @@
   };
   
   # Services
-  services.upower.enable = true;
   services.openssh.enable = true;
+
+  services.upower.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
   # OpenGL

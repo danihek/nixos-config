@@ -6,8 +6,6 @@
   imports =
     [
       ./hardware-configuration.nix
-
-      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -216,7 +214,7 @@
     nameservers = [ "1.1.1.1" ];
 
     interfaces.enp4s0.ipv4.addresses = [ {
-      address = "192.168.1.113";
+      address = "192.168.1.190";
       prefixLength = 24;
     } ];
   };

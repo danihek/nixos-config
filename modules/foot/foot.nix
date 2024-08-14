@@ -1,4 +1,4 @@
-{ pkgs, ...}:
+{ pkgs, config, ...}:
 
 {
   programs.foot = {
@@ -8,7 +8,7 @@
     settings = {
      main = {
        include= "~/.cache/wal/colors-foot.ini";
-       term = "screen-256color";
+       term = "xterm-256color";
        font = "JetBrainsMono Nerd Font:size=12";
        dpi-aware = "yes";
      };

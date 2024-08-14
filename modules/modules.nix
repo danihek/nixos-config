@@ -4,6 +4,7 @@
       ./gtk/gtk.nix
       ./git/git.nix
       ./zsh/zsh.nix
+      ./ssh/ssh.nix
       #./omp/omp.nix i dot have time to configure it
       ./foot/foot.nix
       ./tmux/tmux.nix
