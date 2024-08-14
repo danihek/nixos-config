@@ -23,11 +23,13 @@
     noto-fonts
     minecraftia
     proggyfonts
+    font-awesome
     jetbrains-mono
     noto-fonts-cjk
     liberation_ttf
     noto-fonts-emoji
     fira-code-symbols
+    terminus-nerdfont
     mplus-outline-fonts.githubRelease
   ];
 
