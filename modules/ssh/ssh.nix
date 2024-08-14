@@ -13,7 +13,7 @@
       User dh
 
       Host laptop
-      HostName 192.168.190
+      HostName 192.168.1.190
       User ven
 
       Host phone

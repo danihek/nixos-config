@@ -35,7 +35,7 @@ let
     sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
   '';
 
-  sysconfrebuildpush = pkgs.writeShellScriptBin "sysconfrebuildpush " ''
+  sysconfrebuildpush = pkgs.writeShellScriptBin "sysconfrebuildpush" ''
     #!/usr/bin/env bash
     cd /etc/nixos/
     sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
