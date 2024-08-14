@@ -31,7 +31,7 @@
         "DP-2,2560x1440@165,2560x0,1,transform,1"
       ];
 
-      "$terminal" = "alacritty";
+      "$terminal" = "footclient";
       "$menu" = "wofi --show drun";
       "$lock" = "hyprlock";
 
@@ -174,6 +174,11 @@
         
         "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | tee >(swappy -f - -o - | wl-copy) | wl-copy"
       ];
+ 
+      binde = [
+        ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
+        ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+      ];
 
       bindm = [
         "$mod, mouse:272, movewindow"
@@ -187,6 +192,25 @@
         "sleep 0.2 ; setwall"
         "lxqt-policykit-agent"
         "hyprctl setcursor Numix-Cursor 24"
+      ];
+
+      windowrulev2 = [
+        "float, title:^(Picture in Picture)$"
+        "opacity 1.0 override 1.0 override, title:^(Picture in Picture)$"
+        "pin, title:^(Picture in Picture)$"
+        "idleinhibit fullscreen, class:^(google-chrome)$"
+        "suppressevent maximize, class:.*"
+        "float,class:^(file_progress)$"
+        "float,class:^(confirm)$"
+        "float,class:^(dialog)$"
+        "float,class:^(download)$"
+        "float,class:^(notification)$"
+        "float,class:^(error)$"
+        "float,class:^(confirmreset)$"
+        "float,title:^(Open File)$"
+        "float,title:^(branchdialog)$"
+        "float,title:^(Confirm to replace files)$"
+        "float,title:^(File Operation Progress)$"
       ];
 
       misc = {

@@ -49,20 +49,18 @@
     };
 
     initExtra = ''
-      #autoload -Uz compinit
-      #compinit
-
       # Keys
       bindkey '5~' kill-word
       bindkey '^K' kill-line
-      bindkey "^[[F" end-of-line
       bindkey "^[[3~" delete-char
       bindkey "^[[1;3C" forward-word
       bindkey "^[[1;5C" forward-word
       bindkey "^[[1;3D" backward-word
       bindkey "^[[1;5D" backward-word
       bindkey '^H' backward-kill-word
-      bindkey "^[[H" beginning-of-line
+
+      bindkey "^[[H" end-of-line
+      bindkey "^[[F" beginning-of-line
     '';
     
     envExtra = ''
@@ -74,7 +72,7 @@
       export BROWSER="firefox"
       export OPENER="xdg-open"
       export TERMINAL="alacritty"
-      export TERM="xterm-256color"
+      #export TERM="screen-256color"
       export LAUNCHER="wofi --show drun"
       export FZF_DEFAULT_OPTS="--color=16"
     '';

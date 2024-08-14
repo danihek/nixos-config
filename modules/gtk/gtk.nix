@@ -4,6 +4,8 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
+      cursor-size = 24;
+      cursor-theme = "Numix-Cursor";
     };
   };
 
@@ -22,6 +24,7 @@
 
     cursorTheme = {
       name = "Numix-Cursor";
+      size = 24;
       package = pkgs.numix-cursor-theme;
     };
 

@@ -5,6 +5,8 @@
       ./git/git.nix
       ./zsh/zsh.nix
       #./omp/omp.nix i dot have time to configure it
+      ./foot/foot.nix
+      ./tmux/tmux.nix
       ./wofi/wofi.nix
       ./mako/mako.nix
       ./tgpt/tgpt.nix

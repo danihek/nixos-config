@@ -8,6 +8,7 @@
    	    startup_mode = "Windowed";
    	    dynamic_title = true;
    	    opacity = 0.6;
+        #background = "#0f1210";
       };
 
       cursor = {

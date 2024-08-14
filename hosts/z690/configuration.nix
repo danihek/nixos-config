@@ -6,6 +6,8 @@
   imports =
     [
       ./hardware-configuration.nix
+
+      inputs.sops-nix.nixosModules.sops
       inputs.home-manager.nixosModules.home-manager
     ];
 
@@ -23,6 +25,7 @@
     noto-fonts
     minecraftia
     proggyfonts
+    font-awesome
     jetbrains-mono
     noto-fonts-cjk
     liberation_ttf
@@ -75,11 +78,12 @@
   environment.systemPackages = with pkgs; [
     # Shell, Terminal, Text Editor etc.
     vim 
+    foot
     kitty
     neovide
     hyprlock
     obsidian
-    alacritty
+    alacritty ueberzugpp # yazi support
     vimPlugins.vim-plug 
     
     # Nix
@@ -128,7 +132,8 @@
     wlroots_0_18
     
     # Utility
-    mpv
+    #mpv
+    (mpv.override {scripts = [mpvScripts.mpris];})
     imv
     mako
     wofi
@@ -150,6 +155,7 @@
 
     # Tools
     lf
+    jq
     lsd
     eza
     fzf
@@ -167,17 +173,23 @@
     file
     zola
     unzip
+    scrcpy
     ffmpeg
     pstree
     zoxide
+    weylus
     ani-cli
     killall
     ripgrep
     openscad
     vscodium
+    ckb-next # keyboard
+    kdeconnect # watch and mobile
     obs-studio
     android-tools
+    markdown-oxide
     linuxPackages.usbip
+    libreoffice-qt6-still
 
     # Flex
     cowsay
@@ -207,6 +219,19 @@
       address = "192.168.1.113";
       prefixLength = 24;
     } ];
+  };
+
+  networking.firewall = { 
+    enable = false;
+    allowedTCPPorts = [ 9001 ];
+    allowedUDPPorts = [ 9001 ];
+
+    allowedTCPPortRanges = [ 
+      { from = 1700; to = 1764; } # KDE Connect and Weylus
+    ];  
+    allowedUDPPortRanges = [ 
+      { from = 1700; to = 1764; } # KDE Connect and Weylus
+    ];  
   };
 
   # Sec
