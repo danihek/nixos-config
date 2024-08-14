@@ -259,8 +259,13 @@
   services.upower.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
-  # OpenGL
+  # Hardware 
   hardware.graphics.enable = true;
+
+  # Bluetooth
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boot
 
   system.stateVersion = "24.05";
 }
