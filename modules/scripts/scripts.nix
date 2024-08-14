@@ -1,7 +1,7 @@
 { pkgs, ... }:
 let
   setwall = pkgs.writeShellScriptBin "setwall" ''
-    #!/bin/sh
+    #!/usr/bin/env bash
 
     wallpaper_path=$HOME/pics/wallpapers
     pywal="wal -i"
@@ -21,10 +21,42 @@ let
     themecord
     pywalfox update
   '';
+
+  sysconfupdate = pkgs.writeShellScriptBin "sysconfupdate" ''
+    #!/usr/bin/env bash
+    cd /etc/nixos/
+    git pull
+    sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
+  '';
+
+  sysconfrebuild = pkgs.writeShellScriptBin "sysconfrebuild" ''
+    #!/usr/bin/env bash
+    cd /etc/nixos/
+    sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
+  '';
+
+  sysconfrebuildpush = pkgs.writeShellScriptBin "sysconfrebuildpush " ''
+    #!/usr/bin/env bash
+    cd /etc/nixos/
+    sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
+
+    if [ ! $? -eq "0" ]; then
+      echo "Failed to rebuild..."
+      exit
+    else
+      echo "Build successful, pushing changes to github:"
+      git add .
+      git commit -m "config update"
+      git push origin main
+    fi
+  '';
 in {
   home = {
     packages = [
       setwall
+      sysconfupdate
+      sysconfrebuild
+      sysconfrebuildpush
     ];
   };
 }

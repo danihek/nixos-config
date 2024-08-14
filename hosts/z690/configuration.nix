@@ -72,6 +72,10 @@
     packages = with pkgs; [];
   };
 
+  environment.variables = {
+    NIX_FLAKE_CURRENT_CONFIG = "mainpc";
+  };
+
   # List packages installed in system profile:
   environment.systemPackages = with pkgs; [
     # Shell, Terminal, Text Editor etc.
