@@ -174,6 +174,7 @@
     tlrc
     file
     zola
+    gimp
     unzip
     cobalt #mdbook mdbook-katex
     scrcpy
@@ -189,6 +190,7 @@
     ckb-next # keyboard
     kdeconnect # watch and mobile
     obs-studio
+    imagemagick
     android-tools #gradle sdkmanager flutter
     markdown-oxide
     linuxPackages.usbip
