@@ -188,7 +188,7 @@
     ckb-next # keyboard
     kdeconnect # watch and mobile
     obs-studio
-    android-tools gradle
+    android-tools gradle sdkmanager
     markdown-oxide
     linuxPackages.usbip
     libreoffice-qt6-still
