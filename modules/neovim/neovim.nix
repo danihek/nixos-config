@@ -9,6 +9,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
+      codeium-vim
       coc-nvim
       mini-nvim
       coc-clangd
@@ -32,6 +33,11 @@
     set wildmode=list:longest
     set number relativenumber
     set nu rnu
+
+    imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+    imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
+    imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
+    imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
     inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
     inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
