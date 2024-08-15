@@ -68,7 +68,7 @@
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "dh";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "docker" ];
     packages = with pkgs; [];
   };
 
@@ -175,7 +175,7 @@
     file
     zola
     unzip
-    markdown-oxide #mdbook mdbook-katex
+    #mdbook mdbook-katex
     scrcpy
     ffmpeg
     pstree
@@ -271,6 +271,9 @@
   services.upower.enable = true;
   services.openssh.enable = true;
   services.gnome.gnome-keyring.enable = true;
+
+  # Virt
+  virtualisation.docker.enable = true;
 
   # Hardware 
   hardware.graphics.enable = true;
