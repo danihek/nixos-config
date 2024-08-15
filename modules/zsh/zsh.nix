@@ -76,6 +76,7 @@
       #export TERM="screen-256color"
       export LAUNCHER="wofi --show drun"
       export FZF_DEFAULT_OPTS="--color=16"
+      export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
     '';
   };
 }

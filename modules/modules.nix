@@ -6,6 +6,7 @@
       ./zsh/zsh.nix
       ./ssh/ssh.nix
       #./omp/omp.nix i dot have time to configure it
+      ./java/java.nix
       ./foot/foot.nix
       ./tmux/tmux.nix
       ./wofi/wofi.nix
