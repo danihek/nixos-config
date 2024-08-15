@@ -11,7 +11,7 @@
     };
 
     themecord = {
-      url = "github:danihek/themecord";
+      url = "github:danihek/Themecord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

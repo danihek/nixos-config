@@ -175,6 +175,7 @@
     file
     zola
     unzip
+    mdbook
     scrcpy
     ffmpeg
     pstree
@@ -188,7 +189,7 @@
     ckb-next # keyboard
     kdeconnect # watch and mobile
     obs-studio
-    android-tools gradle sdkmanager flutter
+    android-tools #gradle sdkmanager flutter
     markdown-oxide
     linuxPackages.usbip
     libreoffice-qt6-still
