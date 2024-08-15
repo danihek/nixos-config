@@ -3,6 +3,6 @@
 {
   programs.java = {
     enable = true;
-    package = pkgs.jre8;
+    package = pkgs.jre17_minimal;
   };
 }
