@@ -9,7 +9,7 @@
      main = {
        include= "~/.cache/wal/colors-foot.ini";
        term = "xterm-256color";
-       font = "JetBrainsMono Nerd Font:size=12";
+       font = "JetBrainsMono Nerd Font:size=13";
        dpi-aware = "yes";
      };
 

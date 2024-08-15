@@ -33,6 +33,7 @@
     shellAliases = {
       g = "git";
       sl = "ls";
+      lf = "yazi"; #xd
       ls = "eza";
       tm = "tmux";
       l = "eza -l";
