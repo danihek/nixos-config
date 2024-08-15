@@ -9,7 +9,6 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-     #codeium
       coc-nvim
       mini-nvim
       coc-clangd
@@ -33,7 +32,6 @@
     set wildmode=list:longest
     set number relativenumber
     set nu rnu
-    noremap <C-s> :e#<CR>
 
     inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
     inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
