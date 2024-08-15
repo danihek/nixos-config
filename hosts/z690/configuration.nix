@@ -175,7 +175,7 @@
     file
     zola
     unzip
-    mdbook mdbook-katex
+    markdown-oxide #mdbook mdbook-katex
     scrcpy
     ffmpeg
     pstree
