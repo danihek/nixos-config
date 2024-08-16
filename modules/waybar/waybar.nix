@@ -28,13 +28,9 @@
         };
       };
       clock = {
-        format = "{:%H:%M}";
-        format-alt = "{:%Y-%m-%d}";
+        format = " {:%H:%M}";
+        format-alt = " {:%Y-%m-%d}";
         tooltip-format = "{:%Y-%m-%d | %H:%M}";
-      };
-      cpu = {
-        format = "{usage}%  ";
-        tooltip = false;
       };
       network = {
         interval = 1;
