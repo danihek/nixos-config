@@ -81,8 +81,7 @@
 }
 
 .modules-left {
-	background: @background;
-   padding-right: 2px;
+   padding-left: 2px;
 }
 
 #window {
@@ -96,12 +95,10 @@ window#waybar {
 #workspaces {
  	margin: 5px 5px 5px 5px;
 	background: @background;
-   background: transparent;
 }
 #workspaces button {
 	padding: 0px 4px 0px 4px;
 	color: @foreground;
-   background: transparent;
 }
 #workspaces button.active {
 	color: @background;
