@@ -29,7 +29,6 @@
     '';
 
     settings = {
-
       monitor = [
         "DP-1,2560x1440@165,0x50,1"
         "DP-2,2560x1440@165,2560x0,1,transform,1"
@@ -45,8 +44,8 @@
 
         border_size = 2;
 
-       "col.active_border" = "rgba(255,255,255, 0.9)";
-       "col.inactive_border" = "rgba(18, 16, 17, 0.8)";
+        "col.active_border" = "rgb(bfc9f3)";
+        "col.inactive_border" = "rgb(242430)";
 
         resize_on_border = false;
         allow_tearing = false;
