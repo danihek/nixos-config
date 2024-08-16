@@ -81,7 +81,7 @@
 }
 
 .modules-left {
-	background: @background;
+	background: transparent;
    padding-left: 2px;
 }
 
