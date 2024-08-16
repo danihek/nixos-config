@@ -28,7 +28,8 @@
         };
       };
       clock = {
-        format-alt = " {:%Y-%m-%d}";
+        format = "{%H:%M}";
+        format-alt = "{:%Y-%m-%d}";
         tooltip-format = "{:%Y-%m-%d | %H:%M}";
       };
       cpu = {
@@ -44,9 +45,9 @@
         format-wifi = "{essid} ({signalStrength}%)  ";
       };
       pulseaudio = {
-        format = " {icon} {volume}%" ;
-        format-bluetooth = " {icon} {volume}% {format_source}" ;
-        format-bluetooth-muted = " {icon}  {format_source}" ;
+        format = " {icon} {volume}% ";
+        format-bluetooth = " {icon} {volume}% {format_source} ";
+        format-bluetooth-muted = " {icon}  {format_source} ";
         format-icons = {
           car = "";
           default = [ "" "" "" ];
