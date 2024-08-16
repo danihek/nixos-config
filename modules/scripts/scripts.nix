@@ -15,7 +15,7 @@ let
     swww img $wallpaper_path/$wallpaper \
       --transition-bezier .56,1.12,1,.6 \
       --transition-fps=165 \
-      --transition-type="wave" \
+      --transition-type="any" \
       --transition-duration=0.3
 
     themecord
