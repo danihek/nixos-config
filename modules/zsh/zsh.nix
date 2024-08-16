@@ -2,14 +2,12 @@
 
 {
   home.packages = [
-    pkgs.thefuck
     pkgs.fzf-zsh
     pkgs.zsh-fzf-tab
     pkgs.zsh-fzf-history-search
   ];
   
   programs.fzf.enableZshIntegration = true;
-  programs.zoxide.enableZshIntegration = true;
 
   programs.zsh = {
     enable = true;
@@ -21,10 +19,6 @@
       plugins = 
       [ 
           "git"
-          "vi-mode"
-          "thefuck" 
-          "git-extras"
-          "zsh-navigation-tools"
       ];
       theme = "kphoen";
     };
@@ -71,8 +65,9 @@
       export TERM="alacritty"
       export BROWSER="firefox"
       export OPENER="xdg-open"
+      export open="xdg-open"
       export TERMINAL="alacritty"
-      #export TERM="screen-256color"
+      export TERM="xterm-256color"
       export LAUNCHER="wofi --show drun"
       export FZF_DEFAULT_OPTS="--color=16"
       export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
