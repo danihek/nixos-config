@@ -38,6 +38,7 @@
       lla = "eza -alh";
       tree = "eza --tree";
       mkcl = "make clean";
+      neofetch = "fastfetch";
       TODO = "vim ~/.TODO.md";
       cpl = "make clean ; clear; make";
     };

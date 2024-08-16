@@ -24,11 +24,34 @@
         {
           type = "datetime";
           key = "Time";
-          format = "{14}:{17}:{20}";
+          format = "{14} ={17}:{20}";
         }
         "break"
-        "player"
-        "media"
+        {
+          type = "packages";
+          key = "│ ├󰏖";
+          keyColor = "yellow";
+        }
+        {
+          type = "shell";
+          key = "│ └";
+          keyColor = "yellow";
+        }
+        {
+          type = "wm";
+          key = " DE/WM";
+          keyColor = "blue";
+        }
+        {
+          type = "terminal";
+          key = "│ ├";
+          keyColor = "blue";
+        }
+        {
+          type = "host";
+          key = "󰌢 PC";
+          keyColor = "green";
+        }
       ];
     };
   };
