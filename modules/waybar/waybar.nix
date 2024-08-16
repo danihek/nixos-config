@@ -77,11 +77,13 @@
 
 .modules-right {
 	background: @background;
+   padding-right: 2px;
 }
 
 
 #window {
 	color: @foreground;
+   padding-left: 2px;
 }
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
