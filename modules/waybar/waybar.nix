@@ -81,71 +81,71 @@
    padding-left: 2px;
 }
 
+
 #window {
 	color: @foreground;
 }
-
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
    border: solid 2px @foreground;
-   padding: 2px 2px 2px 2px;
 }
+window#waybar>box {
+    padding:10px;
+}
+
 
 #workspaces {
  	margin: 5px 5px 5px 5px;
 	background: @background;
 }
-
 #workspaces button {
 	padding: 0px 4px 0px 4px;
 	color: @foreground;
 }
-
 #workspaces button.active {
 	color: @background;
 	background: @foreground;
 }
 
+
 #pulseaudio {
 	border: solid 2px @foreground;
 	color: @foreground;
 }
-
 #clock {
 	border: solid 2px @foreground;
 	padding: 0px 5px 0px 0px;
 	color: @foreground;
 }
-
 #network {
 	border: solid 2px @foreground;
 	color: @foreground;
 }
-
 #temperature {
 	border: solid 2px @foreground;
 	color: @foreground;
 }
 
+
 #battery {
 	border: solid 2px @foreground;
 	color: @foreground;
 }
-	#battery.warning {
-	    border-color: #EF6C00;
-	    background-color: #EF6C00;
-	    color: white;
-	}
-	#battery.critical {
-	    border-color: #F44336;
-	    background-color: #F44336;
-	    color: white;
-	}
-	#battery.charging {
-	    background-color: #4EFF63;
-	    border-color: #4EFF63;
-	    color: white;
-	}
-          '';
+#battery.warning {
+  border-color: #EF6C00;
+  background-color: #EF6C00;
+  color: white;
+}
+#battery.critical {
+  border-color: #F44336;
+  background-color: #F44336;
+  color: white;
+}
+#battery.charging {
+  background-color: #4EFF63;
+  border-color: #4EFF63;
+  color: white;
+}
+       '';
   };
 }
