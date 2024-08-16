@@ -12,7 +12,6 @@
       modules-left = [ "hyprland/workspaces" ];
       modules-right = [
         "pulseaudio"
-        "temperature"
         "battery"
         "clock"
       ];
@@ -80,8 +79,6 @@
 	color: @foreground;
 }
 window#waybar {
-      /*background: rgba(30, 30, 45, 0.5);*/
-   /*border: solid 2px @foreground;*/
    background: @background;
 }
 

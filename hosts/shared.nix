@@ -80,6 +80,7 @@
     mako
     wofi
     mupdf
+    yt-dlp
     upower
     libnotify
     pavucontrol
