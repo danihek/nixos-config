@@ -12,18 +12,16 @@
       modules-left = [ "hyprland/workspaces" ];
       modules-right = [
         "pulseaudio"
-        "cpu"
-        "memory"
         "temperature"
         "battery"
         "clock"
       ];
       battery = {
-        format = "{capacity}% {icon}";
-        format-alt = "{time} {icon}";
-        format-charging = "{capacity}% ";
+        format = "{capacity}% {icon} ";
+        format-alt = "{time} {icon}" ;
+        format-charging = "{capacity}% " ;
         format-icons = [ "" "" "" "" "" ];
-        format-plugged = "{capacity}% ";
+        format-plugged = "{capacity}%  ";
         states = {
           critical = 20;
           warning = 30;
@@ -76,11 +74,11 @@
 
 * {
 	border: none;
-   font-family: "Jetbrains Mono" ;
+   font-family: Jetbrains Mono ;
 	font-size: 13px;
 	border-radius: 0;	
 	background: transparent;
-	padding: 0px 4px 0px 1px;
+	padding: 0px 0px 0px 0px;
 }
 
 window#waybar {
@@ -89,10 +87,6 @@ window#waybar {
 }
 
 #window {
-	color: @foreground;
-}
-
-#pulseaudio {
 	color: @foreground;
 }
 
@@ -109,6 +103,10 @@ window#waybar {
 #workspaces button.active {
 	color: @background;
 	background: @foreground;
+}
+
+#pulseaudio {
+	color: @foreground;
 }
 
 #clock {
