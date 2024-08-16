@@ -37,7 +37,7 @@
 
       general = lib.mkDefault {
         gaps_in = 4;
-        gaps_out = 10;
+        gaps_out = 2;
 
         border_size = 2;
 
@@ -72,7 +72,7 @@
         active_opacity = 1.0;
         inactive_opacity = 1.0;
 
-        drop_shadow = true;
+        drop_shadow = false;
         shadow_range = 4;
         shadow_render_power = 3;
         "col.shadow" = "rgba(1a1a1aee)";
@@ -101,7 +101,7 @@
       };
 
       dwindle = {
-        pseudotile = true;
+        pseudotile = false;
       };
  
       input = {

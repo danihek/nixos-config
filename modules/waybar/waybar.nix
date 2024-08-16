@@ -71,23 +71,25 @@
 
     style = ''
 @import '../../.cache/wal/colors-waybar.css';
-
 * {
 	border: none;
-   font-family: Jetbrains Mono ;
+   font-family: Jetbrains Mono;
 	font-size: 13px;
 	border-radius: 0;	
-	background: transparent;
 	padding: 0px 0px 0px 0px;
 }
 
-window#waybar {
-	background: rgba(30, 30, 45, 0.5);
-   border: 2px solid @foreground;
+.modules-right {
+	background: @background;
 }
 
 #window {
 	color: @foreground;
+}
+
+window#waybar {
+	background: rgba(30, 30, 45, 0.5);
+   border: solid 2px @foreground;
 }
 
 #workspaces {
@@ -106,31 +108,28 @@ window#waybar {
 }
 
 #pulseaudio {
+	border: solid 2px @foreground;
 	color: @foreground;
 }
 
 #clock {
-	padding: 0px 4px 0px 0px;
-	color: @foreground;
-}
-
-#memory {
-	color: @foreground;
-}
-
-#cpu {
+	border: solid 2px @foreground;
+	padding: 0px 5px 0px 0px;
 	color: @foreground;
 }
 
 #network {
+	border: solid 2px @foreground;
 	color: @foreground;
 }
 
 #temperature {
+	border: solid 2px @foreground;
 	color: @foreground;
 }
 
 #battery {
+	border: solid 2px @foreground;
 	color: @foreground;
 }
 	#battery.warning {
