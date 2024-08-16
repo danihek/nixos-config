@@ -72,7 +72,7 @@
     }];
 
     style = ''
-@import '../.cache/wal/colors-waybar.css';
+@import '~/.cache/wal/colors-waybar.css';
 
 * {
 	border: none;
