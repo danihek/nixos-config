@@ -93,11 +93,9 @@ window#waybar {
 }
 
 #workspaces {
- 	margin: 5px 5px 5px 5px;
 	background: @background;
 }
 #workspaces button {
-	padding: 0px 4px 0px 4px;
 	color: @foreground;
 }
 #workspaces button.active {
