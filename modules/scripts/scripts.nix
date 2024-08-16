@@ -40,12 +40,16 @@ let
   sysconfrebuild = pkgs.writeShellScriptBin "sysconfrebuild" ''
     #!/usr/bin/env bash
     cd /etc/nixos/
+    git add .
+    git commit -m "nix config auto-commit"
     sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
   '';
 
   sysconfrebuildpush = pkgs.writeShellScriptBin "sysconfrebuildpush" ''
     #!/usr/bin/env bash
     cd /etc/nixos/
+    git add .
+    git commit -m "config update"
     sudo nixos-rebuild switch --flake /etc/nixos#"$NIX_FLAKE_CURRENT_CONFIG"
 
     if [ ! $? -eq "0" ]; then
@@ -53,8 +57,6 @@ let
       exit
     else
       echo "Build successful, pushing changes to github:"
-      git add .
-      git commit -m "config update"
       git push origin main
     fi
   '';

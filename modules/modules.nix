@@ -5,7 +5,6 @@
       ./git/git.nix
       ./zsh/zsh.nix
       ./ssh/ssh.nix
-      #./omp/omp.nix i dot have time to configure it
       ./foot/foot.nix
       ./tmux/tmux.nix
       ./wofi/wofi.nix
@@ -27,6 +26,7 @@
       #./java/java.nix
       #./sway/sway.nix
       #./starship/starship.nix
+      #./omp/omp.nix i dot have time to configure it
 
     # Scripts
       ./scripts/scripts.nix
