@@ -44,8 +44,8 @@
 
         border_size = 2;
 
-        "col.active_border" = "rgb(bfc9f3)";
-        "col.inactive_border" = "rgb(242430)";
+        "col.active_border" = "$color0";
+        "col.inactive_border" = "$color15";
 
         resize_on_border = false;
         allow_tearing = false;
