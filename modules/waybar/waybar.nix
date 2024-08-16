@@ -82,6 +82,7 @@
 }
 
 #window {
+   margin: 2px 2px 2px 2px;
 	color: @foreground;
 }
 
