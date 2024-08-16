@@ -81,8 +81,8 @@ function media-metadata-get {
 }
 
 function hyprlock-mw-source-manager {
-  local csrc_str='^# source = ~/\.config/hypr/conf\.d/medialock\.conf$'
-  local usrc_str='^source = ~/\.config/hypr/conf\.d/medialock\.conf$'
+  local csrc_str='^# source = ~/\.config/hypr/medialock\.conf$'
+  local usrc_str='^source = ~/\.config/hypr/medialock\.conf$'
   while true; do
     read -r media_session_status < <(playerctl status)
     if [ "${media_session_status}" != "Stopped" ] && grep -qP "${csrc_str}" ~/.config/hypr/hyprlock.conf; then
