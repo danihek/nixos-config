@@ -72,7 +72,7 @@
    font-family: Jetbrains Mono;
 	font-size: 13px;
 	border-radius: 0;	
-	padding: 0px 0px 0px 0px;
+	padding: 0px 2px 0px 0px;
 }
 
 .modules-right {
