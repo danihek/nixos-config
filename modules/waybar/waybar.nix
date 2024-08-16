@@ -77,13 +77,11 @@
 
 .modules-right {
 	background: @background;
-   padding-right: 2px;
 }
 
 
 #window {
 	color: @foreground;
-   padding-left: 2px;
 }
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
@@ -96,7 +94,7 @@ window#waybar {
 	background: @background;
 }
 #workspaces button {
-	padding: 0px 5px 0px 5px;
+	padding: 0px 4px 0px 4px;
 	color: @foreground;
 }
 #workspaces button.active {
@@ -111,7 +109,6 @@ window#waybar {
 }
 #clock {
 	border: solid 2px @foreground;
-	padding: 0px 5px 0px 0px;
 	color: @foreground;
 }
 #network {
