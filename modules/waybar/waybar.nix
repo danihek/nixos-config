@@ -17,11 +17,11 @@
         "clock"
       ];
       battery = {
-        format = "{capacity}% {icon} ";
-        format-alt = "{time} {icon}" ;
-        format-charging = "{capacity}% " ;
+        format = "{icon} {capacity}%";
+        format-alt = "{icon} {time}";
+        format-charging = " {capacity}%";
         format-icons = [ "" "" "" "" "" ];
-        format-plugged = "{capacity}%  ";
+        format-plugged = " {capacity}%";
         states = {
           critical = 20;
           warning = 30;
@@ -35,7 +35,6 @@
         format = "{usage}%  ";
         tooltip = false;
       };
-      memory = { format = "{}% "; };
       network = {
         interval = 1;
         format-alt = "{ifname}: {ipaddr}/{cidr}";
@@ -45,9 +44,9 @@
         format-wifi = "{essid} ({signalStrength}%)  ";
       };
       pulseaudio = {
-        format = "{volume}% {icon} ";
-        format-bluetooth = "{volume}% {icon} {format_source} ";
-        format-bluetooth-muted = " {icon} {format_source} ";
+        format = "{icon} {volume}%";
+        format-bluetooth = "{icon} {volume}% {format_source}";
+        format-bluetooth-muted = "{icon}  {format_source}";
         format-icons = {
           car = "";
           default = [ "" "" "" ];
@@ -64,7 +63,7 @@
       };
       temperature = {
         critical-threshold = 80;
-        format = "{temperatureC}°C {icon}";
+        format = "{icon}{temperatureC}°C";
         format-icons = [ "" "" "" ];
       };
     }];
@@ -81,6 +80,8 @@
 
 .modules-right {
 	background: @background;
+   padding-right: 2px;
+   padding-right: 2px;
 }
 
 #window {

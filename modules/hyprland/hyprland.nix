@@ -41,8 +41,8 @@
 
         border_size = 2;
 
-       "col.active_border" = "rgba(242, 215, 229, 0.8)";
-       "col.inactive_border" = "rgba(167, 160, 163, 0.8)";
+       "col.active_border" = "rgba(242, 215, 229, 1.0)";
+       "col.inactive_border" = "rgba(167, 160, 163, 1.0)";
        #"col.active_border" = "rgba(${config.lib.stylix.colors.base0D}ff)";
        #"col.inactive_border" = "rgba(${config.lib.stylix.colors.base02}ff)";
 
@@ -67,15 +67,11 @@
       ];
 
       decoration = lib.mkForce {
-        rounding = 20;
+        rounding = 0;
 
         active_opacity = 1.0;
         inactive_opacity = 1.0;
-
         drop_shadow = false;
-        shadow_range = 4;
-        shadow_render_power = 3;
-        "col.shadow" = "rgba(1a1a1aee)";
 
         blur = {
           enabled = true;
@@ -87,7 +83,7 @@
       };
 
       animations = {
-        enabled = true;
+        enabled = false;
 
         bezier = "myBezier, 0.3, 0, 0, 1";
         animation = [
