@@ -22,6 +22,13 @@ let
     pywalfox update
   '';
 
+  wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
+    #!/usr/bin/env bash
+    waybarPID=$(pgrep waybar)
+    kill -HUP $waybarPID
+    waybar
+  '';
+
   sysconfupdate = pkgs.writeShellScriptBin "sysconfupdate" ''
     #!/usr/bin/env bash
     cd /etc/nixos/
@@ -54,6 +61,8 @@ in {
   home = {
     packages = [
       setwall
+      wbar-reload
+
       sysconfupdate
       sysconfrebuild
       sysconfrebuildpush

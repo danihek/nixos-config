@@ -257,7 +257,6 @@
   
   # Services
   services.openssh.enable = true;
-
   services.upower.enable = true;
   services.gnome.gnome-keyring.enable = true;
 

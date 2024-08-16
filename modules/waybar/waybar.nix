@@ -45,9 +45,9 @@
         format-wifi = "{essid} ({signalStrength}%)  ";
       };
       pulseaudio = {
-        format = "{volume}% {icon}";
-        format-bluetooth = "{volume}% {icon} {format_source}";
-        format-bluetooth-muted = " {icon} {format_source}";
+        format = "{volume}% {icon} ";
+        format-bluetooth = "{volume}% {icon} {format_source} ";
+        format-bluetooth-muted = " {icon} {format_source} ";
         format-icons = {
           car = "";
           default = [ "" "" "" ];
@@ -110,6 +110,7 @@ window#waybar {
 }
 
 #clock {
+	padding: 0px 4px 0px 0px;
 	color: @foreground;
 }
 
