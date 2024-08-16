@@ -26,7 +26,6 @@
           key = "Time";
           format = "{14} ={17}:{20}";
         }
-        "break"
         {
           type = "packages";
           key = "│ ├󰏖";
@@ -38,13 +37,13 @@
           keyColor = "yellow";
         }
         {
-          type = "wm";
-          key = " DE/WM";
+          type = "terminal";
+          key = "│ ├";
           keyColor = "blue";
         }
         {
-          type = "terminal";
-          key = "│ ├";
+          type = "wm";
+          key = " DE/WM";
           keyColor = "blue";
         }
         {
