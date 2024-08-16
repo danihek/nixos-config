@@ -12,7 +12,6 @@
       modules-left = [ "hyprland/workspaces" ];
       modules-right = [
         "pulseaudio"
-        "network"
         "cpu"
         "memory"
         "temperature"
@@ -26,7 +25,7 @@
         format-icons = [ "" "" "" "" "" ];
         format-plugged = "{capacity}% ";
         states = {
-          critical = 15;
+          critical = 20;
           warning = 30;
         };
       };
@@ -48,7 +47,7 @@
         format-wifi = "{essid} ({signalStrength}%)  ";
       };
       pulseaudio = {
-        format = "{volume}% {icon} {format_source}";
+        format = "{volume}% {icon}";
         format-bluetooth = "{volume}% {icon} {format_source}";
         format-bluetooth-muted = " {icon} {format_source}";
         format-icons = {
@@ -73,96 +72,83 @@
     }];
 
     style = ''
-      ${builtins.readFile "${pkgs.waybar}/etc/xdg/waybar/style.css"}
+@import '../.cache/wal/colors-waybar.css';
 
-     *{
-          font-family: "JetBrains Mono";
-          font-size: 14px;
-      }
+* {
+	border: none;
+   font-family: "Jetbrains Mono" ;
+	font-size: 13px;
+	border-radius: 0;	
+	background: transparent;
+	padding: 0px 4px 0px 1px;
+}
 
-      window#waybar {
-          border: 2px;
-      }
+window#waybar {
+	background: rgba(30, 30, 45, 0.5);
+   border: 2px solid @foreground;
+}
 
-      #pulseaudio,
-      #network,
-      #cpu,
-      #memory,
-      #temperature,
-      #battery,
-      #clock {
-          padding: 0 10px;
-          margin: 6px 3px;
-          border-radius: 4px;
-          border: 1px solid Black;
-          font-weight: bold;
-          background-color: Black;
-          color: White;
-          transition: opacity .3s ease-out;
-          opacity: 1;
-      }
+#window {
+	color: @foreground;
+}
 
-      #custom-coretemp,
-      #language,
-      #network,
-      #bluetooth,
-      #cpu {
-          margin-right: 0px;
-          padding-right: 3px;
-          border-top-right-radius: 0px;
-          border-bottom-right-radius: 0px;
-      }
+#pulseaudio {
+	color: @foreground;
+}
 
-      #temperature,
-      #network,
-      #pulseaudio,
-      #memory {
-          margin-left: 0px;
-          padding-left: 3px;
-          border-top-left-radius: 0px;
-          border-bottom-left-radius: 0px;
-      }
+#workspaces {
+ 	margin: 5px 5px 5px 5px;
+	background: @background;
+}
 
-      #cpu {
-          padding-right: 0;
-      }
+#workspaces button {
+	padding: 0px 4px 0px 4px;
+	color: @foreground;
+}
 
-      #mode {
-          border-color: transparent;
-          background-color: transparent;
-          color: Black;
-      }
+#workspaces button.active {
+	color: @background;
+	background: @foreground;
+}
 
-      #workspaces button {
-          transition: background-color .3s ease-out;
-      }
+#clock {
+	color: @foreground;
+}
 
-      #workspaces button.focused {
-          color: Black;
-          background-color: White;
-      }
+#memory {
+	color: @foreground;
+}
 
-      #workspaces button.active {
-        transition: background-color .3s ease-out;
-        background-color: White;
-        color: Black;
-      }
+#cpu {
+	color: @foreground;
+}
 
-      #battery.warning {
-          border-color: #EF6C00;
-          background-color: #EF6C00;
-          color: white;
-      }
-      #battery.critical {
-          border-color: #F44336;
-          background-color: #F44336;
-          color: white;
-      }
-      #battery.charging {
-          background-color: #4EFF63;
-          border-color: #4EFF63;
-          color: white;
-      }
-    '';
+#network {
+	color: @foreground;
+}
+
+#temperature {
+	color: @foreground;
+}
+
+#battery {
+	color: @foreground;
+}
+	#battery.warning {
+	    border-color: #EF6C00;
+	    background-color: #EF6C00;
+	    color: white;
+	}
+	#battery.critical {
+	    border-color: #F44336;
+	    background-color: #F44336;
+	    color: white;
+	}
+	#battery.charging {
+	    background-color: #4EFF63;
+	    border-color: #4EFF63;
+	    color: white;
+	}
+          '';
   };
 }
