@@ -76,6 +76,8 @@
 }
 
 .modules-right {
+	background: transparent;
+   padding-right: 2px;
 }
 
 
