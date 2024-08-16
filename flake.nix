@@ -33,6 +33,7 @@
       nixosConfigurations.laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
+          ./hosts/shared.nix
           ./hosts/t430/configuration.nix
           inputs.home-manager.nixosModules.default 
 
@@ -47,6 +48,7 @@
       nixosConfigurations.mainpc = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
+          ./hosts/shared.nix
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
 
