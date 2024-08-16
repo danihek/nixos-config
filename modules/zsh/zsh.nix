@@ -60,6 +60,7 @@
     
     envExtra = ''
       # Variables
+      export PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)] "
       export IMAGE="imv"
       export VIDEO="mpv"
       export KEYTIMEOUT=1
