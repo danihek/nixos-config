@@ -77,8 +77,6 @@
 
 .modules-right {
 	background: @background;
-   padding-right: 2px;
-   padding-left: 2px;
 }
 
 
@@ -88,9 +86,6 @@
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
    border: solid 2px @foreground;
-}
-window#waybar>box {
-    padding:10px;
 }
 
 
