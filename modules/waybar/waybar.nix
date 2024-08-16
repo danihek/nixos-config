@@ -80,8 +80,9 @@
 	color: @foreground;
 }
 window#waybar {
-	background: rgba(30, 30, 45, 0.5);
-   border: solid 2px @foreground;
+      /*background: rgba(30, 30, 45, 0.5);*/
+   /*border: solid 2px @foreground;*/
+   background: @background;
 }
 
 
