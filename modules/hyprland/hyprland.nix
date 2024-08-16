@@ -39,7 +39,7 @@
       "$menu" = "wofi --show drun";
       "$lock" = "hyprlock";
 
-      general = lib.mkDefault {
+      general = {
         gaps_in = 4;
         gaps_out = 2;
 
