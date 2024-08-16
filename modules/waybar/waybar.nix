@@ -94,6 +94,7 @@ window#waybar {
 }
 
 #workspaces {
+	padding: 0px 0px 0px 5px;
  	margin: 5px 5px 5px 5px;
 	background: @background;
 }
