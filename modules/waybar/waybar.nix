@@ -76,17 +76,13 @@
 }
 
 .modules-right {
-	background: @background;
-   padding-right: 2px;
-}
-
-.modules-left {
 	background: transparent;
-   padding-left: 2px;
+   padding-right: 2px;
 }
 
 #window {
 	color: @foreground;
+   padding-left: 2px;
 }
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
@@ -94,14 +90,13 @@ window#waybar {
 }
 
 #workspaces {
-	padding: 0px 0px 0px 5px;
  	margin: 5px 5px 5px 5px;
 	background: @background;
 }
 #workspaces button {
-	padding: 0px 4px 0px 4px;
 	color: @foreground;
-   background: transparent;
+	background: @background;
+	padding: 0px 4px 0px 4px;
 }
 #workspaces button.active {
 	color: @background;
@@ -111,19 +106,23 @@ window#waybar {
 
 #pulseaudio {
 	border: solid 2px @foreground;
+	background: @background;
 	color: @foreground;
 }
 #clock {
 	border: solid 2px @foreground;
 	padding: 0px 5px 0px 0px;
+	background: @background;
 	color: @foreground;
 }
 #network {
 	border: solid 2px @foreground;
+	background: @background;
 	color: @foreground;
 }
 #temperature {
 	border: solid 2px @foreground;
+	background: @background;
 	color: @foreground;
 }
 
