@@ -82,7 +82,7 @@
 }
 
 #window {
-   margin: 2px 2px 2px 2px;
+   padding: 2px 2px 2px 2px;
 	color: @foreground;
 }
 
