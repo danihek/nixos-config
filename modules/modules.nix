@@ -20,7 +20,7 @@
       ./pywalfox/pywalfox.nix
       ./hyprland/hyprland.nix
       ./hyprlock/hyprlock.nix
-      #./fastfetch/fastfetch.nix
+      ./fastfetch/fastfetch.nix
       ./alacritty/alacritty.nix
 
     # Disabled
