@@ -81,7 +81,6 @@
 }
 
 .modules-left {
-   padding-left: 2px;
 }
 
 #window {
