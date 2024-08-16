@@ -82,13 +82,13 @@
 }
 
 #window {
-   padding: 2px 2px 2px 2px;
 	color: @foreground;
 }
 
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
    border: solid 2px @foreground;
+   padding: 2px 2px 2px 2px;
 }
 
 #workspaces {
