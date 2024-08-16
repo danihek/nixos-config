@@ -67,6 +67,7 @@
 
     style = ''
 @import '../../.cache/wal/colors-waybar.css';
+
 * {
 	border: none;
    font-family: Jetbrains Mono;
@@ -75,19 +76,14 @@
 	padding: 0px 0px 0px 0px;
 }
 
-.modules-right {
-	background: transparent;
-   padding-right: 2px;
-}
-
 #window {
 	color: @foreground;
-   padding-left: 2px;
 }
 window#waybar {
 	background: rgba(30, 30, 45, 0.5);
    border: solid 2px @foreground;
 }
+
 
 #workspaces {
  	margin: 5px 5px 5px 5px;
@@ -97,6 +93,12 @@ window#waybar {
 	color: @foreground;
 	background: @background;
 	padding: 0px 4px 0px 4px;
+}
+#workspaces button:hover {
+	text-shadow: inherit;
+	box-shadow: inherit;
+	transition: none;
+   color: @color5;
 }
 #workspaces button.active {
 	color: @background;
