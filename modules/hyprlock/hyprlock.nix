@@ -98,9 +98,11 @@
 
   home.file.".config/hypr/scripts/medialock.sh" = {
     text = builtins.readFile ./medialock.sh;
+    executable = true;
   };
   home.file.".config/hypr/scripts/rsum.sh" = {
     text = builtins.readFile ./rsum.sh;
+    executable = true;
   };
   home.file.".config/hypr/medialock.conf" = {
     text = ''
