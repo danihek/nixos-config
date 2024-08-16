@@ -78,7 +78,7 @@
 .modules-right {
 	background: @background;
    padding-right: 2px;
-   padding-right: 2px;
+   padding-left: 2px;
 }
 
 #window {
