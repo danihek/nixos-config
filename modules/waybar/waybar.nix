@@ -80,8 +80,6 @@
    padding-right: 2px;
 }
 
-.modules-left {
-}
 
 #window {
 	color: @foreground;
