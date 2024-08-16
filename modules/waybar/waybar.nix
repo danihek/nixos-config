@@ -76,8 +76,6 @@
 }
 
 .modules-right {
-	background: @background;
-   padding-right: 2px;
 }
 
 
@@ -106,11 +104,15 @@ window#waybar {
 #pulseaudio {
 	border: solid 2px @foreground;
 	color: @foreground;
+	background: @background;
+   padding-right: 2px;
 }
 #clock {
 	border: solid 2px @foreground;
 	padding: 0px 5px 0px 0px;
 	color: @foreground;
+	background: @background;
+   padding-right: 2px;
 }
 #network {
 	border: solid 2px @foreground;
@@ -119,12 +121,16 @@ window#waybar {
 #temperature {
 	border: solid 2px @foreground;
 	color: @foreground;
+	background: @background;
+   padding-right: 2px;
 }
 
 
 #battery {
 	border: solid 2px @foreground;
 	color: @foreground;
+	background: @background;
+   padding-right: 2px;
 }
 #battery.warning {
   border-color: #EF6C00;
