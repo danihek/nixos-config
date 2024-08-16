@@ -111,10 +111,9 @@ window#waybar {
 }
 #clock {
 	border: solid 2px @foreground;
-	padding: 0px 5px 0px 0px;
+   padding: 0px 5px 0px 0px;
 	color: @foreground;
 	background: @background;
-   padding-right: 2px;
 }
 #network {
 	border: solid 2px @foreground;
