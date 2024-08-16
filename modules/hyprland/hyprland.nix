@@ -182,6 +182,10 @@
       exec-once = [
         "swww init" "sleep 0.1 ; setwall"
         "wbar-reload"
+
+        "~/.config/hypr/bin/medialock artup" # } Medialock thanks to https://github.com/Klapptnot
+        "~/.config/hypr/bin/medialock hwman" # 
+
         #"pywalfox start"
         "lxqt-policykit-agent"
         "hyprctl setcursor Numix-Cursor 24"
