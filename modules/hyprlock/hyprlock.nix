@@ -92,6 +92,126 @@
 
     extraConfig = ''
       source = $HOME/.cache/wal/colors-hyprland.conf
+      source = ~/.config/hypr/medialock.conf
+    '';
+  };
+
+  home.file.".config/hypr/scripts/medialock.sh" = {
+    text = builtins.readFile ./medialock.sh;
+  };
+  home.file.".config/hypr/scripts/rsum.sh" = {
+    text = builtins.readFile ./rsum.sh;
+  };
+  home.file.".config/hypr/medialock.conf" = {
+    text = ''
+      # Media image
+image {
+    monitor =
+    path = ~/.cache/hyprland/medialock.cache
+    reload_time = 0 # Reload only when medialock sends signal
+    reload_cmd = echo ~/.cache/hyprland/medialock.cache
+    size = 64
+    border_size = 2
+    border_color = $border
+
+    position = -144, 124
+    halign = center
+    valign = bottom
+}
+shape {
+    monitor =
+    size = 360, 72
+    color = $black
+    rounding = -1
+    border_size = 2
+    border_color = $border
+    rotate = 0
+    xray = false # if true, make a "hole" in the background (rectangle of specified size, no rotation)
+
+    position = 0, 120
+    halign = center
+    valign = bottom
+}
+# Song title
+label {
+    monitor =
+    text = cmd[update:100] ~/.config/hypr/bin/medialock "{{title}}"
+    text_align = left
+    color = $white
+    font_size = 12
+    font_family = Plus Jakarta Sans 10
+
+    position = 0, 164
+    halign = center
+    valign = bottom
+}
+# Song artist
+label {
+    monitor =
+    text = cmd[update:100] ~/.config/hypr/bin/medialock "{{artist}}"
+    text_align = left
+    color = $white
+    font_size = 12
+    font_family = Plus Jakarta Sans 10
+
+    position = 0, 144
+    halign = center
+    valign = bottom
+}
+
+# Player status
+label {
+    monitor =
+    text = cmd[update:100] ~/.config/hypr/bin/medialock "{{status_icon}} "
+    text_align = left
+    color = $white
+    font_size = 22
+    font_family = CaskaydiaCove Nerd Font 10
+
+    position = 150, 142
+    halign = center
+    valign = bottom
+}
+
+# Song elapsed time
+label {
+    monitor =
+    text = cmd[update:100] ~/.config/hypr/bin/medialock "{{elapsed}}"
+    text_align = left
+    color = $border
+    font_size = 8
+    font_family = CaskaydiaCove Nerd Font 10
+
+    position = -90, 130
+    halign = center
+    valign = bottom
+}
+# Song duration
+label {
+    monitor =
+    text = cmd[update:100] ~/.config/hypr/bin/medialock "{{duration}}"
+    text_align = left
+    color = $border
+    font_size = 8
+    font_family = CaskaydiaCove Nerd Font 10
+
+    position = 90, 130
+    halign = center
+    valign = bottom
+}
+# Player progress bar
+label {
+    monitor =
+    text = cmd[update:1000] ~/.config/hypr/bin/medialock "<b>&gt;{{progress_bar}}&lt;</b>"
+    text_align = left
+    color = $border
+    font_size = 5
+    font_family = CaskaydiaCove Nerd Font 10
+
+    position = 0, 132
+    halign = center
+    valign = bottom
+}
     '';
   };
 }

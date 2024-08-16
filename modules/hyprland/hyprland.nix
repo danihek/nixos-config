@@ -41,12 +41,9 @@
       general = {
         gaps_in = 4;
         gaps_out = 2;
-
         border_size = 2;
-
-        "col.active_border" = "$color0";
-        "col.inactive_border" = "$color15";
-
+        "col.active_border" = "rgb(bfc9f3)";
+        "col.inactive_border" = "rgb(242430)";
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
