@@ -80,6 +80,9 @@
    padding-right: 2px;
 }
 
+.modules-left {
+   padding-left: 2px;
+}
 
 #window {
 	color: @foreground;
@@ -88,7 +91,6 @@ window#waybar {
 	background: rgba(30, 30, 45, 0.5);
    border: solid 2px @foreground;
 }
-
 
 #workspaces {
  	margin: 5px 5px 5px 5px;
@@ -102,6 +104,7 @@ window#waybar {
 	color: @background;
 	background: @foreground;
 }
+
 
 #pulseaudio {
 	border: solid 2px @foreground;
