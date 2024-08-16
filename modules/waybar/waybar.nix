@@ -28,7 +28,7 @@
         };
       };
       clock = {
-        format-alt = "{:%Y-%m-%d}";
+        format-alt = " {:%Y-%m-%d}";
         tooltip-format = "{:%Y-%m-%d | %H:%M}";
       };
       cpu = {
@@ -44,9 +44,9 @@
         format-wifi = "{essid} ({signalStrength}%)  ";
       };
       pulseaudio = {
-        format = "{icon} {volume}%";
-        format-bluetooth = "{icon} {volume}% {format_source}";
-        format-bluetooth-muted = "{icon}  {format_source}";
+        format = " {icon} {volume}%" ;
+        format-bluetooth = " {icon} {volume}% {format_source}" ;
+        format-bluetooth-muted = " {icon}  {format_source}" ;
         format-icons = {
           car = "";
           default = [ "" "" "" ];
@@ -56,14 +56,14 @@
           phone = "";
           portable = "";
         };
-        format-muted = " {format_source}";
-        format-source = "{volume}% ";
+        format-muted = "  {format_source} ";
+        format-source = " {volume}% " ;
         format-source-muted = "";
         on-click = "pavucontrol";
       };
       temperature = {
         critical-threshold = 80;
-        format = "{icon}{temperatureC}°C";
+        format = " {icon}{temperatureC}°C ";
         format-icons = [ "" "" "" ];
       };
     }];
