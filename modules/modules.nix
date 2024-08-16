@@ -18,7 +18,7 @@
       ./discord/discord.nix
       ./pywalfox/pywalfox.nix
       ./hyprland/hyprland.nix
-      #./hyprlock/hyprlock.nix
+      ./hyprlock/hyprlock.nix
       ./alacritty/alacritty.nix
 
     # Disabled
