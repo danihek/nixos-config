@@ -211,9 +211,7 @@
     cbonsai
     cmatrix
     fortune
-    neofetch
     pipes-rs
-    fastfetch
 
     # Rest..
     gnome-keyring
