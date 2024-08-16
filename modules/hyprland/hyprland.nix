@@ -39,8 +39,8 @@
       "$lock" = "hyprlock";
 
       general = {
-        gaps_in = 4;
-        gaps_out = 2;
+        gaps_in = 5;
+        gaps_out = 5;
         border_size = 2;
         "col.active_border" = "rgb(bfc9f3)";
         "col.inactive_border" = "rgb(242430)";
