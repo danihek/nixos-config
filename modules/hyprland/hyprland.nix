@@ -24,6 +24,10 @@
     systemd.enable = true;
     xwayland.enable = true;
     
+    extraConfig = ''
+      source = ~/.cache/wal/colors-hyprland.conf
+    '';
+
     settings = {
 
       monitor = [
@@ -41,10 +45,8 @@
 
         border_size = 2;
 
-       "col.active_border" = "rgba(242, 215, 229, 1.0)";
-       "col.inactive_border" = "rgba(167, 160, 163, 1.0)";
-       #"col.active_border" = "rgba(${config.lib.stylix.colors.base0D}ff)";
-       #"col.inactive_border" = "rgba(${config.lib.stylix.colors.base02}ff)";
+       "col.active_border" = "rgba(255,255,255, 0.9)";
+       "col.inactive_border" = "rgba(18, 16, 17, 0.8)";
 
         resize_on_border = false;
         allow_tearing = false;
@@ -207,12 +209,11 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
       ];
-
+      
       misc = {
         disable_hyprland_logo = true;
         animate_mouse_windowdragging = false;
         animate_manual_resizes = false;
-        enable_swallow = true;
         focus_on_activate = true;
       };
     };
