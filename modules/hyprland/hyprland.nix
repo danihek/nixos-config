@@ -187,7 +187,7 @@
 
       exec-once = [
         "swww init" "sleep 0.1 ; setwall"
-        "waybar-reload"
+        "wbar-reload"
         #"pywalfox start"
         "lxqt-policykit-agent"
         "hyprctl setcursor Numix-Cursor 24"

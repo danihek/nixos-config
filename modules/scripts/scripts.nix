@@ -18,6 +18,7 @@ let
       --transition-type="any" \
       --transition-duration=0.3
 
+    wbar-reload
     themecord
     pywalfox update
   '';
