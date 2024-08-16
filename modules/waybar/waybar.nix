@@ -72,11 +72,12 @@
    font-family: Jetbrains Mono;
 	font-size: 13px;
 	border-radius: 0;	
-	padding: 0px 2px 0px 0px;
+	padding: 0px 0px 0px 0px;
 }
 
 .modules-right {
 	background: @background;
+   padding-right: 2px;
 }
 
 
@@ -87,7 +88,6 @@ window#waybar {
 	background: rgba(30, 30, 45, 0.5);
    border: solid 2px @foreground;
 }
-
 
 #workspaces {
  	margin: 5px 5px 5px 5px;
@@ -109,6 +109,7 @@ window#waybar {
 }
 #clock {
 	border: solid 2px @foreground;
+	padding: 0px 5px 0px 0px;
 	color: @foreground;
 }
 #network {
