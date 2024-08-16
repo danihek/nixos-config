@@ -87,7 +87,6 @@ window#waybar {
 
 
 #workspaces {
- 	margin: 5px 5px 5px 5px;
 	background: @background;
 }
 #workspaces button {
@@ -109,14 +108,14 @@ window#waybar {
 
 #pulseaudio {
 	border: solid 2px @foreground;
-	background: @background;
-	color: @foreground;
+	background: @foreground;
+	color: @background;
 }
 #clock {
 	border: solid 2px @foreground;
 	padding: 0px 5px 0px 0px;
-	background: @background;
-	color: @foreground;
+	background: @foreground;
+	color: @background;
 }
 #network {
 	border: solid 2px @foreground;
@@ -125,8 +124,8 @@ window#waybar {
 }
 #temperature {
 	border: solid 2px @foreground;
-	background: @background;
-	color: @foreground;
+	background: @foreground;
+	color: @background;
 }
 
 
