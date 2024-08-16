@@ -23,8 +23,6 @@
       theme = "kphoen";
     };
 
-    #PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)] "
-
     shellAliases = {
       g = "git";
       sl = "ls";
@@ -47,7 +45,7 @@
 
     initExtra = ''
       # Prompt 
-      PROMPT='%n@%m[%(?.%{$fg[default]%}.%{$fg[red]%})%?%{$reset_color%}]:%~$vcs_info_msg_0_$(prompt_char) '
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)] "
 
       # Keys
       bindkey '5~' kill-word
