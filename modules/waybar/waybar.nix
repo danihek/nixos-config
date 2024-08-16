@@ -91,6 +91,11 @@ window#waybar {
    border: solid 2px @foreground;
 }
 
+
+#workspaces {
+ 	margin: 5px 5px 5px 5px;
+	background: @background;
+}
 #workspaces button {
 	padding: 0px 4px 0px 4px;
 	color: @foreground;
@@ -99,7 +104,6 @@ window#waybar {
 	color: @background;
 	background: @foreground;
 }
-
 
 #pulseaudio {
 	border: solid 2px @foreground;
