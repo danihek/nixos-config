@@ -190,7 +190,6 @@
     tree
     tldr
     yazi
-    tmux
     wget
     curl
     entr
