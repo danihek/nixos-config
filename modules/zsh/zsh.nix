@@ -21,7 +21,6 @@
       plugins = 
       [ 
           "git"
-          "tmux"
           "vi-mode"
           "thefuck" 
           "git-extras"
