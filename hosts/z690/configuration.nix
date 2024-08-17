@@ -14,7 +14,7 @@ in
     ];
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs USERNAME; };
+    extraSpecialArgs = { inherit inputs; USERNAME = USERNAME; };
     users = {
       ${USERNAME} = import ../../home/dh-home.nix;
     };
