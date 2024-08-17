@@ -55,7 +55,7 @@
       set_rprompt()
       {
         git -C . rev-parse 2>/dev/null || {RPOMPT="" ; return}
-        RPROMPT="%{$fg[white]%}[%{$fg[green]%}$(git rev-parse --abbrev-ref HEAD 2>/dev/null)%{$fg[white]%}:%{$fg[red]%}$(git status --porcelain 2>/dev/null | wc -l)%}%{$fg[white]%}] "
+        RPROMPT="%{$fg[white]%}[%{$fg[green]%}$(git rev-parse --abbrev-ref HEAD 2>/dev/null)%{$fg[white]%}:%{$fg[red]%}$(git status --porcelain 2>/dev/null | wc -l)%}%{$fg[white]%}]"
       }
       precmd() { set_rprompt }
     '';
