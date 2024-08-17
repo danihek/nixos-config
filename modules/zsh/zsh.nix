@@ -44,7 +44,7 @@
       PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
 
       set_git_prompt() {
-        printf -- "%${COLUMNS}s\n" "$(tput setaf 3)$(parse_git_branch)"
+        printf -- "%''${COLUMNS}s\n" "$(tput setaf 3)$(parse_git_branch)"
       }
       precmd() {
         set_git_prompt
