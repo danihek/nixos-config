@@ -4,7 +4,6 @@
   programs.bash = {
     enable = true;
     enableCompletion = true;
-    enableLsColors = true;
     
     shellAliases = {
       g = "git";
