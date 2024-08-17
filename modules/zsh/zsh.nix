@@ -35,9 +35,6 @@
     initExtra = ''
       autoload -U colors && colors
 
-      PROMPT='[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] '
-      RPROMPT='$(git rev-parse --abbrev-ref HEAD 2>/dev/null): $(git status --porcelain 2>/dev/null | wc -l) '
-
       # Keys
       bindkey '5~' kill-word
       bindkey '^K' kill-line
@@ -47,9 +44,19 @@
       bindkey "^[[1;3D" backward-word
       bindkey "^[[1;5D" backward-word
       bindkey '^H' backward-kill-word
-
       bindkey "^[[H" end-of-line
       bindkey "^[[F" beginning-of-line
+      bindkey '^[begin' beginning-of-line
+      bindkey '^[end' end-of-line
+      bindkey '^A' beginning-of-line
+      bindkey '^E' end-of-line
+
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
+      set_rprompt()
+      {
+        RPROMPT="$(git rev-parse --abbrev-ref HEAD 2>/dev/null): $(git status --porcelain 2>/dev/null | wc -l) "
+      }
+      precmd() { set_rprompt }
     '';
     
     envExtra = ''
