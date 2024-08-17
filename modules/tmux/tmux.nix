@@ -31,11 +31,6 @@
 
       setw -g aggressive-resize on
       setw -g monitor-activity on
-
-      bind h select-pane -L
-      bind j select-pane -D
-      bind k select-pane -U
-      bind l select-pane -R
     '';
   };
 }

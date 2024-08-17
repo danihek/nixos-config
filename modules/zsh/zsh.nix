@@ -59,6 +59,14 @@
         RPROMPT="%{$fg[white]%}[%{$fg[green]%}$(git rev-parse --abbrev-ref HEAD 2>/dev/null)%{$fg[white]%}:%{$fg[red]%}$(git status --porcelain 2>/dev/null | wc -l)%}%{$fg[white]%}]"
       }
       precmd() { set_rprompt }
+
+      # Fix tmux keybinds
+      if [[ -n "$TMUX" ]]; then
+        bindkey '\e[1~' beginning-of-line
+        bindkey '\e[4~' end-of-line
+        bindkey '\e[5~' beginning-of-line
+        bindkey '\e[6~' end-of-line
+      fi
     '';
     
     envExtra = ''
