@@ -36,11 +36,11 @@
       autoload -U colors && colors
 
       parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' | cut -d' ' -f 2
+        git branch 2> /dev/null | sed -e '/^[^*]/d' | cut -d' ' -f 2 | sed 's/$/ /'
       }
 
       # Prompt 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] $parse_git_branch "
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] %{$fg[red]$(parse_git_branch)%}"
 
       # Keys
       bindkey '5~' kill-word
