@@ -36,8 +36,8 @@
           ./hosts/shared.nix
           ./hosts/t430/configuration.nix
           inputs.home-manager.nixosModules.default 
-          home-manager.useGlobalPkgs = true;
-          home-manager.useUserPackages = true;
+          home-manager.useGlobalPkgs;
+          home-manager.useUserPackages;
 
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [
