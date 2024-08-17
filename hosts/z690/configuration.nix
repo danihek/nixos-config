@@ -16,7 +16,7 @@ in
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      dh = import ../../home/dh-home.nix;
+      ${USERNAME} = import ../../home/dh-home.nix;
     };
   };
 
@@ -39,10 +39,10 @@ in
   };
 
   # User settings
-  users.users.dh = {
+  users.users.${USERNAME} = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    description = "dh";
+    description = "${USERNAME}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
