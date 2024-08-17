@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, user, ... }:
 
 {
   home.packages = [
@@ -67,5 +67,5 @@
     '';
   };
 
-  users.users.${home.username).shell = pkgs.zsh;
+  users.users.${user}.shell = pkgs.zsh;
 }
