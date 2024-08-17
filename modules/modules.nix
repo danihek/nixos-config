@@ -1,3 +1,5 @@
+{ pkgs, config, ... }:
+
 {
   imports = [
     # Enabled
