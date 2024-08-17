@@ -35,6 +35,11 @@
     initExtra = ''
       autoload -U colors && colors
 
+      autoload -Uz vcs_info
+      precmd_vcs_info() { vcs_info }
+      precmd_functions+=( precmd_vcs_info )
+      setopt prompt_subst
+
       # Prompt 
       PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] ''${vcs_info_msg_0_}"
       zstyle ':vcs_info:git:*' formats ":%b"
