@@ -35,8 +35,8 @@
     initExtra = ''
       autoload -U colors && colors
 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
-      RPROMPT="$(git rev-parse --abbrev-ref HEAD 2>/dev/null): $(git status --porcelain 2>/dev/null | wc -l) "
+      PROMPT='[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] '
+      RPROMPT='$(git rev-parse --abbrev-ref HEAD 2>/dev/null): $(git status --porcelain 2>/dev/null | wc -l) '
 
       # Keys
       bindkey '5~' kill-word
