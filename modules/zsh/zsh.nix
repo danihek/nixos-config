@@ -35,8 +35,12 @@
     initExtra = ''
       autoload -U colors && colors
 
+      parse_git_branch() {
+        git branch 2> /dev/null | sed -e '/^[^*]/d' | cut -d' ' -f 2
+      }
+
       # Prompt 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] $parse_git_branch%{$fg[green]%}»%{$reset_color%} "
 
       # Keys
       bindkey '5~' kill-word
