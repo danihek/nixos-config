@@ -5,6 +5,7 @@
       ./git/git.nix
       ./zsh/zsh.nix
       ./ssh/ssh.nix
+      ./bash/bash.nix
       ./foot/foot.nix
       ./tmux/tmux.nix
       ./wofi/wofi.nix
