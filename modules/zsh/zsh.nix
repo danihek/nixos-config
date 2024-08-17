@@ -54,7 +54,8 @@
       PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
       set_rprompt()
       {
-        RPROMPT="$(git rev-parse --abbrev-ref HEAD 2>/dev/null): $(git status --porcelain 2>/dev/null | wc -l) "
+        RPROMPT="[%{$fg[green]%}($(git rev-parse --abbrev-ref HEAD 2>/dev/null))%{$fg[white]%}:%{$fg[red]%}$(git status --porcelain 2>/dev/null | wc 
+-l)%}%{$fg[white]%}] "
       }
       precmd() { set_rprompt }
     '';
