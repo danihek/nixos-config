@@ -93,7 +93,6 @@
 
     # Media
     #viber
-    spotify
     vesktop
     element-desktop
 
