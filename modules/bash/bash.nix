@@ -32,21 +32,6 @@
 
       # Prompt 
       PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)] "
-
-      historySize= #Infinite
-
-      # Keys
-      bindkey '5~' kill-word
-      bindkey '^K' kill-line
-      bindkey "^[[3~" delete-char
-      bindkey "^[[1;3C" forward-word
-      bindkey "^[[1;5C" forward-word
-      bindkey "^[[1;3D" backward-word
-      bindkey "^[[1;5D" backward-word
-      bindkey '^H' backward-kill-word
-
-      bindkey "^[[H" end-of-line
-      bindkey "^[[F" beginning-of-line
     '';
     
     sessionVariables = {

@@ -14,32 +14,22 @@
     autosuggestion.enable = true;
     syntaxHighlighting.enable = true;
 
-    oh-my-zsh = {
-      enable = true;
-      plugins = 
-      [ 
-          "git"
-      ];
-      theme = "kphoen";
-    };
-
     shellAliases = {
       g = "git";
       sl = "ls";
       lf = "yazi"; #xd
-      ls = "eza";
+      ls = "ls";
       tm = "tmux";
-      l = "eza -l";
-      ll = "eza -lh";
-      nv = "neovide";
-      la = "eza -alh";
+      l = "ls -l";
+      ll = "ls -lh";
+      la = "ls -alh";
       cl = "clear & l";
       fucking = "sudo";
-      lla = "eza -alh";
-      tree = "eza --tree";
+      lla = "ls -alh";
+      tree = "tree";
       mkcl = "make clean";
       neofetch = "fastfetch";
-      TODO = "vim ~/.TODO.md";
+      TODO = "nvim ~/.TODO.md";
       cpl = "make clean ; clear; make";
     };
 
@@ -66,7 +56,6 @@
       export IMAGE="imv"
       export VIDEO="mpv"
       export KEYTIMEOUT=1
-      export TERM="alacritty"
       export BROWSER="firefox"
       export OPENER="xdg-open"
       export open="xdg-open"
