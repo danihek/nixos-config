@@ -54,7 +54,6 @@
       IMAGE="imv";
       VIDEO="mpv";
       KEYTIMEOUT=1;
-      TERM="alacritty";
       BROWSER="firefox";
       OPENER="xdg-open";
       open="xdg-open";
