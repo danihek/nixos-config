@@ -2,6 +2,9 @@
 
 { inputs, config, pkgs, ... }:
 
+let
+  USERNAME = "dh";
+in
 {
   imports =
     [
