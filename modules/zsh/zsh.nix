@@ -1,12 +1,12 @@
 { pkgs, ... }:
 
 {
-  home.packages = [
-    pkgs.fzf-zsh
-    pkgs.zsh-fzf-tab
-    pkgs.zsh-fzf-history-search
-  ];
-  programs.fzf.enableZshIntegration = true;
+ #home.packages = [
+ #  pkgs.fzf-zsh
+ #  pkgs.zsh-fzf-tab
+ #  pkgs.zsh-fzf-history-search
+ #];
+ #programs.fzf.enableZshIntegration = true;
 
   programs.zsh = {
     enable = true;
@@ -33,7 +33,7 @@
     };
 
     initExtra = ''
-      autoload -U colors && colors
+      #autoload -U colors && colors
 
       parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' | cut -d' ' -f 2 | sed 's/$/ /'
@@ -45,9 +45,6 @@
       precmd() {
         set_prompt
       }
-
-      HISTSIZE=
-      SAVEHIST=
 
       # Keys
       bindkey '5~' kill-word
