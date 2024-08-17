@@ -49,7 +49,6 @@
     cmake
     clang
     clang-tools
-    llvm.clang # clangd
     libGL
     seatd
     libgcc
