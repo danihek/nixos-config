@@ -7,7 +7,7 @@
 
     settings = {
      main = {
-       include= "~/.cache/dh/colors-foot.ini";
+       include= "/home/$USER/.cache/wal/colors-foot.ini";
        term = "xterm-256color";
        font = "JetBrainsMono Nerd Font:size=13";
        dpi-aware = "yes";
