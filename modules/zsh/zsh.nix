@@ -10,8 +10,8 @@
 
   programs.zsh = {
     enable = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
+    #autosuggestion.enable = true;
+    #syntaxHighlighting.enable = true;
 
     shellAliases = {
       g = "git";
@@ -46,6 +46,8 @@
         set_prompt
       }
 
+      HISTSIZE=
+      SAVEHIST=
 
       # Keys
       bindkey '5~' kill-word
