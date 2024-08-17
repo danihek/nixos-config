@@ -35,20 +35,8 @@
     initExtra = ''
       autoload -U colors && colors
 
-      parse_git_branch() {
-        branch=$(git rev-parse --abbrev-ref HEAD > /dev/null 2>&1)
-        [ $? -eq 0 ] && echo $branch | sed 's/$/ /'
-      }
-
-      # Prompt 
-      PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
-
-      set_git_prompt() {
-        printf -- "%''${COLUMNS}s\n" "$(tput setaf 3)$(parse_git_branch)"
-      }
-      precmd() {
-        set_git_prompt
-      }
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
+      RPROMPT="$(git rev-parse --abbrev-ref HEAD 2>/dev/null): $(git status --porcelain 2>/dev/null | wc -l) "
 
       # Keys
       bindkey '5~' kill-word
