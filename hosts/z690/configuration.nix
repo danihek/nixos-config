@@ -26,13 +26,13 @@
   networking = {
     networkmanager.enable = true;
     hostName = "nix";
-    defaultGateway = "192.168.1.1";
-    nameservers = [ "1.1.1.1" ];
 
     interfaces.enp4s0.ipv4.addresses = [ {
       address = "192.168.1.195";
       prefixLength = 24;
     } ];
+    defaultGateway = "192.168.1.1";
+    nameservers = [ "1.1.1.1" ];
   };
 
   # User settings

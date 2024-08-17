@@ -21,17 +21,20 @@
   boot.loader.grub.enable = true;
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
-  
+
   networking = {
     networkmanager.enable = true;
     hostName = "nix";
+
+    interfaces = {
+      useDHCP = false;
+      wlp3s0.ipv4.addresses = [ {
+        address = "192.168.1.190";
+        prefixLength = 24;
+      } ];
+    };
     defaultGateway = "192.168.1.1";
     nameservers = [ "1.1.1.1" ];
-
-    interfaces.wlp3s0.ipv4.addresses = [ {
-      address = "192.168.1.190";
-      prefixLength = 24;
-    } ];
   };
 
   # User settings
