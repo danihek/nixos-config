@@ -3,7 +3,9 @@
 {
   programs.bash = {
     enable = true;
-
+    enableCompletion = true;
+    enableLsColors = true;
+    
     shellAliases = {
       g = "git";
       sl = "ls";
@@ -32,6 +34,8 @@
       # Prompt 
       PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)] "
 
+      historySize= #Infinite
+
       # Keys
       bindkey '5~' kill-word
       bindkey '^K' kill-line
@@ -46,20 +50,19 @@
       bindkey "^[[F" beginning-of-line
     '';
     
-    envExtra = ''
-      # Variables
-      export IMAGE="imv"
-      export VIDEO="mpv"
-      export KEYTIMEOUT=1
-      export TERM="alacritty"
-      export BROWSER="firefox"
-      export OPENER="xdg-open"
-      export open="xdg-open"
-      export TERMINAL="alacritty"
-      export TERM="xterm-256color"
-      export LAUNCHER="wofi --show drun"
-      export FZF_DEFAULT_OPTS="--color=16"
-      export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
-    '';
+    sessionVariables = {
+      IMAGE="imv";
+      VIDEO="mpv";
+      KEYTIMEOUT=1;
+      TERM="alacritty";
+      BROWSER="firefox";
+      OPENER="xdg-open";
+      open="xdg-open";
+      TERMINAL="alacritty";
+      TERM="xterm-256color";
+      LAUNCHER="wofi --show drun";
+      FZF_DEFAULT_OPTS="--color=16";
+      _JAVA_OPTIONS="-Dawt.useSystemAAFontSettings=lcd";
+    };
   };
 }
