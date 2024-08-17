@@ -36,8 +36,8 @@
       autoload -U colors && colors
 
       parse_git_branch() {
-        branch=$(git rev-parse --abbrev-ref HEAD)
-        [ $? -eq 0 ] && echo $branch | sed 's/$/ /' > /dev/null
+        branch=$(git rev-parse --abbrev-ref HEAD > /dev/null 2>&1)
+        [ $? -eq 0 ] && echo $branch | sed 's/$/ /'
       }
 
       # Prompt 
