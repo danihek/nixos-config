@@ -2,6 +2,9 @@
 
 { inputs, config, pkgs, ... }:
 
+let
+  USERNAME = "";
+in
 {
   imports =
     [
@@ -13,7 +16,7 @@
   home-manager = {
     extraSpecialArgs = { inherit inputs; };
     users = {
-      ven = import ../../home/ven-home.nix;
+      ${USERNAME} = import ../../home/ven-home.nix;
     };
   }; 
 
@@ -38,10 +41,10 @@
   };
 
   # User settings
-  users.users.ven = {
+  users.users.${USERNAME} = {
     shell = pkgs.zsh;
     isNormalUser = true;
-    description = "ven";
+    description = "${USERNAME}";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };

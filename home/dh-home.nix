@@ -5,8 +5,8 @@
     ../modules/modules.nix
   ];
 
-  home.username = "dh";
-  home.homeDirectory = "/home/dh";
+  home.username = "${USERNAME}";
+  home.homeDirectory = "/home/${USERNAME}";
   home.stateVersion = "24.05";
 
   home.packages = [
