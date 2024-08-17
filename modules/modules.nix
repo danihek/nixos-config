@@ -3,7 +3,7 @@
     # Enabled
       ./gtk/gtk.nix
       ./git/git.nix
-      ./zsh/zsh.nix
+      #./zsh/zsh.nix
       ./ssh/ssh.nix
       ./bash/bash.nix
       ./foot/foot.nix

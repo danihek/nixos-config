@@ -37,7 +37,7 @@
 
   # User settings
   users.users.dh = {
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
     isNormalUser = true;
     description = "dh";
     extraGroups = [ "networkmanager" "wheel" ];
