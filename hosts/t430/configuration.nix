@@ -27,7 +27,7 @@
     hostName = "nix";
 
     interfaces = {
-      useDHCP = false;
+      wlp3s0.useDHCP = false;
       wlp3s0.ipv4.addresses = [ {
         address = "192.168.1.190";
         prefixLength = 24;
