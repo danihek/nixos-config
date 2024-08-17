@@ -1,4 +1,4 @@
-{ lib, pkgs, config, home-manager, ...}:
+{ pkgs, ...}:
 
 {
   programs.foot = {
@@ -7,7 +7,7 @@
 
     settings = {
      main = {
-       include= "/home/${config.users.users.${username}}/.cache/wal/colors-foot.ini";
+       include= "/home/dh/.cache/wal/colors-foot.ini";
        term = "xterm-256color";
        font = "JetBrainsMono Nerd Font:size=13";
        dpi-aware = "yes";
