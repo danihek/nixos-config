@@ -36,14 +36,18 @@
       autoload -U colors && colors
 
       parse_git_branch() {
-        git branch 2> /dev/null | sed -e '/^[^*]/d' | cut -d' ' -f 2 | sed 's/$/ /'
+        branch=$(git rev-parse --abbrev-ref HEAD)
+        [ $? -eq 0 ] && echo $branch | sed 's/$/ /' > /dev/null
       }
+
       # Prompt 
-      set_prompt() {
-        PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] %{$fg[red]$(parse_git_branch)%}"
+      PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
+
+      set_git_prompt() {
+        printf -- "%${COLUMNS}s\n" "$(tput setaf 3)$(parse_git_branch)"
       }
       precmd() {
-        set_prompt
+        set_git_prompt
       }
 
       # Keys
