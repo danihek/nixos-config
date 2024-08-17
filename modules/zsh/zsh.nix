@@ -10,8 +10,8 @@
 
   programs.zsh = {
     enable = true;
-    #autosuggestion.enable = true;
-    #syntaxHighlighting.enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
 
     shellAliases = {
       g = "git";
@@ -33,7 +33,7 @@
     };
 
     initExtra = ''
-      #autoload -U colors && colors
+      autoload -U colors && colors
 
       parse_git_branch() {
         git branch 2> /dev/null | sed -e '/^[^*]/d' | cut -d' ' -f 2 | sed 's/$/ /'
