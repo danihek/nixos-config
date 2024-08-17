@@ -40,7 +40,7 @@
       }
 
       # Prompt 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] $parse_git_branch%{$fg[green]%}»%{$reset_color%} "
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] $parse_git_branch "
 
       # Keys
       bindkey '5~' kill-word
