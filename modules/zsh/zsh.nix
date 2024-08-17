@@ -67,5 +67,5 @@
     '';
   };
 
-  users.users.${home.user}.shell = pkgs.zsh;
+  users.users.${home-manager.users.${user}}.shell = pkgs.zsh;
 }
