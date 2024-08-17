@@ -3,7 +3,7 @@
 { inputs, config, pkgs, ... }:
 
 let
-  USERNAME = "";
+  USERNAME = "ven";
 in
 {
   imports =
@@ -14,7 +14,7 @@ in
     ];
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = { inherit inputs; USERNAME = USERNAME; };
     users = {
       ${USERNAME} = import ../../home/ven-home.nix;
     };

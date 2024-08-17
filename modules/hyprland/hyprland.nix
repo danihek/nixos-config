@@ -25,7 +25,7 @@
     xwayland.enable = true;
     
     extraConfig = ''
-      source = ~/.cache/wal/colors-hyprland.conf
+      source = /home/${USERNAME}/.cache/wal/colors-hyprland.conf
     '';
 
     settings = {
@@ -34,7 +34,7 @@
         "DP-2,2560x1440@165,2560x0,1,transform,1"
       ];
 
-      "$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini'';
+      "$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini"'';
       "$menu" = "wofi --show drun";
       "$lock" = "hyprlock";
 
@@ -180,12 +180,7 @@
       ];
 
       exec-once = [
-        "swww init" "sleep 0.1 ; setwall"
-        "wbar-reload"
-
-        "~/.config/hypr/bin/medialock artup" # } Medialock thanks to https://github.com/Klapptnot
-        "~/.config/hypr/bin/medialock hwman" # 
-
+        "swww init ; sleep 1; setwall"
         #"pywalfox start"
         "lxqt-policykit-agent"
         "hyprctl setcursor Numix-Cursor 24"
