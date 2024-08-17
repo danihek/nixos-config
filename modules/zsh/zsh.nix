@@ -33,11 +33,10 @@
     };
 
     initExtra = ''
-      autoload -U colors && colors
-      autoload -Uz vcs_info
+      autoload -U colors
 
       # Prompt 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] $fg[red]%}%$vcs_info_msg_0_"
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
 
       HISTSIZE=
       SAVEHIST=
