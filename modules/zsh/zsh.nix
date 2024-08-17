@@ -42,7 +42,10 @@
       zstyle ':vcs_info:git:*' formats ":%b "
 
       # Prompt 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] %{$fg[red]%}%$vcs_info_msg_0_%}"
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] $fg[red]%}%$vcs_info_msg_0_"
+
+      HISTSIZE=
+      SAVEHIST=
 
       # Keys
       bindkey '5~' kill-word
