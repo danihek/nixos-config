@@ -46,7 +46,11 @@
     git
     lua
     udev
+    cmake
     clang
+    clang-tools
+    llvm.lldb
+    llvm.clang # clangd
     libGL
     seatd
     libgcc
@@ -59,7 +63,6 @@
     llvm_18
     wayland
     wlroots
-    libclang
     libclang
     libinput 
     libsecret
