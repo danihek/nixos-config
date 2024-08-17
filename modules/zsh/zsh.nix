@@ -36,7 +36,7 @@
       autoload -U colors && colors
 
       # Prompt 
-      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)]{$vcs_info_msg_0_} "
+      PROMPT="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}$(git_prompt_info)] "
       zstyle ':vcs_info:git:*' formats ":%b"
 
       # Keys
