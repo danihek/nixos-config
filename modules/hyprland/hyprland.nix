@@ -1,4 +1,4 @@
-{ lib, pkgs, config, ... }: 
+{ lib, pkgs, config, USERNAME, ... }: 
 
 {
   home.packages = with pkgs; [
@@ -34,7 +34,7 @@
         "DP-2,2560x1440@165,2560x0,1,transform,1"
       ];
 
-      "$terminal" = "footclient";
+      "$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini'';
       "$menu" = "wofi --show drun";
       "$lock" = "hyprlock";
 
