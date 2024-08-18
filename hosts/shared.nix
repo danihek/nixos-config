@@ -146,11 +146,8 @@
     # Rest..
     glib
     gnome-keyring
-    libsForQt5.qt5ct
-    gruvbox-dark-gtk
-    gnome-themes-extra
-    gsettings-desktop-schemas
-    libsForQt5.qtstyleplugin-kvantum
+    libsforqt5.qt5.qtquickcontrols2   
+    libsforqt5.qt5.qtgraphicaleffects
 ];
 
   # Nix
