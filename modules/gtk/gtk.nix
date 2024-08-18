@@ -19,7 +19,7 @@ in
   qt.platformTheme = "gtk";
   qt.style.name = "adwaita-dark";
   qt.style.package = pkgs.adwaita-qt;
-};
+}
 
 # dconf.settings = {
 #   "org/gnome/desktop/interface" = {
