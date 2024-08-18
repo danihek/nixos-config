@@ -86,7 +86,14 @@ in
   environment.variables = {
     ROC_ENABLE_PRE_VEGA = "1";
   };
-
+  
+  environment.systemPackages = with pkgs; [
+    driversi686Linux.amdvlk
+    rocmPackages.clr.icd
+    amdvlk
+    lact
+  ];
+ 
   hardware = {
       opengl = {
       enable = true;
@@ -105,8 +112,7 @@ in
       amdvlk
     ];
   };
-
-  environment.systemPackages = with pkgs; [ lact ];
+ 
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
