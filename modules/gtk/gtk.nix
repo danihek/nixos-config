@@ -18,7 +18,7 @@
     };
 
     theme = {
-      name = "Gruvbox-Dark-BL";
+      name = "gruvbox-dark";
       package = pkgs.gruvbox-dark-gtk;
     };
 
@@ -45,9 +45,9 @@
     enable = true;
       platformTheme = "gtk3";
       style = {
-      name = "Gruvbox-Dark-BL";
+      name = "gruvbox-dark";
     };
   };
 
-  home.sessionVariables.GTK_THEME = "Gruvbox-Dark-BL";
+  home.sessionVariables.GTK_THEME = "gruvbox-dark";
 }
