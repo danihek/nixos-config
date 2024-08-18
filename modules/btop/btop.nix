@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  nixpkgs.config.rocmSupport = true;
   programs = {
     btop = {
       enable = true;
