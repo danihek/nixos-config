@@ -44,7 +44,7 @@
   qt = {
     enable = true;
     platformTheme = "gnome";
-    style = "gtk2";
+    style = gtk2;
   };
 
   home.sessionVariables.GTK_THEME = "Gruvbox-Dark-BL";
