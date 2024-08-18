@@ -21,6 +21,7 @@
           key = "who?";
           format = "ダニシェク";
         }
+        "break"
         {
           type = "datetime";
           key = "Date";
@@ -28,7 +29,7 @@
         }
         {
             type = "os";
-            key = "│ ├ ";
+            key = "│ ├";
             keyColor = "green";
         }
         {
