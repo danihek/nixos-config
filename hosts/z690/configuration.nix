@@ -88,17 +88,24 @@ in
   };
   
   environment.systemPackages = with pkgs; [
-    driversi686Linux.amdvlk
-    rocmPackages.clr.icd
-    amdvlk
+   #driversi686Linux.amdvlk
+   #rocmPackages.clr.icd
+   #amdvlk
     lact
   ];
  
   hardware = {
-      opengl = {
+    opengl = {
       enable = true;
       driSupport = true;
       driSupport32Bit = true;
+      
+      extraPackages = with pkgs; [
+        driversi686Linux.amdvlk
+        rocmPackages.clr.icd
+        amdvlk
+      ];
+
     };
 
     graphics = {
@@ -106,11 +113,6 @@ in
       enable32Bit = true;
     };
     
-    extraPackages = with pkgs; [
-      driversi686Linux.amdvlk
-      rocmPackages.clr.icd
-      amdvlk
-    ];
   };
  
   systemd.packages = with pkgs; [ lact ];
