@@ -114,10 +114,10 @@
 
         "$mod, E, exec, thunar"
         "$mod, O, exec, $menu"
-        "$mod, L, exec, $lock"
         "$mod, R, exec, rofmoji"
         "$mod, B, exec, firefox"
         "$mod, P, exec, pavucontrol"
+        "$mod SHIFT, L, exec, $lock"
 
         "$mod, U, exec, setwall"
         
