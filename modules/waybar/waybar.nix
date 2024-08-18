@@ -27,7 +27,7 @@
         };
       };
       workspaces = {
-        format: "{name}";
+        format = "{name}";
         format-icons = [
           "〇"
           "一"
