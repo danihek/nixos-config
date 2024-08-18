@@ -12,7 +12,8 @@
 
   xdg.portal = {
     enable = true;
-    configPackages = with pkgs; [
+    xdg.portal.config.common.default = "*";
+    extraPortals = with pkgs; [
       xdg-desktop-portal-gtk
       xdg-desktop-portal-wlr
       xdg-desktop-portal-hyprland
