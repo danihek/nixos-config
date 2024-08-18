@@ -16,11 +16,11 @@
         "clock"
       ];
       battery = {
-        format = "{icon} {capacity}%";
-        format-alt = "{icon} {time}";
+        format = "{icon} {capacity}% ";
+        format-alt = "{icon} {time} ";
         format-charging = " {capacity}%";
         format-icons = [ "" "" "" "" "" ];
-        format-plugged = " {capacity}%";
+        format-plugged = " {capacity}% ";
         states = {
           critical = 20;
           warning = 30;
