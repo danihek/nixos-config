@@ -144,10 +144,7 @@
     pipes-rs
 
     # Rest..
-    glib
     gnome-keyring
-    libsForQt5.qt5.qtquickcontrols2   
-    libsForQt5.qt5.qtgraphicaleffects
 ];
 
   # Nix
