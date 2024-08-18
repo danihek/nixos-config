@@ -24,7 +24,7 @@
         {
           type = "custom";
           key = "who?";
-          format = "ダニシェク";
+          format = "{#1}ダニシェク";
         }
         "break"
         {
