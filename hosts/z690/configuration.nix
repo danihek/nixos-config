@@ -76,14 +76,6 @@ in
     ROC_ENABLE_PRE_VEGA = "1";
   };
 
-  hardware.extraPackages = with pkgs; [
-    amdvlk
-  ];
-  # For 32 bit applications 
-  hardware.extraPackages32 = with pkgs; [
-    driversi686Linux.amdvlk
-  ];
-
   # Bluetooth
   services.blueman.enable = false;
   hardware.bluetooth.enable = false; 
