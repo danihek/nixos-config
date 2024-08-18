@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  gruvboxplus = import ./gruvbox-plus.nix { inherit pkgs; };
+  gruvboxPlus = import ./gruvbox-plus.nix { inherit pkgs; };
 in
 {
   gtk.enable = true;
