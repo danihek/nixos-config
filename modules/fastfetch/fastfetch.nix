@@ -16,6 +16,9 @@
         separator = "  ";
       };
       modules = [
+        "break"
+        "break"
+        "break"
         {
           type = "custom";
           key = "who?";
