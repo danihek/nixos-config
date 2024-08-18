@@ -12,7 +12,6 @@
       always_parse_args="true";
       show_all="true";
       print_command="true";
-      layer="overlay";
       insensitive="true";
       prompt="What package senpai...?";
       allow_markup="true";
