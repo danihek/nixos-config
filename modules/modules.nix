@@ -7,7 +7,8 @@
       ./git/git.nix
       ./zsh/zsh.nix
       ./ssh/ssh.nix
-      #./bash/bash.nix
+      ./bash/bash.nix
+      ./btop/btop.nix
       ./foot/foot.nix
       ./tmux/tmux.nix
       ./wofi/wofi.nix

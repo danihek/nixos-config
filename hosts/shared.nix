@@ -33,7 +33,6 @@
     home-manager
 
     # Top's
-    btop
     htop
     
     # Browsers
