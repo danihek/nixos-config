@@ -43,7 +43,7 @@
 
   qt = {
     enable = true;
-      platformTheme = "qt5ct";
+      platformTheme = "gtk3";
       style = {
       package = with pkgs; [ adwaita-qt adwaita-qt6 ];
       name = "adwaita-dark";
