@@ -92,22 +92,15 @@ in
   ];
  
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
-      
+      enable32Bit = true;
       extraPackages = with pkgs; [
         driversi686Linux.amdvlk
         rocmPackages.clr.icd
         amdvlk
       ];
-
     };
-
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-    };
-    
   };
  
   systemd.packages = with pkgs; [ lact ];
