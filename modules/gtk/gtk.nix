@@ -37,5 +37,13 @@
       cursor-size = 24;
       cursor-theme = "Numix-Cursor";
     };
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "palenight";
+    };
   };
+
+  home.packages = with pkgs; [
+    gnomeExtensions.user-themes
+    palenight-theme
+  ];
 }

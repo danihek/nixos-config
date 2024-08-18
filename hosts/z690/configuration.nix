@@ -33,26 +33,10 @@ in
   boot.tmp.cleanOnBoot = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
   boot.kernelParams = [
     "video=DP-1:2560x1440@165"
     "video=DP-2:2560x1440@165"
   ];
-
-  systemd.tmpfiles.rules = 
-    let
-      rocmEnv = pkgs.symlinkJoin {
-        name = "rocm-combined";
-        paths = with pkgs.rocmPackages; [
-          rocblas
-          hipblas
-          clr
-        ];
-      };
-    in
-    [
-      "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
-    ];
 
   networking = {
     hostName = "nix";
@@ -83,26 +67,11 @@ in
     NIX_FLAKE_CURRENT_CONFIG = "mainpc";
   };
 
-  environment.variables = {
-    ROC_ENABLE_PRE_VEGA = "1";
-  };
-  
   environment.systemPackages = with pkgs; [
     lact
   ];
  
-  hardware = {
-    graphics = {
-      enable = true;
-      enable32Bit = true;
-      extraPackages = with pkgs; [
-        driversi686Linux.amdvlk
-        rocmPackages.clr.icd
-        amdvlk
-      ];
-    };
-  };
- 
+  hardware.graphics.enable = true;
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
