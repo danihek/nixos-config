@@ -26,6 +26,7 @@
     self,
     nixpkgs,
     themecord,
+    nixos-cli,
     home-manager,
     ... 
   } 
