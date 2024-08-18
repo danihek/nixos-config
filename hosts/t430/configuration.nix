@@ -76,7 +76,7 @@ in
     uncoreOffset = -80;
     gpuOffset = -80;
     analogioOffset = -90;
-  }
+  };
 
   networking = {
     hostName = "nix";
