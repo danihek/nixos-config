@@ -13,13 +13,13 @@
     enable = true;
 
     iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
+      name = "gruvbox-dark";
+      package = pkgs.gruvbox-dark-icons-gtk;
     };
 
     theme = {
       name = "Gruvbox-Dark-BL";
-      package = pkgs.tokyonight-gtk-theme;
+      package = pkgs.gruvbox-dark-gtk;
     };
 
     cursorTheme = {
