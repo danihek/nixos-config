@@ -20,6 +20,7 @@
         "break"
         "break"
         "break"
+        "break"
         {
           type = "custom";
           key = "who?";
