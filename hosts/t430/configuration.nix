@@ -34,6 +34,51 @@ in
   boot.loader.grub.device = "/dev/sda";
   boot.loader.grub.useOSProber = true;
 
+  # Power management
+  services.tlp.enable = true;
+  powerManagement.enable = true;
+  services.thermald.enable = true;
+  powerManagement.powertop.enable = true;
+
+  services.tlp = {
+      enable = false;
+      settings = {
+        CPU_SCALING_GOVERNOR_ON_AC = "performance";
+        CPU_SCALING_GOVERNOR_ON_BAT = "powersave";
+
+        CPU_ENERGY_PERF_POLICY_ON_BAT = "power";
+        CPU_ENERGY_PERF_POLICY_ON_AC = "performance";
+
+        CPU_MIN_PERF_ON_AC = 0;
+        CPU_MAX_PERF_ON_AC = 100;
+        CPU_MIN_PERF_ON_BAT = 0;
+        CPU_MAX_PERF_ON_BAT = 10;
+      };
+  };
+
+  services.auto-cpufreq = {
+    enable = true;  
+    settings = {
+      battery = {
+         governor = "powersave";
+         turbo = "never";
+      };
+      charger = {
+         governor = "performance";
+         turbo = "auto";
+      };
+    };
+  };
+
+  # Similar CPU: https://github.com/carjorvaz/nixos/blob/3e97cbab17300e611cc2ad56522aa9b08e7eb527/hosts/trajanus.nix#L57
+  services.undervolt = {
+    enable = true;
+    coreOffset = -80;
+    uncoreOffset = -80;
+    gpuOffset = -80;
+    analogioOffset = -90;
+  }
+
   networking = {
     hostName = "nix";
     defaultGateway = "192.168.1.1";
