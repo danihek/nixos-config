@@ -59,7 +59,7 @@
         }
         {
           type = "datetime";
-          key = "Date";
+          key = "🗓";
           format = "{1}-{3}-{11}";
         }
       ];
