@@ -28,24 +28,24 @@
         }
         "break"
         {
-          type = "datetime";
-          key = "Date";
-          format = "{1}-{3}-{11}";
+          type = "host";
+          key = "󰌢 PC";
+          keyColor = "blue";
         }
         {
             type = "os";
             key = "│ ├";
-            keyColor = "green";
+            keyColor = "blue";
         }
         {
           type = "packages";
           key = "│ ├󰏖";
-          keyColor = "yellow";
+          keyColor = "blue";
         }
         {
-          type = "shell";
-          key = "│ └";
-          keyColor = "yellow";
+          type = "wm";
+          key = "│ ├";
+          keyColor = "blue";
         }
         {
           type = "terminal";
@@ -53,14 +53,14 @@
           keyColor = "blue";
         }
         {
-          type = "wm";
-          key = " DE/WM";
+          type = "shell";
+          key = "│ ├";
           keyColor = "blue";
         }
         {
-          type = "host";
-          key = "󰌢 PC";
-          keyColor = "green";
+          type = "datetime";
+          key = "Date";
+          format = "{1}-{3}-{11}";
         }
       ];
     };
