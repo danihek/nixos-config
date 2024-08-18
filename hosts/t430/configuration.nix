@@ -35,7 +35,6 @@ in
   boot.loader.grub.useOSProber = true;
 
   # Power management
-  services.tlp.enable = true;
   powerManagement.enable = true;
   services.thermald.enable = true;
   powerManagement.powertop.enable = true;
