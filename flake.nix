@@ -14,6 +14,11 @@
       url = "github:danihek/Themecord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nixos-cli = {
+      url = "github:water-sucks/nixos";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = 
@@ -51,6 +56,7 @@
           ./hosts/shared.nix
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
+          nixos-cli.nixosModules.nixos-cli
 
           ({ config, pkgs, ... }: {
            environment.systemPackages = with pkgs; [
