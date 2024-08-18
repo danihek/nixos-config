@@ -5,7 +5,7 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos_small";
+        source = "nixos";
         padding = {
           right = 1;
         };
@@ -17,14 +17,22 @@
       };
       modules = [
         {
+          type = "custom";
+          format = "┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓";
+        }
+        {
+          type = "custom";
+          format = "ダニシェク";
+        }
+        {
           type = "datetime";
           key = "Date";
           format = "{1}-{3}-{11}";
         }
         {
-          type = "datetime";
-          key = "Time";
-          format = "{14}:{17}:{20}";
+            type = "os";
+            key = " ├─ ";
+            keyColor = "green";
         }
         {
           type = "packages";
@@ -50,6 +58,10 @@
           type = "host";
           key = "󰌢 PC";
           keyColor = "green";
+        }
+        {
+          type = "custom";
+          format = "┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛";
         }
       ];
     };
