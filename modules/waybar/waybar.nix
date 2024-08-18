@@ -26,6 +26,21 @@
           warning = 30;
         };
       };
+      workspaces = {
+        format: "{name}",
+        format-icons = [
+          "〇"
+          "一"
+          "二"
+          "三"
+          "四"
+          "五"
+          "六"
+          "七"
+          "八"
+          "九"
+        ];
+      };
       clock = {
         format = "{:%H:%M}";
         format-alt = "{:%Y-%m-%d}";
