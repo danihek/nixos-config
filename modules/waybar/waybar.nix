@@ -27,8 +27,8 @@
         };
       };
       clock = {
-        format = " {:%H:%M}";
-        format-alt = " {:%Y-%m-%d}";
+        format = "{:%H:%M}";
+        format-alt = "{:%Y-%m-%d}";
         tooltip-format = "{:%Y-%m-%d | %H:%M}";
       };
       network = {
@@ -116,34 +116,30 @@ window#waybar {
 }
 #network {
 	border: solid 2px @foreground;
-	background: @background;
-	color: @foreground;
+	background: @foreground;
+	color: @background;
 }
 #temperature {
 	border: solid 2px @foreground;
 	background: @foreground;
 	color: @background;
 }
-
-
 #battery {
 	border: solid 2px @foreground;
-	color: @foreground;
+	background: @foreground;
+	color: @background;
 }
 #battery.warning {
   border-color: #EF6C00;
-  background-color: #EF6C00;
-  color: white;
+  color: #EF6C00;
 }
 #battery.critical {
-  border-color: #F44336;
-  background-color: #F44336;
-  color: white;
+  border-color: #D32F2F;
+  color: #D32F2F;
 }
 #battery.charging {
-  background-color: #4EFF63;
-  border-color: #4EFF63;
-  color: white;
+  border-color: #4CAF50;
+  color: #4CAF50;
 }
        '';
   };
