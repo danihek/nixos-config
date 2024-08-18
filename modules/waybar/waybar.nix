@@ -26,7 +26,7 @@
           warning = 30;
         };
       };
-      workspaces = {
+      "hyprland/workspaces" = {
         format = "{icon}";
           format-icons = {
             "1" = "〇";
