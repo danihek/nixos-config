@@ -43,11 +43,6 @@ in
     "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
   ];
 
-  # Enable ROCm
-  environment.systemPackages = with pkgs; [
-    rocclr
-  ];
-
   networking = {
     hostName = "nix";
     defaultGateway = "192.168.1.1";
