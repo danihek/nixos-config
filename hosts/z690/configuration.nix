@@ -76,11 +76,11 @@ in
     ROC_ENABLE_PRE_VEGA = "1";
   };
 
-  hardware.hardware.extraPackages = with pkgs; [
+  hardware.extraPackages = with pkgs; [
     amdvlk
   ];
   # For 32 bit applications 
-  hardware.hardware.extraPackages32 = with pkgs; [
+  hardware.extraPackages32 = with pkgs; [
     driversi686Linux.amdvlk
   ];
 
