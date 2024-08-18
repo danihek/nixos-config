@@ -188,12 +188,6 @@
     jack.enable = true;
   };
 
-  qt = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "Gruvbox-Dark-BL";
-  };
-
   # Programs
   programs.dconf.enable = true;
   programs.zsh.enable = true;
