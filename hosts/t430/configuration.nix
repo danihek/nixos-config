@@ -71,7 +71,7 @@ in
 
   # Similar CPU: https://github.com/carjorvaz/nixos/blob/3e97cbab17300e611cc2ad56522aa9b08e7eb527/hosts/trajanus.nix#L57
   services.undervolt = {
-    enable = true;
+    enable = false; # I have Haswell fck
     coreOffset = -50;
     uncoreOffset = -50;
     gpuOffset = -50;
