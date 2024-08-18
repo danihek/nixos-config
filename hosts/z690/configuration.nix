@@ -39,9 +39,20 @@ in
     "video=DP-2:2560x1440@165"
   ];
 
-  systemd.tmpfiles.rules = [
-    "L+    /opt/rocm/hip   -    -    -     -    ${pkgs.rocmPackages.clr}"
-  ];
+  systemd.tmpfiles.rules = 
+    let
+      rocmEnv = pkgs.symlinkJoin {
+        name = "rocm-combined";
+        paths = with pkgs.rocmPackages; [
+          rocblas
+          hipblas
+          clr
+        ];
+      };
+    in
+    [
+      "L+    /opt/rocm   -    -    -     -    ${rocmEnv}"
+    ];
 
   networking = {
     hostName = "nix";
@@ -75,6 +86,29 @@ in
   environment.variables = {
     ROC_ENABLE_PRE_VEGA = "1";
   };
+
+  hardware = {
+      opengl = {
+      enable = true;
+      driSupport = true;
+      driSupport32Bit = true;
+    };
+
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    
+    extraPackages = with pkgs; [
+      driversi686Linux.amdvl
+      rocmPackages.clr.icd
+      amdvlk
+    ];
+  };
+
+  environment.systemPackages = with pkgs; [ lact ];
+  systemd.packages = with pkgs; [ lact ];
+  systemd.services.lactd.wantedBy = ["multi-user.target"];
 
   # Bluetooth
   services.blueman.enable = false;
