@@ -58,7 +58,7 @@
         "MOZ_ENABLE_WAYLAND,1"
         "WLR_NO_HARDWARE_CURSORS,1"
 
-        "GTK_THEME, Tokyonight-Dark"
+        "GTK_THEME, Tokyonight-Dark-B"
         
         "XDG_SESSION_TYPE,wayland"
         "XDG_CURRENT_DESKTOP,Hyprland"
