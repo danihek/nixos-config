@@ -144,6 +144,7 @@
     pipes-rs
 
     # Rest..
+    glib
     gnome-keyring
     libsForQt5.qt5ct
     gruvbox-dark-gtk
