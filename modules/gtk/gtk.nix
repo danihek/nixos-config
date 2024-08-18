@@ -45,8 +45,7 @@
     enable = true;
       platformTheme = "gtk3";
       style = {
-      package = with pkgs; [ adwaita-qt adwaita-qt6 ];
-      name = "adwaita-dark";
+      name = "Gruvbox-Dark-BL";
     };
   };
 
