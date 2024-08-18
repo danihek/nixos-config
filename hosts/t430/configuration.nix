@@ -36,12 +36,12 @@ in
 
   networking = {
     hostName = "nix";
-    defaultGateway = "192.168.1.190";
+    defaultGateway = "192.168.1.1";
     nameservers = [ "1.1.1.1" ];
     networkmanager.enable = true; 
 
     interfaces.wlp3s0.ipv4.addresses = [ {
-      address = "192.168.1.195";
+      address = "192.168.1.190";
       prefixLength = 24;
     } ];
 
