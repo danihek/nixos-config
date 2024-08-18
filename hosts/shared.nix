@@ -146,8 +146,8 @@
     # Rest..
     glib
     gnome-keyring
-    libsforqt5.qt5.qtquickcontrols2   
-    libsforqt5.qt5.qtgraphicaleffects
+    libsForQt5.qt5.qtquickcontrols2   
+    libsForQt5.qt5.qtgraphicaleffects
 ];
 
   # Nix
