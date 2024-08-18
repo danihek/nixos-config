@@ -75,7 +75,7 @@ in
     coreOffset = -50;
     uncoreOffset = -50;
     gpuOffset = -50;
-    analogioOffset = -60;
+    analogioOffset = -50;
   };
 
   networking = {
