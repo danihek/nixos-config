@@ -43,8 +43,11 @@
 
   qt = {
     enable = true;
-    platformTheme = "gnome";
-    style = gtk2;
+      platformTheme = "qt5ct";
+      style = {
+      package = with pkgs; [ adwaita-qt adwaita-qt6 ];
+      name = "adwaita-dark";
+    };
   };
 
   home.sessionVariables.GTK_THEME = "Gruvbox-Dark-BL";
