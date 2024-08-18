@@ -156,20 +156,6 @@
   programs.nix-ld.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.rocmSupport = true;
-
-  networking.firewall = { 
-    enable = false;
-    allowedTCPPorts = [ 9001 ];
-    allowedUDPPorts = [ 9001 ];
-
-    allowedTCPPortRanges = [ 
-      { from = 1700; to = 1764; } # KDE Connect and Weylus
-    ];  
-    allowedUDPPortRanges = [ 
-      { from = 1700; to = 1764; } # KDE Connect and Weylus
-    ];  
-  };
 
   # TimeZone.
   time.timeZone = "Europe/Warsaw";
