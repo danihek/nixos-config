@@ -9,25 +9,14 @@
       show="drun";
       matching="fuzzy";
       no_actions="true";
-      width="550";
-      height="325";
       always_parse_args="true";
       show_all="true";
       print_command="true";
       layer="overlay";
       insensitive="true";
-      prompt="Search";
+      prompt="What package senpai...?";
       allow_markup="true";
       allow_images="true";
-
-#     image_size =" 48";;
-#     columns = 3;
-#     allow_images = true;
-#     insensitive = true;
-#     run-always_parse_args = true;
-#     run-cache_file = "/dev/null";
-#     run-exec_search = true;
-#     matching = "multi-contains";
     };
     style = ''
 @import '~/.cache/wal/colors-waybar.css'
