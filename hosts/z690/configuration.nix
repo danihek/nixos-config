@@ -100,7 +100,7 @@ in
     };
     
     extraPackages = with pkgs; [
-      driversi686Linux.amdvl
+      driversi686Linux.amdvlk
       rocmPackages.clr.icd
       amdvlk
     ];
