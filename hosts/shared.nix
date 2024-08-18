@@ -26,7 +26,7 @@
     neovide
     hyprlock
     obsidian
-    alacritty ueberzugpp # yazi support
+    alacritty #ueberzugpp # yazi support
     vimPlugins.vim-plug 
     
     # Nix
