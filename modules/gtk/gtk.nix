@@ -29,8 +29,6 @@
   };
   home.sessionVariables.GTK_THEME = "palenight";
 
-  qt.platformTheme.name = "gtk2";
-
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
