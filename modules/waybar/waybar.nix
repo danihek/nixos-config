@@ -27,8 +27,7 @@
         };
       };
       workspaces = {
-        "hyprland" = {
-          "format" = "{icon}";
+        "format" = "{icon}";
           "format-icons" = {
             "1" = "〇";
             "2" = "一";
