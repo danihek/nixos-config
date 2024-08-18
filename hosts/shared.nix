@@ -146,8 +146,8 @@
     # Rest..
     gnome-keyring
     libsForQt5.qt5ct
+    gruvbox-dark-gtk
     gnome-themes-extra
-    tokyonight-gtk-theme
     gsettings-desktop-schemas
     libsForQt5.qtstyleplugin-kvantum
 ];
@@ -191,7 +191,7 @@
   qt = {
     enable = true;
     platformTheme = "gnome";
-    style = "adwaita-dark";
+    style = "Gruvbox-Dark-BL";
   };
 
   # Programs

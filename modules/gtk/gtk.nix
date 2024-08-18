@@ -18,7 +18,7 @@
     };
 
     theme = {
-      name = "GTK_THEME=Tokyonight-Dark-B";
+      name = "Gruvbox-Dark-BL";
       package = pkgs.tokyonight-gtk-theme;
     };
 
@@ -41,5 +41,5 @@
     };
   };
 
-  home.sessionVariables.GTK_THEME = "tokyonight-gtk-theme";
+  home.sessionVariables.GTK_THEME = "Gruvbox-Dark-BL";
 }
