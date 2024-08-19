@@ -28,6 +28,23 @@ in
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
+  
+  services.minecraft-server = {
+    enable = false;
+    eula = true;
+    declarative = true;
+
+    dataDir = "/var/lib/minecraft-server";
+
+    serverProperties = {
+      gamemode = "survival";
+      difficulty = "hard";
+      online-mode = "false";
+      simulation-distance = 10;
+      level-seed = "4";
+    };
+    jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
+  };
 
   # Bootloader.
   boot.tmp.cleanOnBoot = true;
@@ -47,8 +64,8 @@ in
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 443 80 8080 ];
-      allowedUDPPorts = [ 443 80 8080 ];
+      allowedTCPPorts = [ 443 80 8080 25565 ];
+      allowedUDPPorts = [ 443 80 8080 25565 ];
 
       allowedTCPPortRanges = [ 
         { from = 1700; to = 1764; } # KDE Connect and Weylus
