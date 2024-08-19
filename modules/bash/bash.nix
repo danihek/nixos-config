@@ -31,7 +31,9 @@
       fi
 
       # Prompt 
-      PS1="[%{$fg[red]%}%n%{$reset_color%}@%{$fg[magenta]%}%m%{$reset_color%}:%{$fg[blue]%}%~%{$reset_color%}] "
+       GIT_PS1_CMD() { [ "$PS1_CMD1" != "" ] && PS1_CMD1="$PS1_CMD1 "; }
+       PROMPT_COMMAND='PS1_CMD1=$(git branch --show-current 2>> /dev/null) ; GIT_PS1_CMD'
+       PS1='[\[\e[38;5;169;1m\]\u\[\e[0;38;5;196m\]@\[\e[38;5;69;1m\]\h\[\e[0m\]:\[\e[38;5;128m\]\w\[\e[0m\]] ''${PS1_CMD1}'
     '';
     
     sessionVariables = {
