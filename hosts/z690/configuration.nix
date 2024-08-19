@@ -91,7 +91,7 @@ in
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
   # Bluetooth
-  services.blueman.enable = false;
-  hardware.bluetooth.enable = false; 
-  hardware.bluetooth.powerOnBoot = false; 
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true; 
+  hardware.bluetooth.powerOnBoot = true; 
 }
