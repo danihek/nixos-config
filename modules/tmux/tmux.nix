@@ -32,7 +32,7 @@
       setw -g aggressive-resize on
       setw -g monitor-activity on
 
-      bind l display-popup "~/code/bash/wls/wls.sh $(cat Makefile | grep PKGS | cut -d'=' -f 2 | head -n 1)"
+      bind l display-popup "~/code/bash/wls/wls.sh"
     '';
   };
 }
