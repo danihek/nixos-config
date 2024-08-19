@@ -78,7 +78,7 @@
       export OPENER="xdg-open"
       export open="xdg-open"
       export TERMINAL="alacritty"
-      export TERM="xterm-256color"
+      export TERM="screen-256color"
       export LAUNCHER="wofi --show drun"
       export FZF_DEFAULT_OPTS="--color=16"
       export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'

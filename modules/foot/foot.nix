@@ -8,7 +8,7 @@
     settings = {
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
-       term = "xterm-256color";
+       term = "screen-256color";
        font = "JetBrainsMono Nerd Font:size=13";
        dpi-aware = "yes";
      };

@@ -35,7 +35,7 @@
     '';
     
     sessionVariables = {
-      TERM="xterm-256color";
+      TERM="screen-256color";
       FZF_DEFAULT_OPTS="--color=16";
     };
   };
