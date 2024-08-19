@@ -82,6 +82,7 @@
       export LAUNCHER="wofi --show drun"
       export FZF_DEFAULT_OPTS="--color=16"
       export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+      export MOZ_ENABLE_WAYLAND=1
     '';
   };
 }

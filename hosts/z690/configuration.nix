@@ -50,6 +50,7 @@ in
   boot.tmp.cleanOnBoot = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.initrd.kernelModules = [ "amdgpu" ];
 
   networking = {
     hostName = "nix";
@@ -77,6 +78,7 @@ in
   };
 
   environment.variables = {
+    ROC_ENABLE_PRE_VEGA = "1";
     NIX_FLAKE_CURRENT_CONFIG = "mainpc";
   };
 
