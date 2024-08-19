@@ -31,6 +31,8 @@
 
       setw -g aggressive-resize on
       setw -g monitor-activity on
+
+      bind-key C-l display-popup -E "~/code/bash/wls/wls.sh $(cat Makefecho ile | grep "PKGS " | cut -d'=' -f 2)"
     '';
   };
 }
