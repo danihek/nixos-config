@@ -27,7 +27,10 @@
 
     initExtra = ''
       # fzf - Completion & Keybindings
-      [ command -v fzf-share >/dev/null ] && source "$(fzf-share)/key-bindings.bash" ; source "$(fzf-share)/completion.bash"
+      if command -v fzf-share >/dev/null; then
+        source "$(fzf-share)/key-bindings.bash"
+        source "$(fzf-share)/completion.bash"
+      fi
 
       # Pywal colors
       [ -d "$HOME/.cache/wal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
