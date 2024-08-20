@@ -22,7 +22,7 @@ in
 
   # User settings
   users.users.${USERNAME} = {
-    shell = pkgs.zsh;
+    shell = pkgs.bash;
     isNormalUser = true;
     description = "${USERNAME}";
     extraGroups = [ "networkmanager" "wheel" ];

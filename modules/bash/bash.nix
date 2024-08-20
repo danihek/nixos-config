@@ -8,6 +8,7 @@
     shellAliases = {
       g = "git";
       sl = "ls";
+      ls = "eza";
       lf = "yazi"; #xd
       tm = "tmux";
       l = "ls -l";
@@ -25,13 +26,14 @@
     };
 
     initExtra = ''
-      if command -v fzf-share >/dev/null; then
-        source "$(fzf-share)/key-bindings.bash"
-        source "$(fzf-share)/completion.bash"
-      fi
+      # fzf - Completion & Keybindings
+      [ command -v fzf-share >/dev/null ] && source "$(fzf-share)/key-bindings.bash" ; source "$(fzf-share)/completion.bash"
+
+      # Pywal colors
+      [ -d "$HOME/.cache/wal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
 
       # Prompt 
-       PS1='[\[\e[38;5;169;1m\]\u\[\e[0;38;5;196m\]@\[\e[38;5;69;1m\]\h\[\e[0m\]:\[\e[38;5;128m\]\w\[\e[0m\]]\e[38;5;156m\]'
+       PS1='[\[\e[38;5;169;1m\]\u\[\e[0;38;5;196m\]@\[\e[38;5;69;1m\]\h\[\e[0m\]:\[\e[38;5;128m\]\w\[\e[0m\]]\e[38;5;156m\] '
     '';
     
     sessionVariables = {
