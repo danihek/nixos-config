@@ -30,7 +30,7 @@ in
   };
   
   services.minecraft-server = {
-    enable = false;
+    enable = true;
     eula = true;
     declarative = true;
 
