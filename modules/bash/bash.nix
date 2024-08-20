@@ -37,6 +37,10 @@
 
       # Prompt 
        PS1='[\[\e[38;5;169;1m\]\u\[\e[0;38;5;196m\]@\[\e[38;5;69;1m\]\h\[\e[0m\]:\[\e[38;5;128m\]\w\[\e[0m\]]\e[38;5;156m\] '
+
+       # Keybindings
+          bind '"\e[1;5A": history-search-backward'
+          bind '"\e[1;5B": history-search-forward'
     '';
     
     sessionVariables = {
