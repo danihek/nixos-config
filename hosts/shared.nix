@@ -127,6 +127,7 @@
     ripgrep
     openscad
     vscodium
+    kdenlive
     ckb-next # keyboard
     kdeconnect # watch and mobile
     obs-studio
