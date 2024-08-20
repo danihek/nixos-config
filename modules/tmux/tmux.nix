@@ -29,6 +29,13 @@
       set-window-option -g mode-keys vi
       set-window-option -g automatic-rename
 
+
+      # Fix tmux-neovim error
+      # https://www.reddit.com/r/NixOS/comments/13iqrj8/tmux_resurrect_doesnt_resurrect_nvim_sessions/
+      resurrect_dir="$HOME/.tmux/resurrect"
+      set -g @resurrect-dir $resurrect_dir
+      set -g @resurrect-hook-post-save-all 'target=$(readlink -f $resurrect_dir/last); sed "s| --cmd .*-vim-pack-dir||g; s|/etc/profiles/per-user/$USER/bin/||g; s|/home/$USER/.nix-profile/bin/||g" $target | sponge $target'
+
       setw -g aggressive-resize on
       setw -g monitor-activity on
 
