@@ -21,6 +21,13 @@
        style = "block";
      };
 
+     key-bindings = {
+       scrollback-up-line = "Shift+k";
+       scrollback-down-line = "Shift+j";
+       scrollback-up-half-page = "Control+Shift+k";
+       scrollback-down-half-page = "Control+Shift+j";
+     };
+     
      mouse = {
        hide-when-typing = "yes";
      };
