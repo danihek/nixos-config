@@ -40,6 +40,9 @@
     firefox
     librewolf 
 
+    # Mail
+    thunderbird
+
     # Dev
     gdb
     git
