@@ -124,16 +124,15 @@
         "$mod, J, togglesplit"
         "$mod, F, fullscreen"
 
-          
         "$mod, h, movefocus, l"
         "$mod, l, movefocus, r"
         "$mod, k, movefocus, u"
         "$mod, j, movefocus, d"
-          
-        "$mod CTRL, h, movewindow, l"
-        "$mod CTRL, l, movewindow, r"
-        "$mod CTRL, k, movewindow, u"
-        "$mod CTRL, j, movewindow, d"
+
+        "$mod CTRL, h, movewindow, l"   "$mod SHIFT, h, resizeactive, 100 0"
+        "$mod CTRL, l, movewindow, r"   "$mod SHIFT, l, resizeactive, -100 0"
+        "$mod CTRL, k, movewindow, u"   "$mod SHIFT, k, resizeactive, 0 -100"
+        "$mod CTRL, j, movewindow, d"   "$mod SHIFT, j, resizeactive, 0 100"
           
         "$mod SHIFT, D,movetoworkspace,special"
         "$mod, D, togglespecialworkspace"
@@ -156,11 +155,6 @@
         "$mod, minus, splitratio, -0.15"
         "$mod, equal, splitratio, +0.15"
 
-        "$mod SHIFT, right, resizeactive, 100 0"
-        "$mod SHIFT, left, resizeactive, -100 0"
-        "$mod SHIFT, up, resizeactive, 0 -100"
-        "$mod SHIFT, down, resizeactive, 0 100"
-         
         ",XF86AudioMute,exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioPlay,exec, playerctl play-pause"
         ",XF86AudioNext,exec, playerctl next"
