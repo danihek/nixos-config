@@ -54,6 +54,8 @@
 
     inoremap <silent><expr> <cr> "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
     inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<tab>"
+
+    CocCommand document.toggleInlayHint
     '';
   };
 }
