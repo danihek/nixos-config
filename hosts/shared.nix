@@ -36,6 +36,7 @@
     htop
     
     # Browsers
+    brave
     links2
     firefox
     librewolf 
