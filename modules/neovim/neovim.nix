@@ -60,10 +60,6 @@
   xdg.configFile."nvim/coc-settings.json".text = ''
     {
       "inlayHint.enable": false,
-
-      "codeLens.enable": true,
-      "suggest.enablePreview": true,
-      "diagnostic.displayByAle": true,
     }
   '';
 }
