@@ -104,7 +104,7 @@
         repeat_delay = 200;
         repeat_rate = 50;
 
-        kb_options = "caps: swapescape";
+        kb_options = "caps:swapescape";
       };
 
       "$mod" = "SUPER";
