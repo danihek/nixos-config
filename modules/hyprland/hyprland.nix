@@ -156,7 +156,7 @@
         "$mod, minus, splitratio, -0.15"
         "$mod, equal, splitratio, +0.15"
 
-        "$mod, F1, exec, ~/.config/hypr/hyprview.sh"
+        "$mod, F1, exec, hyprviewtoggle"
         
         ",XF86AudioMute,exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioPlay,exec, playerctl play-pause"
@@ -211,21 +211,4 @@
       };
     };
   };
-
-  pkgs.writeShellScriptBin."hyprview.sh" = ''
-    #!/usr/bin/env sh
-    MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
-    if [ "$MODE" = 0 ] ; then
-        hyprctl --batch "\
-            keyword animations:enabled 1;\
-            keyword decoration:drop_shadow 10;\
-            keyword decoration:blur:enabled 1;\
-            keyword general:gaps_in 50;\
-            keyword general:gaps_out 50;\
-            keyword general:border_size 10;\
-            keyword decoration:rounding 30"
-        exit
-    fi
-    hyprctl reload
-  '';
 }

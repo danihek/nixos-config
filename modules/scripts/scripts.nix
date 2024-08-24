@@ -60,12 +60,35 @@ let
       git push origin main
     fi
   '';
+  hyprviewtoggle = pkg.writeShellScriptBin "hyprviewtoggle" ''
+    #!/usr/bin/env sh
+    MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+    if [ "$MODE" = 0 ] ; then
+        hyprctl --batch "\
+            keyword animations:enabled 1;\
+            keyword decoration:drop_shadow 10;\
+            keyword decoration:blur:enabled 1;\
+            keyword general:gaps_in 50;\
+            keyword general:gaps_out 50;\
+            keyword general:border_size 10;\
+            keyword decoration:rounding 30"
+        exit
+    fi
+    hyprctl reload
+  '';
 in {
   home = {
     packages = [
+      # Pywal & Sww
       setwall
+
+      # Waybar
       wbar-reload
 
+      # Hyprland
+      hyprviewtoggle
+      
+      # NixOS
       sysconfupdate
       sysconfrebuild
       sysconfrebuildpush
