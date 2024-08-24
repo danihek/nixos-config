@@ -52,10 +52,10 @@ in
 
   services.undervolt = {
     enable = true;
-    gpuOffset = -100;
-    coreOffset = -100;
-    uncoreOffset = -100;
-    analogioOffset = -100;
+    gpuOffset = -50;
+    coreOffset = -50;
+    uncoreOffset = -50;
+    analogioOffset = -50;
   };
 
   # Bootloader.
