@@ -105,7 +105,7 @@
         repeat_rate = 50;
 
         kb_options = {
-          "caps" = "swapescape";
+          "caps: swapescape";
         };
       };
 
