@@ -50,14 +50,6 @@ in
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
   };
 
-  services.undervolt = {
-    enable = true;
-    gpuOffset = -50;
-    coreOffset = -50;
-    uncoreOffset = -50;
-    analogioOffset = -50;
-  };
-
   # Bootloader.
   boot.tmp.cleanOnBoot = true;
   boot.loader.systemd-boot.enable = true;
