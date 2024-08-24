@@ -60,7 +60,7 @@ let
       git push origin main
     fi
   '';
-  hyprviewtoggle = pkg.writeShellScriptBin "hyprviewtoggle" ''
+  hyprviewtoggle = pkgs.writeShellScriptBin "hyprviewtoggle" ''
     #!/usr/bin/env sh
     MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
     if [ "$MODE" = 0 ] ; then
