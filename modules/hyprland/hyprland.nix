@@ -212,7 +212,7 @@
     };
   };
 
-  pkgs.writeShellScriptBin."hyprview.sh" ''
+  pkgs.writeShellScriptBin."hyprview.sh" = ''
     #!/usr/bin/env sh
     MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
     if [ "$MODE" = 0 ] ; then
