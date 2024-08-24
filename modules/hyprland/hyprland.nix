@@ -103,8 +103,6 @@
         follow_mouse = 1;
         repeat_delay = 200;
         repeat_rate = 50;
-
-        kb_options = "caps:swapescape";
       };
 
       "$mod" = "SUPER";
