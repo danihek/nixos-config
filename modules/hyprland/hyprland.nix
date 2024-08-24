@@ -103,6 +103,7 @@
         follow_mouse = 1;
         repeat_delay = 200;
         repeat_rate = 50;
+        kb_options = "caps:swapescape";
       };
 
       "$mod" = "SUPER";
@@ -116,7 +117,7 @@
         "$mod, R, exec, rofmoji"
         "$mod, B, exec, firefox"
         "$mod, P, exec, pavucontrol"
-        "$mod SHIFT, L, exec, $lock"
+        "$mod CTRL SHIFT, L, exec, $lock"
 
         "$mod, U, exec, setwall"
         
@@ -155,6 +156,8 @@
         "$mod, minus, splitratio, -0.15"
         "$mod, equal, splitratio, +0.15"
 
+        "$mod, F1, exec, ~/.config/hypr/hyprview.sh"
+        
         ",XF86AudioMute,exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioPlay,exec, playerctl play-pause"
         ",XF86AudioNext,exec, playerctl next"
@@ -208,4 +211,21 @@
       };
     };
   };
+
+  pkgs.writeShellScriptBin "hyprview.sh" ''
+    #!/usr/bin/env sh
+    MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+    if [ "$MODE" = 0 ] ; then
+        hyprctl --batch "\
+            keyword animations:enabled 1;\
+            keyword decoration:drop_shadow 10;\
+            keyword decoration:blur:enabled 1;\
+            keyword general:gaps_in 50;\
+            keyword general:gaps_out 50;\
+            keyword general:border_size 10;\
+            keyword decoration:rounding 30"
+        exit
+    fi
+    hyprctl reload
+  '';
 }
