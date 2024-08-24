@@ -39,9 +39,6 @@
       setw -g aggressive-resize on
       setw -g monitor-activity on
 
-      unbind C-b
-      set -g prefix C-Space
-      bind -n C-Space send-prefix
       bind l display-popup "~/code/bash/wls/wls.sh"
     '';
   };
