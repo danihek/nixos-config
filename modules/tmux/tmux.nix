@@ -39,7 +39,7 @@
       setw -g aggressive-resize on
       setw -g monitor-activity on
 
-      bind l display-popup "~/code/bash/wls/wls.sh"
+      bind l display-popup "dpcs"
     '';
   };
 }

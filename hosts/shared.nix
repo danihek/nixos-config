@@ -28,7 +28,7 @@
     obsidian
     alacritty #ueberzugpp # yazi support
     vimPlugins.vim-plug 
-    
+ 
     # Nix
     home-manager
 
@@ -99,6 +99,10 @@
     #viber
     vesktop
     element-desktop
+
+    # Music
+    cava
+    supersonic
 
     # Tools
     lf

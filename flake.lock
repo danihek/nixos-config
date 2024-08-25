@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "dpcs": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1724596545,
+        "narHash": "sha256-7Vxrwp512xMj8rdniWgy2hxmpQRY10+9o9niug4wtzQ=",
+        "owner": "danihek",
+        "repo": "dpcs",
+        "rev": "d04adc91c6abf30f5d3fecd41969371896f4f6fa",
+        "type": "github"
+      },
+      "original": {
+        "owner": "danihek",
+        "repo": "dpcs",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -38,6 +58,7 @@
     },
     "root": {
       "inputs": {
+        "dpcs": "dpcs",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
         "themecord": "themecord"
