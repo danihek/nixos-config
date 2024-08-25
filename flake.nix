@@ -5,6 +5,11 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    dpcs = {
+      url = "github:danihek/dpcs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,6 +24,7 @@
   outputs = 
   {
     self,
+    dpcs,
     nixpkgs,
     themecord,
     home-manager,
@@ -41,7 +47,14 @@
             environment.systemPackages = with pkgs; [
               themecord.packages.x86_64-linux.default
             ];
-           })
+          })
+
+          ({ config, pkgs, ... }: {
+            environment.systemPackages = with pkgs; [
+              dpcs.packages.x86_64-linux.default
+            ];
+          })
+
         ];
       };
       
@@ -57,6 +70,13 @@
              themecord.packages.x86_64-linux.default
            ];
           })
+          
+          ({ config, pkgs, ... }: {
+            environment.systemPackages = with pkgs; [
+              dpcs.packages.x86_64-linux.default
+            ];
+         })
+
         ];
       };
     };
