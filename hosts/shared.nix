@@ -102,7 +102,7 @@
 
     # Music
     cava
-    supersonic
+    rhythmbox
 
     # Tools
     lf
