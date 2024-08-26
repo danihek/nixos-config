@@ -1,40 +1,43 @@
-{ pkgs, ... }:
+{ pkgs, config, gtkThemeFromScheme, ... }:
+
 {
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
+  home.pointerCursor = {
+    gtk.enable = true;
+    x11.enable = true;
+    package = pkgs.bibata-cursors;
+    name = "Bibata-Modern-Ice";
+    size = 24;
   };
 
   gtk = {
     enable = true;
-
-    cursorTheme = {
-      name = "Catppuccin-Macchiato-Dark";
-      package = pkgs.catppuccin-cursors.macchiatoDark;
+    font = {
+      name = "Hack";
+      size = 12;
+      package = pkgs.hack-font;
     };
-
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        size = "compact";
-        tweaks = [ "rimless" ];
-        variant = "macchiato";
-      };
+      name = "${config.colorScheme.slug}";
+      package = gtkThemeFromScheme {scheme = config.colorScheme;};
+    };
+    iconTheme = {
+      name = "candy-icons";
+      package = pkgs.candy-icons;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
     };
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme = "gtk";
+    style = {
+        name = "adwaita-dark";
+        package = pkgs.adwaita-qt;
+    };
   };
 }
