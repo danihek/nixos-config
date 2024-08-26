@@ -29,9 +29,7 @@
       "hyprland/workspaces" = {
         format = "{icon}";
         all-outputs = true;
-        active-only = false;
-	     disable-scroll = true;
-	     warp-on-scroll = false; 
+        active-only = true;
         persistant_workspaces = {
 		    "1" = [];
 	 	    "2" = [];
