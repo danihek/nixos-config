@@ -162,13 +162,10 @@
     libsForQt5.qtstyleplugin-kvantum
   ];
 
-  nixpkgs.config.qt5 = {
+  qt5 = {
     enable = true;
-    platformTheme = "qt5ct"; 
-      style = {
-        package = pkgs.utterly-nord-plasma;
-        name = "Utterly Nord Plasma";
-      };
+    platformTheme = "gnome";
+    style = "adwaita-dark";
   };
 
   # Nix
