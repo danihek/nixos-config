@@ -162,11 +162,6 @@
     libsForQt5.qtstyleplugin-kvantum
   ];
 
-  qt.enable = true;
-  qt.platformTheme.name = gtk;
-  qt.style.name = "adwaita-dark";
-  qt.style.package = pkgs.adwaita-qt;
-
   # Nix
   programs.nix-ld.enable = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];

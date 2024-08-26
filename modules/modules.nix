@@ -3,6 +3,7 @@
 {
   imports = [
     # Enabled
+      ./qt/qt.nix
       ./gtk/gtk.nix
       ./git/git.nix
       ./zsh/zsh.nix
