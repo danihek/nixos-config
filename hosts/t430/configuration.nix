@@ -35,9 +35,9 @@ in
   boot.loader.grub.useOSProber = true;
 
   # Power management
-  powerManagement.enable = true;
-  services.thermald.enable = true;
-  powerManagement.powertop.enable = true;
+  powerManagement.enable = false;
+  services.thermald.enable = false;
+  powerManagement.powertop.enable = false;
 
   services.tlp = {
       enable = false;
@@ -55,29 +55,6 @@ in
       };
   };
 
-  services.auto-cpufreq = {
-    enable = true;  
-    settings = {
-      battery = {
-         governor = "powersave";
-         turbo = "never";
-      };
-      charger = {
-         governor = "performance";
-         turbo = "auto";
-      };
-    };
-  };
-
-  # Similar CPU: https://github.com/carjorvaz/nixos/blob/3e97cbab17300e611cc2ad56522aa9b08e7eb527/hosts/trajanus.nix#L57
-  services.undervolt = {
-    enable = false; # I have Haswell fck
-    coreOffset = -50;
-    uncoreOffset = -50;
-    gpuOffset = -50;
-    analogioOffset = -50;
-  };
-
   networking = {
     hostName = "nix";
     defaultGateway = "192.168.1.1";
@@ -89,18 +66,8 @@ in
       prefixLength = 24;
     } ];
 
-    firewall = {
-      enable = false;
-      allowedTCPPorts = [ 443 80 8080 5004 ];
-      allowedUDPPorts = [ 443 80 8080 5004 ];
-
-      allowedTCPPortRanges = [ 
-        { from = 1700; to = 1764; } # KDE Connect and Weylus
-      ];  
-      allowedUDPPortRanges = [ 
-        { from = 1700; to = 1764; } # KDE Connect and Weylus
-      ];
-    };
+  firewall = {
+    enable = false;
   };
 
   environment.variables = {
@@ -108,7 +75,7 @@ in
   };
 
   # Bluetooth
-  services.blueman.enable = true;
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
+  services.blueman.enable = false;
+  hardware.bluetooth.enable = false; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boot
 }
