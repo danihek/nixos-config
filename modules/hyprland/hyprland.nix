@@ -180,11 +180,11 @@
         "swww init ; sleep 1; setwall"
         #"pywalfox start"
         "lxqt-policykit-agent"
-        "hyprctl setcursor Numix-Cursor 24"
       ];
 
       windowrulev2 = [
         "float, title:^(Picture in Picture)$"
+        "float, title:^(Volume Control)$"
         "opacity 1.0 override 1.0 override, title:^(Picture in Picture)$"
         "pin, title:^(Picture in Picture)$"
         "idleinhibit fullscreen, class:^(google-chrome)$"
@@ -204,9 +204,6 @@
       
       misc = {
         disable_hyprland_logo = true;
-        animate_mouse_windowdragging = false;
-        animate_manual_resizes = false;
-        focus_on_activate = true;
       };
     };
   };
