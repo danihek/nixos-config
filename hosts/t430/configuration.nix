@@ -84,10 +84,10 @@ in
     nameservers = [ "1.1.1.1" ];
     networkmanager.enable = true; 
 
-    interfaces.wlp3s0.ipv4.addresses = [ {
-      address = "192.168.1.190";
-      prefixLength = 24;
-    } ];
+   #interfaces.wlp3s0.ipv4.addresses = [ {
+   #  address = "192.168.1.190";
+   #  prefixLength = 24;
+   #} ];
 
     firewall = {
       enable = true;
