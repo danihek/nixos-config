@@ -25,7 +25,7 @@
           critical = 20;
           warning = 30;
         };
-      };
+      }; 
       "hyprland/workspaces" = {
         format = "{icon}";
         "all-outputs" = true;
@@ -43,7 +43,26 @@
             "10" = "十";
             "11" = "十一";
           };
+        active-only = false;
+	     disable-scroll = true;
+	     all-outputs = false;
+	     warp-on-scroll = false;
+	     persistant_workspaces = {
+		  "1" = "[]";
+	 	  "2" = "[]";
+	 	  "3" = "[]";
+	 	  "4" = "[]";
+	 	  };
       };
+      "custom/music": {
+        format = "  {}";
+        escape = true;
+        interval = 5;
+        tooltip = false;
+        exec = "playerctl metadata --format='{{ title }}'";
+        on-click = "playerctl play-pause";
+        max-length = 50;
+      },
       clock = {
         format = "{:%H:%M}";
         format-alt = "{:%Y-%m-%d}";
