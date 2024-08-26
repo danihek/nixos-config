@@ -28,32 +28,32 @@
       }; 
       "hyprland/workspaces" = {
         format = "{icon}";
-        "all-outputs" = true;
-          format-icons = {
-            "1" = "一";
-            "2" = "二";
-            "3" = "三";
-            "4" = "四";
-            "5" = "五";
-            "6" = "六";
-            "7" = "七";
-            "8" = "八";
-            "9" = "九";
-            "10" = "十";
-            "11" = "十一";
-          };
-        "active-only" = false;
-	     "disable-scroll" = true;
-	     "warp-on-scroll" = false;
-	     persistant_workspaces = {
+        all-outputs = true;
+        active-only = false;
+	     disable-scroll = true;
+	     warp-on-scroll = false; 
+        persistant_workspaces = {
 		    "1" = "[]";
 	 	    "2" = "[]";
 	 	    "3" = "[]";
 	 	    "4" = "[]";
 	 	  };
+        format-icons = {
+          "1" = "一";
+          "2" = "二";
+          "3" = "三";
+          "4" = "四";
+          "5" = "五";
+          "6" = "六";
+          "7" = "七";
+          "8" = "八";
+          "9" = "九";
+          "10" = "十";
+          "11" = "十一";
+        };
       };
       "custom/music" = {
-        format = "  {}";
+        format = " 𝄞 {}";
         escape = true;
         interval = 5;
         tooltip = false;
