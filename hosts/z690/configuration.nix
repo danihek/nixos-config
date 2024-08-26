@@ -83,6 +83,7 @@ in
   hardware.bluetooth.enable = true; 
   hardware.bluetooth.powerOnBoot = true; 
 
+  hardware.ckb-next.enable = true;
   
   # Services
   services.minecraft-server = {
