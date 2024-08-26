@@ -1,41 +1,55 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
-  dconf = {
-    enable = true;
-    settings = {
-      "org/gnome/desktop/interface" = {
-        color-scheme = "prefer-dark";
-      };
-    };
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Catppuccin-Macchiato-Dark";
+    package = pkgs.catppuccin-cursors.macchiatoDark;
+    size = 24;
   };
 
   gtk = {
     enable = true;
-
     cursorTheme = {
+      size = 24;
       name = "Catppuccin-Macchiato-Dark";
       package = pkgs.catppuccin-cursors.macchiatoDark;
     };
-
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        size = "compact";
-        tweaks = [ "rimless" ];
-        variant = "macchiato";
-      };
+      name = "Dracula";
+      package = pkgs.dracula-theme;
+    };
+    iconTheme = {
+      name = "candy-icons";
+      package = pkgs.candy-icons;
+    };
+    gtk3.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
+    };
+    gtk4.extraConfig = {
+      gtk-application-prefer-dark-theme=1;
     };
   };
 
   qt = {
     enable = true;
-    platformTheme.name = "gtk";
+    platformTheme = "gtk";
+    style = {
+      name = "adwaita-dark";
+      package = pkgs.adwaita-qt;
+    };
   };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      color-scheme = "prefer-dark";
+      cursor-size = 24;
+      cursor-theme = "Catppuccin-Macchiato-Dark";
+    };
+    "org/gnome/shell/extensions/user-theme" = {
+      name = "Dracula";
+    };
+  };
+
+  home.sessionVariables.GTK_THEME = "Dracula";
 }
