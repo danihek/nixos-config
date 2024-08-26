@@ -29,6 +29,7 @@
       "hyprland/workspaces" = {
         format = "{icon}";
         "all-outputs" = true;
+        "active-only" = false;
           format-icons = {
             "1" = "一";
             "2" = "二";
