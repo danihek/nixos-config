@@ -102,7 +102,7 @@
 
     # Music
     mpd
-    mpc
+    moc
     cava
     rhythmbox
 
