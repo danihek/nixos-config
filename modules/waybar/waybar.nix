@@ -43,15 +43,15 @@
             "10" = "十";
             "11" = "十一";
           };
-        active-only = false;
-	     disable-scroll = true;
-	     all-outputs = false;
-	     warp-on-scroll = false;
+        "active-only" = false;
+	     "disable-scroll" = true;
+	     "all-outputs" = false;
+	     "warp-on-scroll" = false;
 	     persistant_workspaces = {
-		  "1" = "[]";
-	 	  "2" = "[]";
-	 	  "3" = "[]";
-	 	  "4" = "[]";
+		    "1" = "[]";
+	 	    "2" = "[]";
+	 	    "3" = "[]";
+	 	    "4" = "[]";
 	 	  };
       };
       "custom/music": {
