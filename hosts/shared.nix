@@ -104,7 +104,9 @@
     mpd
     moc
     cava
+    paprefs
     rhythmbox
+    pulseaudioFull
 
     # Tools
     lf
