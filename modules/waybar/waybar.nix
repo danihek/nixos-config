@@ -28,19 +28,8 @@
       }; 
       "hyprland/workspaces" = {
         format = "{icon}";
-        persistant_workspaces = {
-          "一" = [ ];
-          "二" = [ ];
-          "三" = [ ];
-          "四" = [ ];
-          "五" = [ ];
-          "六" = [ ];
-          "七" = [ ];
-          "八" = [ ];
-          "九" = [ ];
-          };
+        only-active = true;
         all-outputs = true;
-        disable-scroll = true;
         format-icons = {
           "1" = "一";
           "2" = "二";
@@ -52,7 +41,6 @@
           "8" = "八";
           "9" = "九";
           "10" = "十";
-          "11" = "十一";
         };
       };
       "custom/music" = {
