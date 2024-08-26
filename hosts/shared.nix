@@ -104,9 +104,9 @@
     mpd
     moc
     cava
-    paprefs
+    cmus
+    ncmpcpp
     rhythmbox
-    pulseaudioFull
 
     # Tools
     lf
@@ -206,15 +206,6 @@
     pulse.enable = true;
     jack.enable = true;
   };
-
-  hardware.pulseaudio.extraConfig = ''
-    load-module module-combine-sink
-    load-module module-esound-protocol-tcp
-    load-module module-native-protocol-tcp
-    load-module module-zeroconf-publish
-    load-module module-null-sink sink_name=rtp format=s16be channels=2 rate=44100 description="RTP Multicast Sink"
-    load-module module-rtp-send source=rtp.monitor
-  '';
 
   # Programs
   programs.dconf.enable = true;
