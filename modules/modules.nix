@@ -7,7 +7,6 @@
       ./git/git.nix
       ./zsh/zsh.nix
       ./ssh/ssh.nix
-      ./mpd/mpd.nix
       ./bash/bash.nix
       ./btop/btop.nix
       ./foot/foot.nix
