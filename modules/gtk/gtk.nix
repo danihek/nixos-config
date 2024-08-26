@@ -1,4 +1,4 @@
-{ pkgs, config, gtkThemeFromScheme, ... }:
+{ pkgs, config, ... }:
 
 {
   home.pointerCursor = {
@@ -17,8 +17,13 @@
       package = pkgs.hack-font;
     };
     theme = {
-      name = "${config.colorScheme.slug}";
-      package = gtkThemeFromScheme {scheme = config.colorScheme;};
+      name = "Catppuccin-Macchiato-Compact-Blue-Dark";
+      package = pkgs.catppuccin-gtk.override {
+        accents = [ "blue" ];
+        size = "compact";
+        tweaks = [ "rimless" ];
+        variant = "macchiato";
+      };
     };
     iconTheme = {
       name = "candy-icons";
@@ -38,6 +43,15 @@
     style = {
         name = "adwaita-dark";
         package = pkgs.adwaita-qt;
+    };
+  };
+
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
     };
   };
 }
