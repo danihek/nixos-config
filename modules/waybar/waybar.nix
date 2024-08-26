@@ -52,7 +52,7 @@
 	 	    "4" = "[]";
 	 	  };
       };
-      "custom/music": {
+      "custom/music" = {
         format = "  {}";
         escape = true;
         interval = 5;
