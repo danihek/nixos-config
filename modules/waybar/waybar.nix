@@ -9,7 +9,7 @@
       layer = "top";
       position = "top";
       modules-center = [ "hyprland/window" ];
-      modules-left = [ "hyprland/workspaces" ];
+      modules-left = [ "hyprland/workspaces" "custom/music" ];
       modules-right = [
         "pulseaudio"
         "battery"
