@@ -70,6 +70,8 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    pulseaudioFull
+    paprefs
     lact
   ];
  
