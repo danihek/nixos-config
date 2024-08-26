@@ -1,54 +1,60 @@
 { pkgs, config, ... }:
 
 {
+  home.pointerCursor = {
+    gtk.enable = true;
+    name = "Catppuccin-Macchiato-Dark";
+    package = pkgs.catppuccin-cursors.macchiatoDark;
+    size = 24;
+  };
+
   gtk = {
     enable = true;
-    iconTheme = {
-      name = "Papirus-Dark";
-      package = pkgs.papirus-icon-theme;
-    };
-    theme = {
-      name = "palenight";
-      package = pkgs.palenight-theme;
+    font = {
+      name = "Hack";
+      size = 12;
+      package = pkgs.hack-font;
     };
     cursorTheme = {
       size = 24;
-      name = "Numix-Cursor";
-      package = pkgs.numix-cursor-theme;
+      name = "Catppuccin-Macchiato-Dark";
+      package = pkgs.catppuccin-cursors.macchiatoDark;
+    };
+    theme = {
+      theme.name = "Dracula";
+      theme.package = pkgs.dracula-theme;
+    };
+    iconTheme = {
+      name = "candy-icons";
+      package = pkgs.candy-icons;
     };
     gtk3.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
+      gtk-application-prefer-dark-theme=1;
     };
     gtk4.extraConfig = {
-      Settings = ''
-        gtk-application-prefer-dark-theme=1
-      '';
+      gtk-application-prefer-dark-theme=1;
     };
   };
 
-  xdg.configFile = {
-    "gtk-4.0/assets".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/assets";
-    "gtk-4.0/gtk.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk.css";
-    "gtk-4.0/gtk-dark.css".source = "${config.gtk.theme.package}/share/themes/${config.gtk.theme.name}/gtk-4.0/gtk-dark.css";
+  qt = {
+    enable = true;
+    platformTheme = "gtk";
+    style = {
+        name = "adwaita-dark";
+        package = pkgs.adwaita-qt;
+    };
   };
-
-  home.sessionVariables.GTK_THEME = "palenight";
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
       cursor-size = 24;
-      cursor-theme = "Numix-Cursor";
+      cursor-theme = "Catppuccin-Macchiato-Dark";
     };
     "org/gnome/shell/extensions/user-theme" = {
-      name = "palenight";
+      name = "Dracula";
     };
   };
 
-  home.packages = with pkgs; [
-    gnomeExtensions.user-themes
-    palenight-theme
-  ];
+  home.sessionVariables.GTK_THEME = "Dracula";
 }
