@@ -28,8 +28,8 @@
       }; 
       "hyprland/workspaces" = {
         format = "{icon}";
-        active-only = true;
-        all-outputs = true;
+        #active-only = true;
+        all-outputs = false;
         format-icons = {
           "1" = "一";
           "2" = "二";
@@ -40,7 +40,7 @@
           "7" = "七";
           "8" = "八";
           "9" = "九";
-          "10" = "十";
+          "10"= "十";
         };
       };
       "custom/music" = {
