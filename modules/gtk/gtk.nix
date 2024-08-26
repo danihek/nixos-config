@@ -18,12 +18,7 @@
     };
     theme = {
       name = "Catppuccin-Macchiato-Compact-Blue-Dark";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "blue" ];
-        size = "compact";
-        tweaks = [ "rimless" ];
-        variant = "macchiato";
-      };
+      package = pkgs.catppuccin-gtk;
     };
     iconTheme = {
       name = "candy-icons";
