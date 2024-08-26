@@ -42,7 +42,7 @@
           "9" = "九";
           "10" = "十";
         };
-        persistent_workspaces = {
+        "persistent_workspaces" = {
 		    "1" = "[]";
 	 	    "2" = "[]";
 	 	    "3" = "[]";
