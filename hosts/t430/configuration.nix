@@ -69,7 +69,7 @@ in
     firewall = {
       enable = false;
     };
-  }
+  };
 
   environment.variables = {
     NIX_FLAKE_CURRENT_CONFIG = "laptop";
