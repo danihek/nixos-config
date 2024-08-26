@@ -36,14 +36,14 @@
     };
   };
 
-  qt = {
-    enable = true;
-    platformTheme = "gtk";
-    style = {
-        name = "adwaita-dark";
-        package = pkgs.adwaita-qt;
-    };
-  };
+ #qt = {
+ #  enable = true;
+ #  platformTheme = "gtk";
+ #  style = {
+ #      name = "adwaita-dark";
+ #      package = pkgs.adwaita-qt;
+ #  };
+ #};
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
