@@ -33,10 +33,10 @@
 	     disable-scroll = true;
 	     warp-on-scroll = false; 
         persistant_workspaces = {
-		    "1" = "[]";
-	 	    "2" = "[]";
-	 	    "3" = "[]";
-	 	    "4" = "[]";
+		    1 = [];
+	 	    2 = [];
+	 	    3 = [];
+	 	    4 = [];
 	 	  };
         format-icons = {
           "1" = "一";
