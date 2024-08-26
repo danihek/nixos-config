@@ -60,7 +60,7 @@
         exec = "playerctl metadata --format='{{ title }}'";
         on-click = "playerctl play-pause";
         max-length = 50;
-      },
+      };
       clock = {
         format = "{:%H:%M}";
         format-alt = "{:%Y-%m-%d}";
