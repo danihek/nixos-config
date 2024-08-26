@@ -32,23 +32,6 @@ in
   services.udev.extraRules = ''
     SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", GROUP="plugdev"
   '';
-  
-  services.minecraft-server = {
-    enable = true;
-    eula = true;
-    declarative = true;
-
-    dataDir = "/var/lib/minecraft-server";
-
-    serverProperties = {
-      gamemode = "survival";
-      difficulty = "hard";
-      online-mode = "false";
-      simulation-distance = 10;
-      level-seed = "4";
-    };
-    jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
-  };
 
   # Bootloader.
   boot.tmp.cleanOnBoot = true;
@@ -98,4 +81,38 @@ in
   services.blueman.enable = true;
   hardware.bluetooth.enable = true; 
   hardware.bluetooth.powerOnBoot = true; 
+
+  
+  # Services
+  services.minecraft-server = {
+    enable = true;
+    eula = true;
+    declarative = true;
+
+    dataDir = "/var/lib/minecraft-server";
+
+    serverProperties = {
+      gamemode = "survival";
+      difficulty = "hard";
+      online-mode = "false";
+      simulation-distance = 10;
+      level-seed = "4";
+    };
+    jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
+  };
+
+  services.mpd = {
+    enable = true;
+    extraConfig = ''
+      audio_output {
+          type            "httpd"
+          name            "My HTTP Stream"
+          encoder         "vorbis"
+          port            "8000"
+          bind_to_address "0.0.0.0"
+          quality         "5.0"
+          format          "44100:16:2"
+      }
+    '';
+  };
 }
