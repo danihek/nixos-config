@@ -21,8 +21,8 @@
       package = pkgs.catppuccin-cursors.macchiatoDark;
     };
     theme = {
-      theme.name = "Dracula";
-      theme.package = pkgs.dracula-theme;
+      name = "Dracula";
+      package = pkgs.dracula-theme;
     };
     iconTheme = {
       name = "candy-icons";
