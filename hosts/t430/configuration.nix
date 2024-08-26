@@ -91,8 +91,8 @@ in
 
     firewall = {
       enable = true;
-      allowedTCPPorts = [ 443 80 8080 ];
-      allowedUDPPorts = [ 443 80 8080 ];
+      allowedTCPPorts = [ 443 80 8080 5004 ];
+      allowedUDPPorts = [ 443 80 8080 5004 ];
 
       allowedTCPPortRanges = [ 
         { from = 1700; to = 1764; } # KDE Connect and Weylus
