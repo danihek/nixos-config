@@ -162,11 +162,10 @@
     libsForQt5.qtstyleplugin-kvantum
   ];
 
-  qt5 = {
-    enable = true;
-    platformTheme = "gnome";
-    style = "adwaita-dark";
-  };
+  qt.enable = true;
+  qt.platformTheme.name = "gtk";
+  qt.style.name = "adwaita-dark";
+  qt.style.package = pkgs.adwaita-qt;
 
   # Nix
   programs.nix-ld.enable = true;
