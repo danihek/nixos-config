@@ -46,7 +46,7 @@
       "custom/music" = {
         format = " 𝄞 {}";
         escape = true;
-        interval = 5;
+        interval = 1;
         tooltip = false;
         exec = "playerctl metadata --format='{{ title }}'";
         on-click = "playerctl play-pause";
