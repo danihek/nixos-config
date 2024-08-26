@@ -101,6 +101,8 @@
     element-desktop
 
     # Music
+    mpd
+    mpc
     cava
     rhythmbox
 
