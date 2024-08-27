@@ -39,5 +39,13 @@
     };
   };
 
+  home.pointerCursor = {
+    package = pkgs.vimix-cursor-theme;
+    name = "Vimix-Cursors";
+    size = 24;
+    gtk.enable = true;
+    x11.enable = true;
+  };
+
   home.sessionVariables.GTK_THEME = "Nordic";
 }
