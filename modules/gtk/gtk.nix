@@ -32,7 +32,7 @@
   dconf.settings = {
     "org/gnome/desktop/interface" = {
       color-scheme = "prefer-dark";
-      cursor-size = 24;
+      cursor-size = 32;
     };
     "org/gnome/shell/extensions/user-theme" = {
       name = "Nordic";
@@ -41,8 +41,8 @@
 
   home.pointerCursor = {
     package = pkgs.oreo-cursors-plus;
-    name = "Oreo-Cursors-Plus";
-    size = 24;
+    name = "oreo_spark_red_cursors";
+    size = 32;
     gtk.enable = true;
     x11.enable = true;
   };
