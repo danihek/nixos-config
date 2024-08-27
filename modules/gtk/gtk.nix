@@ -40,8 +40,8 @@
   };
 
   home.pointerCursor = {
-    package = pkgs.vimix-cursor-theme;
-    name = "Vimix-Cursors";
+    package = pkgs.oreo-cursors-plus;
+    name = "Oreo-Cursors-Plus";
     size = 24;
     gtk.enable = true;
     x11.enable = true;
