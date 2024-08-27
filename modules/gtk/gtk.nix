@@ -40,8 +40,10 @@
   };
 
   home.pointerCursor = {
-    package = pkgs.oreo-cursors-plus;
-    name = "oreo_spark_red_cursors";
+   # package = pkgs.oreo-cursors-plus;
+   # name = "oreo_spark_red_cursors";
+    package = pkgs.posy-cursors;
+    name = "Posy_Cursor_Black";
     size = 32;
     gtk.enable = true;
     x11.enable = true;
