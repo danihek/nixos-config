@@ -37,7 +37,6 @@ in
   boot.tmp.cleanOnBoot = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.initrd.kernelModules = [ "amdgpu" ];
 
   networking = {
     hostName = "nix";
@@ -77,7 +76,7 @@ in
 
  
   powerManagement.cpuFreqGovernor = "performance";
-  hardware.graphics.enable = true;
+  #hardware.graphics.enable = true;
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
 
@@ -86,6 +85,7 @@ in
   hardware.bluetooth.enable = true; 
   hardware.bluetooth.powerOnBoot = true; 
 
+  # Corsair Keyboard
   hardware.ckb-next.enable = true;
   
   # Services
