@@ -73,7 +73,10 @@ in
     ckb-next
     lact
   ];
+
+
  
+  powerManagement.cpuFreqGovernor = "performance";
   hardware.graphics.enable = true;
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
