@@ -138,6 +138,7 @@
     killall
     ripgrep
     openscad
+    librecad
     vscodium
     kdenlive
     ckb-next # keyboard
