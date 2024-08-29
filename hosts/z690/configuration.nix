@@ -103,6 +103,14 @@ in
       simulation-distance = 10;
       level-seed = "4";
     };
+    
+    whitelist = {
+      wlosek1_11 = "1fd54f6c-4d3a-3a2b-8789-ec46ee40ac5b";
+      leoooo = "e3aa69e2-91e9-39c2-bb47-1a8a2e193afe";
+      kotomiki = "b39381fc-a261-394e-9432-0f9f64e306f6";
+      sigma_edgar = "1a701200-4e46-3cfb-9aa4-2f303c1aae33";
+    };
+
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
   };
 
