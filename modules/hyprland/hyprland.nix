@@ -181,6 +181,7 @@
         #"pywalfox start"
         "lxqt-policykit-agent"
         "hyprctl setcursor Posy_Cursor_Black 24"
+        "ckb-next -b"
       ];
 
       windowrulev2 = [
