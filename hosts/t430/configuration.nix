@@ -76,7 +76,7 @@ in
   };
 
   # Bluetooth
-  services.blueman.enable = false;
-  hardware.bluetooth.enable = false; # enables support for Bluetooth
+  services.blueman.enable = true;
+  hardware.bluetooth.enable = true; # enables support for Bluetooth
   hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boot
 }
