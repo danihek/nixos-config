@@ -180,6 +180,7 @@
         "swww init ; sleep 1; setwall"
         #"pywalfox start"
         "lxqt-policykit-agent"
+        "hyprctl setcursor Posy_Cursor_Black 24"
       ];
 
       windowrulev2 = [
