@@ -134,6 +134,7 @@
     pstree
     zoxide
     weylus
+    arduino
     ani-cli
     killall
     ripgrep
