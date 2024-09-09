@@ -72,8 +72,6 @@ in
     ckb-next
     lact
   ];
-
-
  
   powerManagement.cpuFreqGovernor = "performance";
   #hardware.graphics.enable = true;
