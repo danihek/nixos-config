@@ -105,6 +105,7 @@
     moc
     cava
     cmus
+    spotify
     ncmpcpp
     rhythmbox
 
