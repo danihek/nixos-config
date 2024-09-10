@@ -81,6 +81,9 @@ in
     enable = true;
     enable32Bit = true;
   };
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk
+  ];
 
   # Bluetooth
   services.blueman.enable = true;
