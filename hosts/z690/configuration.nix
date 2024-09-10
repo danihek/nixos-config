@@ -64,20 +64,22 @@ in
   };
 
   environment.variables = {
-    ROC_ENABLE_PRE_VEGA = "1";
     NIX_FLAKE_CURRENT_CONFIG = "mainpc";
   };
 
   environment.systemPackages = with pkgs; [
-    cinnamon.nemo dolphin
+    nemo dolphin
     ckb-next
     lact
   ];
  
   powerManagement.cpuFreqGovernor = "performance";
-  #hardware.graphics.enable = true;
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
 
   # Bluetooth
   services.blueman.enable = true;
@@ -89,7 +91,7 @@ in
   
   # Services
   services.minecraft-server = {
-    enable = true;
+    enable = false;
     eula = true;
     declarative = true;
 
