@@ -70,6 +70,7 @@ in
   environment.systemPackages = with pkgs; [
     nemo dolphin
     ckb-next
+    amdvlk
     lact
   ];
  
