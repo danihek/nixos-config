@@ -69,6 +69,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
+    cinammon.nemo dolphin
     ckb-next
     lact
   ];
