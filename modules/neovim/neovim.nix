@@ -50,8 +50,9 @@
     inoremap <silent><expr> <cr> "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
     inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<tab>"
 
+    let g:codeium_enabled = v:false
     let g:codeium_disable_bindings = 1
-    imap <script><silent><nowait><expr> <C-g> codeium#Accept()
+    imap <script><silent><nowait><expr> <C-j> codeium#Accept()
     imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
     imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
     imap <C-x>   <Cmd>call codeium#Clear()<CR>
