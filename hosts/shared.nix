@@ -139,7 +139,7 @@
     weylus
     busybox
     arduino
-    ani-cli
+    ani-cli manga-tui
     killall
     ripgrep
     openscad
