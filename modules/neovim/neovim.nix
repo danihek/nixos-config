@@ -37,7 +37,7 @@
     colorscheme retrobox
     
     <script><silent><nowait><expr> codeium#Disable()
-    vim.g.codeium_disable_bindings = 1
+    let g:codeium_no_map_tab = v:false
     imap <script><silent><nowait><expr> <C-g> codeium#Accept()
     imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
     imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
