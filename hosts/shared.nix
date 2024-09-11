@@ -49,6 +49,8 @@
     git
     lua
     udev
+    sfml
+    csfml
     cmake
     clang
     clang-tools
