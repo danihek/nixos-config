@@ -83,7 +83,7 @@
     imv
     mako
     wofi
-    mupdf
+    mupdf zathura 
     yt-dlp
     upower
     libnotify
