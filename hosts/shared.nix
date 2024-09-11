@@ -135,6 +135,7 @@
     pstree
     zoxide
     weylus
+    busybox
     arduino
     ani-cli
     killall
@@ -159,6 +160,7 @@
     pipes-rs
 
     # Rest..
+    xdg-utils
     gnome-keyring
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
