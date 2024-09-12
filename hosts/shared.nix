@@ -220,6 +220,8 @@
   services.printing.enable = true;
   services.gnome.gnome-keyring.enable = true;
   services.avahi = { enable = true; nssmdns4 = true; openFirewall = true; };
+  services.printing.drivers = [ pkgs.hplip ];
+
 
   # Hardware 
   hardware.graphics.enable = true;
