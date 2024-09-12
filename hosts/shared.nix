@@ -215,8 +215,9 @@
   };
   
   # Services
-  services.openssh.enable = true;
   services.upower.enable = true;
+  services.openssh.enable = true;
+  services.printing.enable = true;
   services.gnome.gnome-keyring.enable = true;
 
   # Hardware 
