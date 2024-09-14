@@ -8,6 +8,7 @@
     swappy
     playerctl
     wl-clipboard
+    brightnessctl
   ];
 
   xdg.portal = {
@@ -170,6 +171,9 @@
       binde = [
         ", XF86AudioRaiseVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%+"
         ", XF86AudioLowerVolume, exec, wpctl set-volume -l 1.5 @DEFAULT_AUDIO_SINK@ 5%-"
+
+        "ALT, XF86AudioRaiseVolume, exec, brightnessctl s +1%"
+        "ALT, XF86AudioLowerVolume, exec, brightnessctl s 1%-"
       ];
 
       bindm = [
