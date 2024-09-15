@@ -109,7 +109,7 @@
     moc
     cava
     cmus
-    #spotify spicetify-cli
+    spotify spicetify-cli
     ncmpcpp
     rhythmbox
 
