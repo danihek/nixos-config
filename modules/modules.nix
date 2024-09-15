@@ -23,6 +23,7 @@
       ./pywalfox/pywalfox.nix
       ./hyprland/hyprland.nix
       ./hyprlock/hyprlock.nix
+      ./spicetify/spicetify.nix
       ./fastfetch/fastfetch.nix
       ./alacritty/alacritty.nix
 
