@@ -14,7 +14,7 @@ in
     enable = true;
      enabledExtensions = with spicePkgs.extensions; [
        adblock
-       shuffle+
+       shuffle
      ];
      theme = spicePkgs.themes.dribbblish;
      colorScheme = "gruvbox-material-dark";
