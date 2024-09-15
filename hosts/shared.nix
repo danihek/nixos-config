@@ -34,6 +34,9 @@
 
     # Top's
     htop
+    btop
+    bpytop
+    powertop
     
     # Browsers
     brave
@@ -153,6 +156,9 @@
     markdown-oxide
     linuxPackages.usbip
     libreoffice-qt6-still
+
+    # Fun
+    osu-lazer-bin
 
     # Flex
     cowsay
