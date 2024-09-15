@@ -54,13 +54,13 @@
     sfml
     csfml
     cmake
-    clang
-    clang-tools
+    clang clang-tools
     libGL
     seatd
     libgcc
     libGLU
     pixman
+    python3
     godot_4
     glxinfo
     gnumake
