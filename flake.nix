@@ -19,6 +19,11 @@
       url = "github:danihek/Themecord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    spicetify-nix = {
+      url = "github:Gerg-L/spicetify-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = 
@@ -42,6 +47,7 @@
           ./hosts/shared.nix
           ./hosts/t430/configuration.nix
           inputs.home-manager.nixosModules.default 
+          inputs.spicetify-nix.nixosModules.default
 
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [
@@ -64,6 +70,7 @@
           ./hosts/shared.nix
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.spicetify-nix.nixosModules.default
 
           ({ config, pkgs, ... }: {
            environment.systemPackages = with pkgs; [

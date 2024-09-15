@@ -3,6 +3,7 @@
 {
   imports = [
     ../modules/modules.nix
+    inputs.spicetify-nix.homeManagerModules.default
   ];
 
   home.username = "${USERNAME}";
