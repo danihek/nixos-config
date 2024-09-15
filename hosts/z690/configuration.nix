@@ -51,9 +51,10 @@ in
     } ];
 
     firewall = {
-      enable = false;
-      allowedTCPPorts = [ 443 80 8080 25565 8999 57621 5353 ];
-      allowedUDPPorts = [ 443 80 8080 25565 8999 57621 5353 ];
+      enable = true;
+      checkReversePath = "loose";
+      allowedTCPPorts = [ 443 80 4070 8080 25565 8999 57621 5353 ];
+      allowedUDPPorts = [ 443 80 4070 8080 25565 8999 57621 5353 ];
 
       allowedTCPPortRanges = [ 
         { from = 1700; to = 1764; } # KDE Connect and Weylus
