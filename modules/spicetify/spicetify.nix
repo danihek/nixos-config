@@ -24,5 +24,5 @@
   
     theme = spicePkgs.themes.catppuccin;
     colorScheme = "mocha";
-  }
+  };
 }
