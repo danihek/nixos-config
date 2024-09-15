@@ -35,7 +35,6 @@
     # Top's
     htop
     btop
-    bpytop
     powertop
     
     # Browsers

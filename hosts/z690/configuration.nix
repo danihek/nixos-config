@@ -81,7 +81,7 @@ in
     enable = true;
     enable32Bit = true;
   };
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.extraPackages = with pkgs; [
     amdvlk
   ];
 
