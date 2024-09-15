@@ -47,7 +47,6 @@
           ./hosts/shared.nix
           ./hosts/t430/configuration.nix
           inputs.home-manager.nixosModules.default 
-          inputs.spicetify-nix.nixosModules.default
 
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [

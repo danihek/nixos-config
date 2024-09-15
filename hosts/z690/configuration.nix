@@ -11,7 +11,6 @@ in
       ../shared.nix
       ./hardware-configuration.nix
       inputs.home-manager.nixosModules.home-manager
-      inputs.spicetify-nix.homeManagerModules.default
     ];
 
   home-manager = {
