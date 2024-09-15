@@ -86,6 +86,10 @@ in
     amdvlk
   ];
 
+  # Virtualization
+  programs.virt-manager.enable = true;
+  virtualisation.libvirtd.enable = true;
+
   # Bluetooth
   services.blueman.enable = true;
   hardware.bluetooth.enable = true; 
