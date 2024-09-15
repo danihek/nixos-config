@@ -86,6 +86,9 @@ in
     amdvlk
   ];
 
+  # Flatpak for spotify
+  services.flatpak.enable = true;
+
   # Virtualization
   programs.virt-manager.enable = true;
   virtualisation.libvirtd.enable = true;
