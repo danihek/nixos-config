@@ -73,6 +73,7 @@ in
     nemo dolphin
     ckb-next
     amdvlk
+    rpcs3
     lact
   ];
  
