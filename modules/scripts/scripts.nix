@@ -68,9 +68,9 @@ let
             keyword animations:enabled 1;\
             keyword decoration:drop_shadow 5;\
             keyword decoration:blur:enabled 1;\
-            keyword general:gaps_in 20;\
-            keyword general:gaps_out 20;\
-            keyword general:border_size 30;\
+            keyword general:gaps_in 10;\
+            keyword general:gaps_out 10;\
+            keyword general:border_size 3;\
             keyword decoration:rounding 20"
         exit
     fi
