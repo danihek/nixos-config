@@ -66,12 +66,12 @@ let
     if [ "$MODE" = 0 ] ; then
         hyprctl --batch "\
             keyword animations:enabled 1;\
-            keyword decoration:drop_shadow 10;\
+            keyword decoration:drop_shadow 5;\
             keyword decoration:blur:enabled 1;\
-            keyword general:gaps_in 50;\
-            keyword general:gaps_out 50;\
-            keyword general:border_size 10;\
-            keyword decoration:rounding 30"
+            keyword general:gaps_in 20;\
+            keyword general:gaps_out 20;\
+            keyword general:border_size 30;\
+            keyword decoration:rounding 20"
         exit
     fi
     hyprctl reload
