@@ -26,7 +26,7 @@ in
     shell = pkgs.zsh;
     isNormalUser = true;
     description = "${USERNAME}";
-    extraGroups = [ "networkmanager" "wheel" "dialout" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" ];
     packages = with pkgs; [];
   };
 

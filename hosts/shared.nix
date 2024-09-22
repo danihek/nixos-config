@@ -222,6 +222,7 @@
   # Services
   services.gvfs.enable = true;
   services.upower.enable = true;
+  services.udisks2.enable = true;
   services.openssh.enable = true;
   services.printing.enable = true;
   services.gnome.gnome-keyring.enable = true;
