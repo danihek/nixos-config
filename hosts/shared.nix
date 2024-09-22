@@ -121,6 +121,8 @@
     fzf
     bat
     wtf
+    rar
+    tor
     vimv
     tree
     tldr
