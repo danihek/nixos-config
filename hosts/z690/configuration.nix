@@ -38,7 +38,6 @@ in
   boot.tmp.cleanOnBoot = true;
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelParams = [ "video=DP-2:2560x1440@170" ];
 
   networking = {
     hostName = "nix";
