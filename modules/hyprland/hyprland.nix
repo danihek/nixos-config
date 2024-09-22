@@ -36,7 +36,7 @@
     settings = {
       monitor = [
         "DP-1,2560x1440@165,0x50,1"
-        "DP-2,2560x1440@165,2560x0,1,transform,1"
+        "DP-2,2560x1440@24,2560x0,1,transform,1"
       ];
 
       "$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini"'';
