@@ -134,6 +134,8 @@
     file
     zola
     gimp
+    wine
+    p7zip
     unzip
     cobalt #mdbook mdbook-katex
     scrcpy
