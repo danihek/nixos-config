@@ -137,6 +137,7 @@
     wine
     p7zip
     unzip
+    kicad
     cobalt #mdbook mdbook-katex
     scrcpy
     bitwig-studio reaper ffmpeg # audio, video
