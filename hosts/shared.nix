@@ -139,7 +139,7 @@
     unzip
     cobalt #mdbook mdbook-katex
     scrcpy
-    ffmpeg
+    bitwig reaper ffmpeg # audio, video
     pstree
     zoxide
     weylus
