@@ -96,7 +96,7 @@
 * {
 	border: none;
    font-family: Jetbrains Mono;
-	font-size: 13px;
+	font-size: 9px;
 	border-radius: 0;	
 	padding: 0px 0px 0px 0px;
 }
