@@ -96,7 +96,7 @@
 * {
 	border: none;
    font-family: Jetbrains Mono;
-	font-size: 9px;
+	font-size: 11px;
 	border-radius: 0;	
 	padding: 0px 0px 0px 0px;
 }
@@ -115,7 +115,7 @@ window#waybar {
 #workspaces button {
 	color: @foreground;
 	background: @background;
-	padding: 0px 4px 0px 4px;
+	padding: 0px 3px 0px 3px;
 }
 #workspaces button:hover {
 	text-shadow: inherit;
