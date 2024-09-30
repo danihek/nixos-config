@@ -169,8 +169,8 @@
         "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | tee >(swappy -f - -o - | wl-copy) | wl-copy"
 
         # Rotating laptop screen
-        "$mod ALT, DOWN, exec, hyprctl keyword monitor LVDS-1,1920x1080@60,0x0,1,transform,0"
-        "$mod ALT, UP, exec, hyprctl keyword monitor LVDS-1,1920x1080@60,0x0,1,transform,2"
+        "$mod ALT, DOWN, exec, hyprctl keyword monitor LVDS-1,1920x1080@60,0x0,1,transform,2"
+        "$mod ALT, UP, exec, hyprctl keyword monitor LVDS-1,1920x1080@60,0x0,1,transform,0"
         "$mod ALT, LEFT, exec, hyprctl keyword monitor LVDS-1,1920x1080@60,0x0,1,transform,3"
         "$mod ALT, RIGHT, exec, hyprctl keyword monitor LVDS-1,1920x1080@60,0x0,1,transform,1"
 
