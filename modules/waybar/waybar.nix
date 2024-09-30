@@ -115,7 +115,7 @@ window#waybar {
 #workspaces button {
 	color: @foreground;
 	background: @background;
-	padding: 0px 3px 0px 3px;
+	padding: 0px 1px 0px 1px;
 }
 #workspaces button:hover {
 	text-shadow: inherit;
