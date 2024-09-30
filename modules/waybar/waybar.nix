@@ -115,7 +115,7 @@ window#waybar {
 #workspaces button {
 	color: @foreground;
 	background: @background;
-	padding: 0px 1px 0px 1px;
+	padding: 0px 4px 0px 4px;
 }
 #workspaces button:hover {
 	text-shadow: inherit;
@@ -136,7 +136,6 @@ window#waybar {
 }
 #clock {
 	border: solid 2px @foreground;
-	padding: 0px 5px 0px 0px;
 	background: @foreground;
 	color: @background;
 }
