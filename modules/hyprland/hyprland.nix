@@ -233,11 +233,6 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
       ];
-
-      gestures = {
-        workspace_swipe = true;
-        workspace_swipe_touch = true;
-      };
       
       misc = {
         disable_hyprland_logo = true;
