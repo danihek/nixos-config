@@ -220,6 +220,8 @@
       misc = {
         disable_hyprland_logo = true;
         disable_while_typing = true;
+        workspace_swipe = true;
+        workspace_swipe_touch = true;
       };
     };
   };
