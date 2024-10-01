@@ -13,10 +13,8 @@ let
     $pywal $wallpaper_path/$wallpaper
 
     swww img $wallpaper_path/$wallpaper \
-      --transition-bezier .56,1.12,1,.6 \
-      --transition-fps=165 \
-      --transition-type="any" \
-      --transition-duration=0.3
+      --transition-type="grow" \
+      --invert-y
 
     wbar-reload
     themecord

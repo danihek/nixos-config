@@ -219,6 +219,7 @@
       
       misc = {
         disable_hyprland_logo = true;
+        disable_while_typing = true;
       };
     };
   };
