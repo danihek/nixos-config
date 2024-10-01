@@ -216,12 +216,18 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
       ];
+
+      touchpad = {
+        disable_while_typing = true;
+      };
+
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_touch = true;
+      };
       
       misc = {
         disable_hyprland_logo = true;
-        disable_while_typing = true;
-        workspace_swipe = true;
-        workspace_swipe_touch = true;
       };
     };
   };
