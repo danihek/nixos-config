@@ -97,8 +97,19 @@
         ];
       };
 
+      binds = {
+        allow_workspace_cycles = true;
+      };
+
       dwindle = {
-        pseudotile = false;
+        pseudotile = "yes";
+        preserve_split = "yes";
+        # no_gaps_when_only = "yes";
+      };
+
+      gestures = {
+        workspace_swipe = true;
+        workspace_swipe_use_r = true;
       };
  
       input = {
@@ -106,6 +117,12 @@
         follow_mouse = 1;
         repeat_delay = 200;
         repeat_rate = 50;
+        
+        touchpad = {
+          natural_scroll = "yes";
+          disable_while_typing = true;
+          drag_lock = true;
+        };
       };
 
       "$mod" = "SUPER";
@@ -216,10 +233,6 @@
         "float,title:^(Confirm to replace files)$"
         "float,title:^(File Operation Progress)$"
       ];
-
-      touchpad = {
-        disable_while_typing = true;
-      };
 
       gestures = {
         workspace_swipe = true;
