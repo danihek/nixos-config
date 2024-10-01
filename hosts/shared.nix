@@ -57,6 +57,8 @@
     clang clang-tools
     libGL
     seatd
+    cargo
+    rustup
     libgcc
     libGLU
     pixman
