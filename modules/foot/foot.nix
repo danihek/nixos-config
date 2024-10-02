@@ -11,7 +11,7 @@
        term = "screen-256color";
        font = "JetBrainsMono Nerd Font:size=9";
        dpi-aware = "yes";
-       pad = "10x10 cnenter"
+       pad = "10x10 cnenter";
      };
 
      colors = {
