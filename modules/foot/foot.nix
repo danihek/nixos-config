@@ -9,8 +9,9 @@
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
-       font = "JetBrainsMono Nerd Font:size=13";
+       font = "JetBrainsMono Nerd Font:size=9";
        dpi-aware = "yes";
+       pad = "10x10 cnenter"
      };
 
      colors = {
@@ -22,10 +23,10 @@
      };
 
      key-bindings = {
-       scrollback-up-line = "Shift+k";
-       scrollback-down-line = "Shift+j";
-       scrollback-up-half-page = "Control+Shift+k";
-       scrollback-down-half-page = "Control+Shift+j";
+       scrollback-up-line = "Alt+k";
+       scrollback-down-line = "Alt+j";
+       scrollback-up-half-page = "Alt+Shift+k";
+       scrollback-down-half-page = "Alt+Shift+j";
      };
      
      mouse = {
