@@ -11,7 +11,7 @@
        term = "screen-256color";
        font = [ lib.mkIf ("${USERNAME}" == "ven") {
         font = "JetBrainsMono Nerd Font:size=9";
-       }; lib.mkIf ("${USERNAME}" == "en") {
+       } lib.mkIf ("${USERNAME}" != "ven") {
         font = "FiraCode Nerd Font:size=13";
        } ];
 
