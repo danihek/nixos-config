@@ -17,6 +17,9 @@ let
 };
 in
 { 
+  home.file."~/.mozilla/firefox/dh/user.js".source = "${shyFox}/user.js";
+  home.file."~/.mozilla/firefox/dh/chrome".source = "${shyFox}/chrome";
+
   programs = {
     firefox = {
       enable = true;
@@ -28,8 +31,7 @@ in
           name = "dh";
           isDefault = true;
           settings = {
-            "browser.startup.homepage" = "https://searx.aicampground.com";
-            "browser.search.defaultenginename" = "Searx";
+            "browser.search.defaultenginename" = "Google";
             "browser.search.order.1" = "Searx";
           };
           search = {
@@ -82,7 +84,7 @@ in
 
         /* ---- EXTENSIONS ---- */
         ExtensionSettings = {
-          "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          #"*".installation_mode = "blocked"; # blocks all addons except the ones specified below
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
             installation_mode = "force_installed";
@@ -111,6 +113,4 @@ in
       };
     };
   };
-  home.file."~/.mozilla/firefox/dh/user.js".source = "${shyFox}/user.js";
-  home.file."~/.mozilla/firefox/dh/chrome".source = "${shyFox}/chrome";
 }
