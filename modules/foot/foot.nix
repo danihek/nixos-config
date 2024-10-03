@@ -1,4 +1,4 @@
-{ pkgs, lib, config, users, USERNAME, ...}:
+{ pkgs, lib, config, USERNAME, ...}:
 
 {
   programs.foot = {
@@ -9,7 +9,7 @@
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
-       font = lib.mkIf (config.users.users."${USERNAME}".isSystemUser) {
+       font = lib.mkIf ("${USERNAME}" == "ven") {
         font = "JetBrainsMono Nerd Font:size=9";
        };
 
