@@ -10,11 +10,10 @@ let
     Status = "locked";
   };
   shyFox = pkgs.fetchFromGitHub {
-    owner = "danihek";
-    repo = "ShyFox";
-    rev = "master";
-    src = ./.;
-  };
+  owner = "danihek";
+  repo = "ShyFox";
+  rev = "master";
+};
 in
 {
   home.file."~/.mozilla/firefox/profiles.ini".text = ''
