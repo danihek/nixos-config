@@ -39,7 +39,7 @@ in
             order = [ "Google" "DuckDuckGo" "Searx" ];
           };
 
-          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+          extensions = with nur.repos.rycee.firefox-addons; [
             userchrome_toggle_extended
             adblocker_ultimate
             antitestportal
