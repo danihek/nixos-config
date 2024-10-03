@@ -21,11 +21,6 @@
     firefox
   ];
 
-  let
-    firefoxProfilePath = "${pkgs.mozilla.firefox}/share/firefox/profiles";
-    profileName = "default";
-  in
-
   home.file."~/.mozilla/firefox/profiles.ini".text = ''
     [Profile0]
     Name=default
