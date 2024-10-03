@@ -1,4 +1,4 @@
-{ pkgs, lib, USERNAME, ...}:
+{ pkgs, lib, config, USERNAME, ...}:
 
 {
   programs.foot = {
