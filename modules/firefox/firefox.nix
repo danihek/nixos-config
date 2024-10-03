@@ -111,6 +111,6 @@ in
       };
     };
   };
-  home.file."~/.mozilla/firefox/dh/user.js".source = "${shyFox}/user.js";
-  home.file."~/.mozilla/firefox/dh/chrome".source = "${shyFox}/chrome";
+ #home.file."~/.mozilla/firefox/dh/user.js".source = "${shyFox}/user.js";
+ #home.file."~/.mozilla/firefox/dh/chrome".source = "${shyFox}/chrome";
 }
