@@ -31,7 +31,7 @@ in
 
   # Ensure that the default Firefox profile directory exists
   home.file."~/.mozilla/firefox/danihek.default".directory = {
-    owner = "${config.users.user}"; # Replace with your actual username
+    owner = config.users.user; # Replace with your actual username
   };
 
   # Copy the chrome folder and user.js from the shyFox repository to the profile directory
