@@ -119,9 +119,7 @@
         repeat_rate = 50;
         
         touchpad = {
-          natural_scroll = "yes";
           disable_while_typing = true;
-          drag_lock = true;
         };
       };
 
