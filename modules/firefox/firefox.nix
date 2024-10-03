@@ -1,4 +1,4 @@
-{ config, pkgs, USERNAME, ... }:
+{ config, lib, pkgs, USERNAME, ... }:
 
 let
   lock-false = {
@@ -39,7 +39,7 @@ in
             order = [ "Google" "DuckDuckGo" "Searx" ];
           };
 
-          extensions = with nur.repos.rycee.firefox-addons; [
+          extensions = with pkgs.nur.repos.rycee.firefox-addons; [
             userchrome_toggle_extended
             adblocker_ultimate
             antitestportal
