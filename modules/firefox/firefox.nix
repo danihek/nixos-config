@@ -1,22 +1,26 @@
-{ pkgs, ... }:
+{ pkgs ? import <nixpkgs> {} }:
 
 let
   shyFox = pkgs.fetchFromGitHub {
     owner = "danihek";
     repo = "ShyFox";
-    rev = "master";
-    src = ./.;
+    rev = "master"; # Use a specific commit hash if needed
+    src = ./.; # Assumes you run from within the cloned directory
   };
-  
-  firefoxProfilePath = "${pkgs.mozilla.firefox}/share/firefox/profiles/default-release";
+
+  # Specify the path to your Firefox profile
+  firefoxProfilePath = "${pkgs.mozilla.firefox}/share/firefox/profiles/default-release"; # Adjust if your profile name is different
 in
 
+# Define a derivation to copy the files
 pkgs.stdenv.mkDerivation {
   pname = "shyfox-firefox-profile";
   version = "1.0";
 
+  # Build inputs
   buildInputs = [ pkgs.makeWrapper ];
 
+  # Build phase
   buildPhase = ''
     # Create the profile directory if it doesn't exist
     mkdir -p "${firefoxProfilePath}/chrome"
@@ -28,13 +32,15 @@ pkgs.stdenv.mkDerivation {
     cp ${shyFox}/user.js "${firefoxProfilePath}/"
   '';
 
+  # Install phase (no installation needed)
   installPhase = ''
     echo "Files have been copied to ${firefoxProfilePath}."
   '';
 
+  # No outputs, we only copy files
   meta = with pkgs.stdenv.lib; {
     description = "Copy ShyFox configuration files to Firefox profile";
-    license = licenses.mit;
-    maintainers = with maintainers; [ yourMaintainerName ];
+    license = licenses.mit;  # Adjust license as needed
+    maintainers = with maintainers; [ yourMaintainerName ];  # Optional
   };
 }
