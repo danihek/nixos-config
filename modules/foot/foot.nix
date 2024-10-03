@@ -9,9 +9,9 @@
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
-       font = lib.mkIf ("${USERNAME}" == "ven") {
+       font = lib.mkIf (${USERNAME} == "ven") {
         font = "JetBrainsMono Nerd Font:size=9";
-       }// lib.mkIf ("${USERNAME}" != "ven") {
+       } // lib.mkIf (${USERNAME} != "ven") {
         font = "FiraCode Nerd Font:size=13";
        };
 
