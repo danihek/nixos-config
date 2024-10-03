@@ -16,23 +16,7 @@ let
   hash = "sha256-3OEAuNqqUimhWA04qA19InCSsDFWoVWX5A48pF2mNEY=";
 };
 in
-{
-  home.file."~/.mozilla/firefox/profiles.ini".text = ''
-    [Profile0]
-    Name=default
-    IsRelative=1
-    Path=default
-    Default=1
-
-    [General]
-    StartWithLastProfile=1
-    Version=2
-  '';
-
-  # Copy the chrome folder and user.js from the shyFox repository to the profile directory
-  home.file."~/.mozilla/firefox/default/user.js".source = "${shyFox}/user.js";
-  home.file."~/.mozilla/firefox/default/chrome".source = "${shyFox}/chrome";
-  
+{ 
   programs = {
     firefox = {
       enable = true;
@@ -127,4 +111,6 @@ in
       };
     };
   };
+  home.file."~/.mozilla/firefox/dh/user.js".source = "${shyFox}/user.js";
+  home.file."~/.mozilla/firefox/dh/chrome".source = "${shyFox}/chrome";
 }
