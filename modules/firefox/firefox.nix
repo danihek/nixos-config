@@ -83,7 +83,7 @@ in
           "3c078156-979c-498b-8990-85f7987dd929" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/file/4246774/sidebery-5.2.0.xpi";
             installation_mode = "force_installed";
-          }
+          };
           "userchrome-toggle-extended@n2ezr.ru" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/userchrome_toggle_extended/latest.xpi";
             installation_mode = "force_installed";
