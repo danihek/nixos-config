@@ -9,11 +9,9 @@
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
-       if ${USERNAME} == "ven" then {
+       (lib.mkIf ${USERNAME} == "ven" {
          font = "JetBrainsMono Nerd Font:size=9";
-       } else {
-         font = "JetBrainsMono Nerd Font:size=13";
-       };
+       })
 
        dpi-aware = "yes";
        pad = "10x10 center";
