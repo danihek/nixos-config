@@ -17,17 +17,17 @@ let
 };
 in
 {
- #home.file."~/.mozilla/firefox/profiles.ini".text = ''
- #  [Profile0]
- #  Name=default
- #  IsRelative=1
- #  Path=default
- #  Default=1
+  home.file."~/.mozilla/firefox/profiles.ini".text = ''
+    [Profile0]
+    Name=default
+    IsRelative=1
+    Path=default
+    Default=1
 
- #  [General]
- #  StartWithLastProfile=1
- #  Version=2
- #'';
+    [General]
+    StartWithLastProfile=1
+    Version=2
+  '';
 
   # Copy the chrome folder and user.js from the shyFox repository to the profile directory
   home.file."~/.mozilla/firefox/default/user.js".source = "${shyFox}/user.js";
@@ -38,13 +38,13 @@ in
       enable = true;
       languagePacks = [ "en-US" ];
 
-      /* PROFILES */
-      profiles = {
-        default = {
-          id = 0;
-          name = "default";
+      /* PROFILE */
+      profiles.dh = {
+        id = 0;
+          name = "dh";
           isDefault = true;
           settings = {
+            "browser.startup.homepage" = "https://searx.aicampground.com";
             "browser.search.defaultenginename" = "Searx";
             "browser.search.order.1" = "Searx";
           };
@@ -61,14 +61,8 @@ in
                     { name = "query"; value = "{searchTerms}"; }
                   ];
                 }];
-                icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+                icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
                 definedAliases = [ "@np" ];
-              };
-              "NixOS Wiki" = {
-                urls = [{ template = "https://nixos.wiki/index.php?search={searchTerms}"; }];
-                iconUpdateURL = "https://nixos.wiki/favicon.png";
-                updateInterval = 24 * 60 * 60 * 1000; # every day
-                definedAliases = [ "@nw" ];
               };
               "Searx" = {
                 urls = [{ template = "https://searx.aicampground.com/?q={searchTerms}"; }];
@@ -76,11 +70,9 @@ in
                 updateInterval = 24 * 60 * 60 * 1000; # every day
                 definedAliases = [ "@searx" ];
               };
-              "Bing".metaData.hidden = true;
-              "Google".metaData.alias = "@g"; # builtin engines only support specifying one additional alias
+              "Google".metaData.alias = "@g";
             };
           };
-        };
       };
 
       /* ---- POLICIES ---- */
