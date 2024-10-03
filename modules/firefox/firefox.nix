@@ -17,8 +17,8 @@ let
 };
 in
 { 
-  home.file."~/.mozilla/firefox/dh/user.js".source = "${shyFox}/user.js";
-  home.file."~/.mozilla/firefox/dh/chrome".source = "${shyFox}/chrome";
+  home.file."~/.mozilla/firefox/${USERNAME}/user.js".source = "${shyFox}/user.js";
+  home.file."~/.mozilla/firefox/${USERNAME}/chrome".source = "${shyFox}/chrome";
 
   programs = {
     firefox = {
@@ -26,38 +26,17 @@ in
       languagePacks = [ "en-US" ];
 
       /* PROFILE */
-      profiles.dh = {
-        id = 0;
-          name = "dh";
+      profiles.${USERNAME} = {
+          id = 0;
+          name = "${USERNAME}";
           isDefault = true;
           settings = {
             "browser.search.defaultenginename" = "Google";
-            "browser.search.order.1" = "Searx";
+            "browser.search.order.1" = "Google";
           };
           search = {
-            force = true;
-            default = "Searx";
-            order = [ "Searx" "Google" ];
-            engines = {
-              "Nix Packages" = {
-                urls = [{
-                  template = "https://search.nixos.org/packages";
-                  params = [
-                    { name = "type"; value = "packages"; }
-                    { name = "query"; value = "{searchTerms}"; }
-                  ];
-                }];
-                icon = "''${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
-                definedAliases = [ "@np" ];
-              };
-              "Searx" = {
-                urls = [{ template = "https://searx.aicampground.com/?q={searchTerms}"; }];
-                iconUpdateURL = "https://nixos.wiki/favicon.png";
-                updateInterval = 24 * 60 * 60 * 1000; # every day
-                definedAliases = [ "@searx" ];
-              };
-              "Google".metaData.alias = "@g";
-            };
+            default = "Google";
+            order = [ "Google" "DuckDuckGo" "Searx" ];
           };
       };
 
@@ -87,6 +66,42 @@ in
           #"*".installation_mode = "blocked"; # blocks all addons except the ones specified below
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          "addon@darkreader.org" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          "sponsorBlocker@ajay.app" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+            installation_mode = "force_installed";
+          };
+          "adblockultimate@adblockultimate.net" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/file/4320550/adblocker_ultimate-3.8.26.xpi";
+            installation_mode = "force_installed";
+          };
+          "3c078156-979c-498b-8990-85f7987dd929" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/file/4246774/sidebery-5.2.0.xpi";
+            installation_mode = "force_installed";
+          }
+          "userchrome-toggle-extended@n2ezr.ru" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/userchrome_toggle_extended/latest.xpi";
+            installation_mode = "force_installed";
+          };
+        "pywalfox@frewacom.org" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/pywalfox/latest.xpi";
+            installation_mode = "force_installed";
+          };
+        "ademking@betterviewer" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/betterviewer/latest.xpi";
+            installation_mode = "force_installed";
+          };
+        "3cbdf1b7-a83b-4f57-9faf-c84ed37fd77c" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/file/3879928/antitestportal-1.2.1.xpi";
+            installation_mode = "force_installed";
+          };
+        "userchrome-toggle-extended@n2ezr.ru" = {
+            install_url = "https://addons.mozilla.org/firefox/downloads/latest/userchrome_toggle_extended/latest.xpi";
             installation_mode = "force_installed";
           };
         };
