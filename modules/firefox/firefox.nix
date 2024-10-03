@@ -13,7 +13,7 @@ let
   owner = "danihek";
   repo = "ShyFox";
   rev = "master";
-  hash = "sha256-3OEAuNqqUimhWA04qA19InCSsDFWoVWX5A48pF2mNEY="
+  hash = "sha256-3OEAuNqqUimhWA04qA19InCSsDFWoVWX5A48pF2mNEY=";
 };
 in
 {
