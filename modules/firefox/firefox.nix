@@ -17,10 +17,6 @@
     };
   in
 {
-  environment.systemPackages = with pkgs; [
-    firefox
-  ];
-
   home.file."~/.mozilla/firefox/profiles.ini".text = ''
     [Profile0]
     Name=default
