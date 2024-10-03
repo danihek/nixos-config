@@ -10,11 +10,10 @@
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
        font = lib.mkIf ("${USERNAME}" == "ven") {
-        font = "JetBrainsMono Nerd Font:size=9";
-      }; 
-      font = lib.mkIf ("${USERNAME}" != "ven") {
-        font = "FiraCode Nerd Font:size=13";
-       };
+    font = "JetBrainsMono Nerd Font:size=9";
+} else {
+    font = "Default Font:size=10";  # Change this to your desired default font
+};
 
        dpi-aware = "yes";
        pad = "10x10 center";
