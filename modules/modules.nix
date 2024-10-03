@@ -19,6 +19,7 @@
       ./pywal/pywal.nix
       ./neovim/neovim.nix
       ./waybar/waybar.nix
+      ./firefox/firefox.nix
       ./discord/discord.nix
       ./pywalfox/pywalfox.nix
       ./hyprland/hyprland.nix
