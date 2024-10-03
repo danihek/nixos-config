@@ -1,21 +1,21 @@
 { config, pkgs, ... }:
 
-let
-  lock-false = {
-    Value = false;
-    Status = "locked";
-  };
-  lock-true = {
-    Value = true;
-    Status = "locked";
-  };
-  shyFox = pkgs.fetchFromGitHub {
-    owner = "danihek";
-    repo = "ShyFox";
-    rev = "master";
-    src = ./.;
-  };
-in
+  let
+    lock-false = {
+      Value = false;
+      Status = "locked";
+    };
+    lock-true = {
+      Value = true;
+      Status = "locked";
+    };
+    shyFox = pkgs.fetchFromGitHub {
+      owner = "danihek";
+      repo = "ShyFox";
+      rev = "master";
+      src = ./.;
+    };
+  in
 {
   home.file."~/.mozilla/firefox/profiles.ini".text = ''
     [Profile0]
@@ -23,29 +23,19 @@ in
     IsRelative=1
     Path=danihek.default
     Default=1
-
+    
     [General]
     StartWithLastProfile=1
     Version=2
   '';
 
-  # Ensure that the default Firefox profile directory exists
-  home.file."~/.mozilla/firefox/danihek.default".directory = {
-    mode = "0700";
-    owner = "your_username"; # Replace with your actual username
-    group = "your_group"; # Replace with your actual group
-  };
-
-  # Copy the chrome folder and user.js from the shyFox repository to the profile directory
-  home.file."~/.mozilla/firefox/danihek.default/user.js".source = "${shyFox}/path/to/user.js"; # Adjust the path if necessary
-  home.file."~/.mozilla/firefox/danihek.default/chrome".source = "${shyFox}/path/to/chrome"; # Adjust the path if necessary
-  
   programs = {
     firefox = {
       enable = true;
       languagePacks = [ "en-US" ];
 
       /* ---- POLICIES ---- */
+      # Check about:policies#documentation for options.
       policies = {
         DisableTelemetry = true;
         DisableFirefoxStudies = true;
@@ -67,15 +57,20 @@ in
         SearchBar = "unified"; # alternative: "separate"
 
         /* ---- EXTENSIONS ---- */
+        # Check about:support for extension/add-on ID strings.
+        # Valid strings for installation_mode are "allowed", "blocked",
+        # "force_installed" and "normal_installed".
         ExtensionSettings = {
           "*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          # uBlock Origin:
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
             installation_mode = "force_installed";
           };
         };
-
+  
         /* ---- PREFERENCES ---- */
+        # Check about:config for options.
         Preferences = { 
           "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
           "extensions.pocket.enabled" = lock-false;
@@ -98,4 +93,3 @@ in
     };
   };
 }
-
