@@ -11,9 +11,9 @@
        term = "screen-256color";
        font = lib.mkIf ("${USERNAME}" == "ven") {
         font = "JetBrainsMono Nerd Font:size=9";
-      } else {
-        font = "JetBrainsMono Nerd Font:size=13";
-      };
+       }// lib.mkIf ("${USERNAME}" != "ven") {
+        font = "FiraCode Nerd Font:size=13";
+       };
 
        dpi-aware = "yes";
        pad = "10x10 center";
