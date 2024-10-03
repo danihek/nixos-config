@@ -29,14 +29,9 @@ in
     Version=2
   '';
 
-  # Ensure that the default Firefox profile directory exists
-  home.file."~/.mozilla/firefox/default".directory = {
-    owner = USERNAME; # Replace with your actual username
-  };
-
   # Copy the chrome folder and user.js from the shyFox repository to the profile directory
-  home.file."~/.mozilla/firefox/default/user.js".source = "${shyFox}/path/to/user.js"; # Adjust the path if necessary
-  home.file."~/.mozilla/firefox/default/chrome".source = "${shyFox}/path/to/chrome"; # Adjust the path if necessary
+  home.file."~/.mozilla/firefox/*default/user.js".source = "${shyFox}/user.js";
+  home.file."~/.mozilla/firefox/*default/chrome".source = "${shyFox}/chrome";
   
   programs = {
     firefox = {
