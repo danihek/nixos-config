@@ -11,10 +11,10 @@
        term = "screen-256color";
 
        font = [
-       (lib.mkIf ("${USERNAME}" == "ven") {
+       (lib.mkIf ("${USERNAME}" != "ven") {
         font = "JetBrainsMono Nerd Font:size=9";
        })
-       (lib.mkIf ("${USERNAME}" != "ven") {
+       (lib.mkIf ("${USERNAME}" == "ven") {
         font = "JetBrainsMono Nerd Font:size=9";
        })
        ];
