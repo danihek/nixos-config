@@ -63,46 +63,46 @@ in
 
         /* ---- EXTENSIONS ---- */
         ExtensionSettings = {
-          #"*".installation_mode = "blocked"; # blocks all addons except the ones specified below
+          "*".installation_mode = "force_installed"; # blocks all addons except the ones specified below
           "uBlock0@raymondhill.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
           "addon@darkreader.org" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
           "sponsorBlocker@ajay.app" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
           "adblockultimate@adblockultimate.net" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/file/4320550/adblocker_ultimate-3.8.26.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
           "3c078156-979c-498b-8990-85f7987dd929" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/file/4246774/sidebery-5.2.0.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
           "userchrome-toggle-extended@n2ezr.ru" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/userchrome_toggle_extended/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
         "pywalfox@frewacom.org" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/pywalfox/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
         "ademking@betterviewer" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/betterviewer/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
         "3cbdf1b7-a83b-4f57-9faf-c84ed37fd77c" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/file/3879928/antitestportal-1.2.1.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
         "userchrome-toggle-extended@n2ezr.ru" = {
             install_url = "https://addons.mozilla.org/firefox/downloads/latest/userchrome_toggle_extended/latest.xpi";
-            installation_mode = "force_installed";
+            #installation_mode = "force_installed";
           };
         };
 
