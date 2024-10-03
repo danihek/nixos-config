@@ -40,17 +40,23 @@ in
           };
 
           extensions = with pkgs.nur.repos.rycee.firefox-addons; [
-            userchrome_toggle_extended
-            adblocker_ultimate
-            antitestportal
-            privacy-badger
-            ublock-origin
-            sponsorblock
-            betterviewer
-            darkreader
-            sidebery
-            pywalfox
-          ];
+        darkreader
+        octotree
+        refined-github
+        ublock-origin
+      ];
+         #extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+         #  userchrome_toggle_extended
+         #  adblocker_ultimate
+         #  antitestportal
+         #  privacy-badger
+         #  ublock-origin
+         #  sponsorblock
+         #  betterviewer
+         #  darkreader
+         #  sidebery
+         #  pywalfox
+         #];
       };
 
       /* ---- POLICIES ---- */
