@@ -30,8 +30,8 @@ in
   '';
 
   # Copy the chrome folder and user.js from the shyFox repository to the profile directory
-  home.file."~/.mozilla/firefox/*default/user.js".source = "${shyFox}/user.js";
-  home.file."~/.mozilla/firefox/*default/chrome".source = "${shyFox}/chrome";
+  home.file."~/.mozilla/firefox/default/user.js".source = "${shyFox}/user.js";
+  home.file."~/.mozilla/firefox/default/chrome".source = "${shyFox}/chrome";
   
   programs = {
     firefox = {
