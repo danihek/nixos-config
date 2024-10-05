@@ -137,7 +137,7 @@
         "$mod CTRL SHIFT, L, exec, $lock"
 
         "$mod, U, exec, setwall"
-        "$mod SHIFT, U, exec, setwalli"
+        "$mod SHIFT, U, exec, setwall $(for img in ~/pics/wallpapers/*; do echo -en \"$img\0icon\x1f$img\n\" ; done | rofi -dmenu -show-icons)"
         
         "$mod, V, togglefloating"
         "$mod, N, togglesplit"
