@@ -88,7 +88,6 @@
     (mpv.override {scripts = [mpvScripts.mpris];}) # mpv
     imv
     mako
-    rofi-wayland
     wofi
     mupdf zathura 
     yt-dlp
