@@ -13,7 +13,7 @@
     terminal = "${pkgs.foot}/bin/foot";
 
     font = "MesloLGS Nerd Font Mono 10";
-    theme = "${config.xdg.cacheHome}/wal/colors-rofi-dark.rasi";
+    theme = "${config.xdg.cacheHome}/wal/colors-rofi-light.rasi";
 
     extraConfig = {
       dpi = 0;
