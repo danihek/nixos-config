@@ -15,5 +15,5 @@
     style = ''
       @import url('~/.cache/wal/colors-wofi.css')
     '';
-  }
+  };
 }
