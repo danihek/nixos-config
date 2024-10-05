@@ -185,10 +185,10 @@
         "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | tee >(swappy -f - -o - | wl-copy) | wl-copy"
 
         # Rotating laptop screen
-        "$mod ALT, DOWN, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 'DP-1' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,2"
-        "$mod ALT, UP, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 'DP-1' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,0"
-        "$mod ALT, LEFT, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 'DP-1' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,3"
-        "$mod ALT, RIGHT, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 'DP-1' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,1"
+        "$mod ALT, DOWN, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,2"
+        "$mod ALT, UP, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,0"
+        "$mod ALT, LEFT, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,3"
+        "$mod ALT, RIGHT, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,1"
 
       ];
  
@@ -206,8 +206,6 @@
       ];
 
       exec-once = [
-        "export HYPRLAND_ANIMATIONS_TOGGLE=1"
-
         "swww init ; sleep 1; setwall"
         #"pywalfox start"
         "lxqt-policykit-agent"

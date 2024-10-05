@@ -82,7 +82,14 @@ let
             keyword decoration:rounding 20"
         exit
     else
-        hyprctl --batch "keyword animations:enabled 0"
+        hyprctl --batch " \
+            keyword animations:enabled 0; \
+            keyword decoration:drop_shadow 0; \
+            keyword decoration:blur:enabled 1; \
+            keyword general:gaps_in 10; \
+            keyword general:gaps_out 10; \
+            keyword general:border_size 2; \
+            keyword decoration:rounding 0"
     fi
   '';
 in {
