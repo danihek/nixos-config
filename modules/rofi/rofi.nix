@@ -23,7 +23,7 @@
       cycle = false;
       hide-scrollbar = true;
       disable-history = false;
-      opacity = 0.5;
+      opacity = "0.5";
     };
 
     plugins = with pkgs; [
