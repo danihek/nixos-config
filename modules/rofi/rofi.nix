@@ -35,7 +35,7 @@
       spacing = "10px";
 
       # Custom line height to space out elements
-      line-height = 1.8;
+      line-height = "1.8";
     };
 
     plugins = with pkgs; [
