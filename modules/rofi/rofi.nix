@@ -9,20 +9,49 @@
     cycle = true;
     # Install the wayland variant of rofi
     package = pkgs.rofi-wayland;
-    # Set terminal to kitty
+    # Set terminal to foot
     terminal = "${pkgs.foot}/bin/foot";
 
-    font = "MesloLGS Nerd Font Mono 10";
-    theme = "${config.xdg.cacheHome}/wal/colors-rofi-light.rasi";
+    # Custom font for better aesthetics
+    font = "MesloLGS Nerd Font Mono 12"; # Larger font for better readability
+    theme = "${config.xdg.cacheHome}/wal/colors-rofi-custom.rasi"; # Custom theme
 
     extraConfig = {
-      show-icons = true;
-      scrollbar = false;
-      element-icon = true; # Ensure icons are enabled
-      element-icon-size = "9.0ch"; # Increase the size of icons, adjust as needed
+      show-icons = true;           # Enable icons
+      element-icon = true;         # Ensure icons are displayed
+      element-icon-size = "3.0ch"; # Increase the icon size
+
+      scrollbar = false;           # Disable scrollbar for a minimal look
+
+      # Grid layout with larger icons and more space between elements
+      columns = 3; # 3-column grid layout
+      lines = 5;   # Show 5 lines per page, you can increase this
+
+      # Custom prompt text for personalization
+      prompt = "Choose your action 💻: ";
+
+      # Padding and spacing for better layout
+      padding = "10px 20px";
+      spacing = "10px";
+
+      # Custom styles for elements
+      element {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+
+      # Custom line height to space out elements
+      line-height = 1.8;
+
+      # Custom highlight color for selected elements
+      selected-normal-background = "#5c6370"; # Highlight background for selected item
+      selected-normal-foreground = "#ffffff"; # Highlight foreground for selected item
     };
+
     plugins = with pkgs; [
-      rofi-emoji
+      rofi-emoji  # Emoji support in Rofi
     ];
   };
 }
+
