@@ -16,6 +16,7 @@
     theme = "${config.xdg.cacheHome}/wal/colors-rofi-light.rasi";
 
     extraConfig = {
+      element-icon = { size = 1.65; };
       show-icons = true;
       scrollbar = false;
     };
