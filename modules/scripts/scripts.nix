@@ -1,9 +1,11 @@
 { pkgs, ... }:
 let
+  wallpapers_path = "$HOME/pics/wallpapers";
+
   setwall = pkgs.writeShellScriptBin "setwall" ''
     #!/usr/bin/env bash
 
-    wallpaper_path=$HOME/pics/wallpapers
+    wallpaper_path=${wallpapers_path}
     pywal="wal -i"
     wallpaper=$(echo $(ls $wallpaper_path -1 | grep ".jpg\|.png" | shuf | head -n 1))
 
@@ -74,6 +76,24 @@ let
     fi
     hyprctl reload
   '';
+
+  # 'i' at the end stands for interactive
+  setwalli = pkgs.writeShellScriptBin "setwalli " ''
+    #!/bin/bash
+    WALLPAPER_DIR=${wallpapers_path}
+    
+    while true; do
+      SELECTED=$(ls "$WALLPAPER_DIR"/*.{png,jpg,jpeg,gif,webp} 2>/dev/null | xargs -n 1 basename | wofi --dmenu --prompt "Select a wallpaper:" -W 300 -H 300)
+    
+      if [ -n "$SELECTED" ]; then
+        swww img --transition-fps 60 --transition-type grow --transition-duration 2 --invert-y --transition-pos "$(hyprctl cursorpos | grep -E '^[0-9]' || echo "0,0")" "$WALLPAPER_DIR/$SELECTED"
+      else
+        break
+      fi
+    done
+  '';
+
+
 in {
   home = {
     packages = [
