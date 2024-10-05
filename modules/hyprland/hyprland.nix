@@ -37,7 +37,7 @@
       monitor = [
         "DP-1,2560x1440@165,0x50,1"
         "DP-2,2560x1440@165,2560x0,1,transform,0"
-        "LVDS-1, $(hyprctl monitors | grep -A 1 'DP-1' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1" # my T430 with fhd ips B)
+        "LVDS-1,1920x1080@60,0x0,1" # my T430 with fhd ips B)
       ];
 
       "$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini"'';
