@@ -15,6 +15,7 @@
       ./mako/mako.nix
       ./tgpt/tgpt.nix
       ./cava/cava.nix
+      ./rofi/rofi.nix
       ./emacs/emacs.nix
       ./pywal/pywal.nix
       ./neovim/neovim.nix
