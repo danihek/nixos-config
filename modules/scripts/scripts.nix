@@ -99,6 +99,7 @@ in {
     packages = [
       # Pywal & Sww
       setwall
+      setwalli # i-interactive, wallpaper picker with wofi
 
       # Waybar
       wbar-reload
