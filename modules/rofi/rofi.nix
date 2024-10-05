@@ -19,7 +19,7 @@
       show-icons = true;
       scrollbar = false;
       element-icon = true; # Ensure icons are enabled
-      element-icon-size = "2.0ch"; # Increase the size of icons, adjust as needed
+      element-icon-size = "9.0ch"; # Increase the size of icons, adjust as needed
     };
     plugins = with pkgs; [
       rofi-emoji
