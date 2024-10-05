@@ -16,7 +16,8 @@
     theme = "${config.xdg.cacheHome}/wal/colors-rofi-light.rasi";
 
     extraConfig = {
-      dpi = 0;
+      show-icons = true;
+      scrollbar = false;
     };
     plugins = with pkgs; [
       rofi-emoji
