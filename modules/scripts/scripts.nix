@@ -85,7 +85,7 @@ let
   '';
 
   # 'i' at the end stands for interactive
-  setwalli = pkgs.writeShellScriptBin "setwalli " ''
+  setwalli = pkgs.writeShellScriptBin "setwalli" ''
     #!/bin/bash
     WALLPAPER_DIR=${wallpapers_path}
     
