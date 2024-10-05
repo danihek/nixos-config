@@ -9,6 +9,8 @@
       filter_rate = "200";
       insensitve = true;
       gtk_dark = true;
+      allow_images = true;
+      columns = 5;
       term = "foot";
       layer = "overlay";
     };
