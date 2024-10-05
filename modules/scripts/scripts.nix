@@ -69,10 +69,9 @@ let
   '';
   hyprviewtoggle = pkgs.writeShellScriptBin "hyprviewtoggle" ''
     #!/usr/bin/env sh
-    #MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
-    #MODE=$HYPRLAND_ANIMATIONS_TOGGLE, because config can read/set it directly - it fix problem when you update wallpaper and lose animations
-
-    if [ "$HYPRLAND_ANIMATIONS_TOGGLE" = 0 ] ; then
+    MODE=$(hyprctl getoption animations:enabled | awk 'NR==1{print $2}')
+    
+    if [ "$MODE" = 0 ] ; then
         hyprctl --batch "\
             keyword animations:enabled 1;\
             keyword decoration:drop_shadow 5;\
@@ -81,14 +80,10 @@ let
             keyword general:gaps_out 10;\
             keyword general:border_size 3;\
             keyword decoration:rounding 20"
-        export HYPRLAND_ANIMATIONS_TOGGLE=1
         exit
     else
-      hyprctl --batch "keyword animations:enabled 0;"
-      export HYPRLAND_ANIMATIONS_TOGGLE=0
+        hyprctl --batch "keyword animations:enabled 0"
     fi
-
-    hyprctl reload
   '';
 in {
   home = {
