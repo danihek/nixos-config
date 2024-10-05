@@ -137,6 +137,7 @@
         "$mod CTRL SHIFT, L, exec, $lock"
 
         "$mod, U, exec, setwall"
+        "$mod SHIFT, U, exec, setwalli"
         
         "$mod, V, togglefloating"
         "$mod, N, togglesplit"
