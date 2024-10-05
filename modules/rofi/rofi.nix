@@ -34,19 +34,8 @@
       padding = "10px 20px";
       spacing = "10px";
 
-      # Custom styles for elements
-      element {
-        padding: 10px;
-        margin: 5px;
-        border-radius: 5px;
-      }
-
       # Custom line height to space out elements
       line-height = 1.8;
-
-      # Custom highlight color for selected elements
-      selected-normal-background = "#5c6370"; # Highlight background for selected item
-      selected-normal-foreground = "#ffffff"; # Highlight foreground for selected item
     };
 
     plugins = with pkgs; [
