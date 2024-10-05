@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.rofi = {
+  programs.rofi-wayland = {
         enable = true;
   
         extraConfig = {
