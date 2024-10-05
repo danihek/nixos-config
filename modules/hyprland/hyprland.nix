@@ -41,7 +41,7 @@
       ];
 
       "$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini"'';
-      "$menu" = "wofi --show drun";
+      "$menu" = "rofi -show drun";
       "$lock" = "hyprlock";
 
       general = {
