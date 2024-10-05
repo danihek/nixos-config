@@ -2,15 +2,12 @@
   programs.wofi = {
     enable = true;
     settings = {
-      width = 500;
-      mode = "run";
       stylesheet = "~/.cache/wal/colors-wofi.css";
-      prompt = "";
-      filter_rate = "200";
-      insensitve = true;
-      gtk_dark = true;
       allow_images = true;
-      columns = 5;
+      insensitiv = true;
+      no_actions = true;
+      columns = 2;
+      show = "drun";
       term = "foot";
       layer = "overlay";
     };
