@@ -1,21 +1,14 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 
 {
-  programs.rofi = {
-        enable = true;
-  
-        extraConfig = {
-          disable-history = false;
-          show-icons = true;
-          sidebar-mode = false;
-          sort = true;
-  
-          drun-display-format = "{icon} {name}";
-          display-drun = "   Run ";
-          display-window = " 﩯 Window ";
- 
-          xoffset = 0;
-          yoffset = 0;
-    };
+  programs.rofi = let
+    inherit (config.lib.formats.rasi) mkLiteral;
+  in
+  {
+    cycle = true;
+    # Install the wayland variant of rofi
+    package = pkgs.rofi-wayland;
+    # Set terminal to kitty
+    terminal = "${pkgs.foot}/bin/foot";
   };
 }
