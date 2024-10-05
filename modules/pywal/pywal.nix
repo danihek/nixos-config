@@ -143,7 +143,7 @@ in {
       ${foot-colors}
     '';
     ".config/wal/templates/colors-wofi.css".text = ''
-      ${foot-colors}
+      ${wofi-colors}
     '';
   };
 }
