@@ -88,6 +88,46 @@ let
     bright6={color14.strip}
     bright7={color15.strip}
   '';
+  wofi-colors = ''
+      window {
+        margin: 0px;
+        border: 1px solid {foreground.strip};
+        background-color: {background.strip};
+      }
+
+      #input {
+        margin: 5px;
+        border: none;
+        background-color: {color8.strip};
+      }
+
+      #inner-box {
+        margin: 5px;
+        border: none;
+        background-color: {background.strip};
+      }
+
+      #outer-box {
+        margin: 5px;
+        border: none;
+        background-color: {background.strip};
+      }
+
+      #scroll {
+        margin: 0px;
+        border: none;
+      }
+
+      #text {
+        margin: 5px;
+        border: none;
+        color: #ffffff;
+      }
+
+      #entry:selected {
+        background-color: {color8.strip};
+      }
+    '';
 in {
   home.file = {
     ".config/wal/templates/colors-hyprland.conf".text = ''
@@ -100,6 +140,9 @@ in {
       ${discord-colors}
     '';
     ".config/wal/templates/colors-foot.ini".text = ''
+      ${foot-colors}
+    '';
+    ".config/wal/templates/colors-wofi.css".text = ''
       ${foot-colors}
     '';
   };
