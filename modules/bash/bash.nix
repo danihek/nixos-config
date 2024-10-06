@@ -12,14 +12,15 @@
       lf = "yazi"; #xd
       tm = "tmux";
       l = "ls -l";
+      tree = "tree";
       ll = "ls -lh";
       nv = "neovide";
       la = "ls -alh";
+      lla = "ls -alh";
       cl = "clear & l";
       fucking = "sudo";
-      lla = "ls -alh";
-      tree = "tree";
       mkcl = "make clean";
+      nrun = "nix-shell -p"; 
       neofetch = "fastfetch";
       TODO = "vim ~/.TODO.md";
       cpl = "make clean ; clear; make";
@@ -36,7 +37,7 @@
       [ -d "$HOME/.cache/wal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
 
       # Prompt 
-      PS1='\u@\h:\w > '
+      PS1='\[\033[31m\]\u\[\033[35m\]@\[\033[36m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
 
        # Keybindings
           bind '"\e[1;5A": history-search-backward'
