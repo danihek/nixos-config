@@ -12,7 +12,9 @@
       codeium-vim
       coc-nvim
       mini-nvim
+      pywal-nvim
       coc-clangd
+      vim-markdown
       plenary-nvim
       vim-polyglot
       vim-css-color
@@ -34,7 +36,7 @@
     set number relativenumber
     set nu rnu
 
-    colorscheme retrobox
+    " colorscheme retrobox
     
     inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
     inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
