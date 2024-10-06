@@ -37,7 +37,7 @@
       [ -d "$HOME/.cache/wal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
 
       # Prompt 
-      PS1='\[\033[31m\]\u\[\033[35m\]@\[\033[36m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
+      PS1='\[\033[36m\]\u\[\033[35m\]@\[\033[31m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
 
        # Keybindings
           bind '"\e[1;5A": history-search-backward'

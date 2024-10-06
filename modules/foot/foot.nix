@@ -26,10 +26,10 @@
      };
 
      key-bindings = {
-       scrollback-up-line = "Alt+k";
-       scrollback-down-line = "Alt+j";
-       scrollback-up-half-page = "Alt+Shift+k";
-       scrollback-down-half-page = "Alt+Shift+j";
+       scrollback-up-line = "Alt+K";
+       scrollback-down-line = "Alt+K";
+       scrollback-up-half-page = "Alt+Shift+K";
+       scrollback-down-half-page = "Alt+Shift+K";
      };
      
      mouse = {
