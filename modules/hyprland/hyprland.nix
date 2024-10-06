@@ -190,12 +190,6 @@
         "$mod ALT, LEFT, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,3"
         "$mod ALT, RIGHT, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,1"
         
-
-        "$mod, code:34, exec, hyprupdategaps --inc_gaps_in ; hyprupdategaps --inc_gaps_out"
-        "$mod, code:35, exec, hyprupdategaps --dec_gaps_in ; hyprupdategaps --dec_gaps_out"
-        "$mod SHIFT, code:34, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size + 1))"
-        "$mod SHIFT, code:35, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size - 1))"
-
         "$mod SHIFT, F9, exec, hyprctl reload"
       ];
  
@@ -205,6 +199,13 @@
 
         "ALT, XF86AudioRaiseVolume, exec, brightnessctl s +1%"
         "ALT, XF86AudioLowerVolume, exec, brightnessctl s 1%-"
+
+        "$mod, code:34, exec, hyprupdategaps --inc_gaps_in ; hyprupdategaps --inc_gaps_out"
+        "$mod, code:35, exec, hyprupdategaps --dec_gaps_in ; hyprupdategaps --dec_gaps_out"
+        "$mod SHIFT, code:34, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size + 1))"
+        "$mod SHIFT, code:35, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size - 1))"
+
+
       ];
 
       bindm = [
