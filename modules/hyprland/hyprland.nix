@@ -184,12 +184,6 @@
         
         "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | tee >(swappy -f - -o - | wl-copy) | wl-copy"
 
-        "$mod, ], exec, hyprupdategaps --inc_gaps_in ; hyprupdategaps --inc_gaps_out"
-        "$mod, [, exec, hyprupdategaps --dec_gaps_in ; hyprupdategaps --dec_gaps_out"
-
-        "$mod SHIFT, ], exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size + 1))"
-        "$mod SHIFT, [, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size - 1))"
-
         # Rotating laptop screen
         "$mod ALT, DOWN, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,2"
         "$mod ALT, UP, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,0"
@@ -210,6 +204,14 @@
       bindm = [
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
+
+        "$mod, mouse_up, exec, hyprupdategaps --inc_gaps_in ; hyprupdategaps --inc_gaps_out"
+        "$mod, mouse_down, exec, hyprupdategaps --dec_gaps_in ; hyprupdategaps --dec_gaps_out"
+
+        "$mod SHIFT, mouse_up, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size + 1))"
+        "$mod SHIFT, mouse_down, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size - 1))"
+
+
       ];
 
       exec-once = [
