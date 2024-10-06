@@ -14,8 +14,6 @@
       mini-nvim
       pywal-nvim
       coc-clangd
-      vim-airline
-      vim-markdown
       plenary-nvim
       vim-polyglot
       vim-css-color
@@ -64,13 +62,6 @@
 
     set cursorline
     highlight CursorLine cterm=NONE ctermbg=238
-
-    " Nerdfonts
-    let g:airline_powerline_fonts = 1
-    " Clear terminal buffer on exit (without it, Airline messes up shell)
-    set t_ti= t_te=
-    " Enable ale with airline
-    let g:airline#extensions#ale#enabled = 1
     '';
   };
 
