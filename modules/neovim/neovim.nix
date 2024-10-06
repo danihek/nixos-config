@@ -36,7 +36,8 @@
     set number relativenumber
     set nu rnu
 
-    " colorscheme retrobox
+    " it works with pywal I guess ??
+    colorscheme vim
     
     inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
     inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
@@ -54,6 +55,8 @@
 
     let g:codeium_enabled = v:false
     let g:codeium_disable_bindings = 1
+    let g:vim_markdown_folding_disabled = 1
+
     imap <script><silent><nowait><expr> <C-j> codeium#Accept()
     imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
     imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
