@@ -205,11 +205,11 @@
         "$mod, mouse:272, movewindow"
         "$mod, mouse:273, resizewindow"
 
-        "$mod, mouse_up, exec, hyprupdategaps --inc_gaps_in ; hyprupdategaps --inc_gaps_out"
-        "$mod, mouse_down, exec, hyprupdategaps --dec_gaps_in ; hyprupdategaps --dec_gaps_out"
+       #"$mod, mouse_up, exec, hyprupdategaps --inc_gaps_in ; hyprupdategaps --inc_gaps_out"
+       #"$mod, mouse_down, exec, hyprupdategaps --dec_gaps_in ; hyprupdategaps --dec_gaps_out"
 
-        "$mod SHIFT, mouse_up, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size + 1))"
-        "$mod SHIFT, mouse_down, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size - 1))"
+       #"$mod SHIFT, mouse_up, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size + 1))"
+       #"$mod SHIFT, mouse_down, exec, border_size=$(hyprctl -j getoption general:border_size | jq '.int') ; hyprctl keyword general:border_size $(($border_size - 1))"
 
 
       ];
