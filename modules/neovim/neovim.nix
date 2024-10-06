@@ -14,6 +14,7 @@
       mini-nvim
       pywal-nvim
       coc-clangd
+      vim-airline
       vim-markdown
       plenary-nvim
       vim-polyglot
@@ -36,8 +37,7 @@
     set number relativenumber
     set nu rnu
 
-    " it works with pywal I guess ??
-    colorscheme vim
+    colorscheme pywal
     
     inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
     inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
