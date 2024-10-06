@@ -9,7 +9,6 @@
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
-       border-width = 0;
 
        #font = "JetBrainsMono Nerd Font:size=9";
        font = "JetBrainsMono Nerd Font:size=11";
