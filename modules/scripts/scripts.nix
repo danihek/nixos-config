@@ -78,7 +78,7 @@ let
             keyword decoration:blur:enabled 1;\
             keyword general:gaps_in 10;\
             keyword general:gaps_out 10;\
-            keyword general:border_size 3;\
+            keyword general:border_size 0;\
             keyword decoration:rounding 20"
         exit
     else
