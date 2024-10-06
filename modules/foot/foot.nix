@@ -9,12 +9,17 @@
      main = {
        include= "/home/${USERNAME}/.cache/wal/colors-foot.ini";
        term = "screen-256color";
+       border-width = 0;
 
        #font = "JetBrainsMono Nerd Font:size=9";
-       font = "JetBrainsMono Nerd Font:size=10";
+       font = "JetBrainsMono Nerd Font:size=11";
 
        dpi-aware = "yes";
-       pad = "10x10 center";
+       pad = "0x0";
+     };
+
+     url = {
+       protocols = "http, https, ftp, ftps, file, gemini, gopher";
      };
 
      colors = {
