@@ -64,6 +64,15 @@
 
     set cursorline
     highlight CursorLine cterm=NONE ctermbg=238
+
+    let g:airline_statusline_ontop=1
+    let g:airline#extensions#tabline#enabled = 1
+    " Nerdfonts
+    let g:airline_powerline_fonts = 1
+    " Clear terminal buffer on exit (without it, Airline messes up shell)
+    set t_ti= t_te=
+    " Enable ale with airline
+    let g:airline#extensions#ale#enabled = 1
     '';
   };
 
