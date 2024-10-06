@@ -47,7 +47,7 @@
       general = {
         gaps_in = 10;
         gaps_out = 20;
-        border_size = 3;
+        border_size = 0; # from now on, it looks clean ig
         "col.active_border" = "rgb(bfc9f3)";
         "col.inactive_border" = "rgb(242430)";
         resize_on_border = false;
