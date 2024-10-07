@@ -84,7 +84,7 @@
       };
 
       animations = {
-        enabled = false; # see exec-once, it's all driven by the $HYPRLAND_ANIMATIONS_TOGGLE variable
+        enabled = false;
 
         bezier = "myBezier, 0.3, 0, 0, 1";
         animation = [
@@ -187,6 +187,7 @@
         ",XF86AudioStop, exec, playerctl stop"
         
         "$mod SHIFT, S, exec, grim -g \"$(slurp -d)\" - | tee >(swappy -f - -o - | wl-copy) | wl-copy"
+        ", code:107, exec, grim -g \"$(slurp -d)\" - | tee >(swappy -f - -o - | wl-copy) | wl-copy"
 
         # Rotating laptop screen
         "$mod ALT, DOWN, exec, hyprctl keyword monitor $(hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g'), $(hyprctl monitors | grep -A 1 hyprctl activeworkspace | grep \"on monitor\" | cut -d' ' -f 7 | sed 's/://g' | sed -n '2p' | cut -d' ' -f1 | cut -d$'\t' -f2),0x0,1,transform,2"
