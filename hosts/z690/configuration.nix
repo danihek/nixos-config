@@ -71,6 +71,7 @@ in
 
   environment.systemPackages = with pkgs; [
     nemo dolphin
+    themecord
     ckb-next
     amdvlk
     rpcs3
