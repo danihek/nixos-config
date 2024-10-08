@@ -50,7 +50,7 @@
 
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [
-              #themecord.packages.x86_64-linux.default
+              themecord.packages.x86_64-linux.default
             ];
           })
 
