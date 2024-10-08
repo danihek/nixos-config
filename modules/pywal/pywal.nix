@@ -43,29 +43,22 @@ let
     @define-color color15 {color15};
   '';
   discord-colors = ''
-    --accent-color: {color9};
-    --border-color: {color3};
-    --background-1: {color12};
-    --background-2: {color13};
-    --background-mentioned: {color3} !important;
-    --background-mentioned-hover: {color3} !important;
-    --background-modifier-hover: {color6} !important;
-    --background-modifier-active: {color3} !important;
-    --text-normal: {color15} !important;
-    --text-positive: {color15} !important;
-    --text-muted: {color15} !important;
-    --text-link: {color15} !important;
-    --button-background: {color5} !important;
-    --button-background-hover: {color0} !important;
-    --button-background-active: {color0} !important;
-    --button-accent-hover: {color0} !important;
-    --button-accent-active: {color5} !important;
-    --button-destructive: {color5} !important;
-    --button-destructive-hover: {color4} !important;
-    --button-destructive-active: {color4} !important;
-    --settings-icon-color: {color0} !important;
-    --tab-selected: {color2} !important;
-    --switch: {color1} !important;
+  --color0: {color0};
+  --color1: {color1};
+  --color2: {color2};
+  --color3: {color3};
+  --color4: {color4};
+  --color5: {color5};
+  --color6: {color6};
+  --color7: {color7};
+  --color8: {color8};
+  --color9: {color9};
+  --color10: {color10};
+  --color11: {color11};
+  --color12: {color12};
+  --color13: {color13};
+  --color14: {color14};
+  --color15: {color15};
   '';
   foot-colors = ''
     [colors]
