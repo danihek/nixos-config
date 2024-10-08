@@ -70,11 +70,11 @@
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
 
-         #({ config, pkgs, ... }: {
-         # environment.systemPackages = with pkgs; [
-         #   #themecord.packages.x86_64-linux.default
-         # ];
-         #})
+          ({ config, pkgs, ... }: {
+           environment.systemPackages = with pkgs; [
+              themecord.packages.x86_64-linux.default
+           ];
+          })
           
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [
