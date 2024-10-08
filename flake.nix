@@ -15,10 +15,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-   #themecord = {
-   #  url = "github:danihek/Themecord";
-   #  inputs.nixpkgs.follows = "nixpkgs";
-   #};
+    themecord = {
+      url = "github:danihek/Themecord";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
@@ -31,7 +31,7 @@
     self,
     dpcs,
     nixpkgs,
-   # themecord,
+    themecord,
     home-manager,
     ... 
   } 
@@ -69,12 +69,13 @@
           ./hosts/shared.nix
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
+          inputs.themecord.nixosModules.default
 
-          ({ config, pkgs, ... }: {
-           environment.systemPackages = with pkgs; [
-             #themecord.packages.x86_64-linux.default
-           ];
-          })
+         #({ config, pkgs, ... }: {
+         # environment.systemPackages = with pkgs; [
+         #   #themecord.packages.x86_64-linux.default
+         # ];
+         #})
           
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [
