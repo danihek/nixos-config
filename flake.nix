@@ -69,7 +69,6 @@
           ./hosts/shared.nix
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
-          inputs.themecord
 
          #({ config, pkgs, ... }: {
          # environment.systemPackages = with pkgs; [
