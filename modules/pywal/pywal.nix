@@ -129,9 +129,9 @@ in {
     ".config/wal/templates/colors-waybar.css".text = ''
       ${waybar-colors}
     '';
-#   ".config/wal/templates/colors-discord.css".text = ''
-#     ${discord-colors}
-#   '';
+    ".config/wal/templates/colors-discord.css".text = ''
+      ${discord-colors}
+    '';
     ".config/wal/templates/colors-foot.ini".text = ''
       ${foot-colors}
     '';
