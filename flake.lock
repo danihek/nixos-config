@@ -77,8 +77,7 @@
         "dpcs": "dpcs",
         "home-manager": "home-manager",
         "nixpkgs": "nixpkgs",
-        "spicetify-nix": "spicetify-nix",
-        "themecord": "themecord"
+        "spicetify-nix": "spicetify-nix"
       }
     },
     "spicetify-nix": {
@@ -99,26 +98,6 @@
       "original": {
         "owner": "Gerg-L",
         "repo": "spicetify-nix",
-        "type": "github"
-      }
-    },
-    "themecord": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1728426317,
-        "narHash": "sha256-hXX72yetBiC3+ERlxqu48bxoCkK0HW1TDuZPI79kPuQ=",
-        "owner": "danihek",
-        "repo": "Themecord",
-        "rev": "693001891b7eeb5bbabaf5c1ea750a3eb3680b08",
-        "type": "github"
-      },
-      "original": {
-        "owner": "danihek",
-        "repo": "Themecord",
         "type": "github"
       }
     }
