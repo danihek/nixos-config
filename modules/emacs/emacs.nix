@@ -25,7 +25,7 @@
       );
   };
 
-  home.file.".emacs.d/init.el".source = ''
+  home.file.".emacs.d/init.el" = ''
     (scroll-bar-mode -1)
     (menu-bar-mode -1)
     (tool-bar-mode -1)
