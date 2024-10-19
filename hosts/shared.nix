@@ -39,8 +39,9 @@
     
     # Browsers
     brave
-    links2
+    links2 lynx
     firefox
+    qutebrowser
     librewolf 
 
     # Mail
