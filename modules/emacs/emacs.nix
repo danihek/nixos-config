@@ -3,7 +3,7 @@
 {
   programs.emacs = {
     enable = true;
-    package = pkgs.emacs26-nox;
+    package = pkgs.emacs-nox;
     extraPackages = (
       epkgs:
       [
