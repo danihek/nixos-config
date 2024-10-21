@@ -35,6 +35,10 @@
     set number relativenumber
     set nu rnu
 
+    set tabstop=4
+    set shiftwidth=4
+    set expandtab
+
     colorscheme pywal
     
     inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
@@ -62,6 +66,20 @@
 
     set cursorline
     highlight CursorLine cterm=NONE ctermbg=238
+
+    set statusline=
+
+    " Status line left side.
+    set statusline+=\ %F\ %M\ %Y\ %R
+    
+    " Use a divider to separate the left side from the right side.
+    set statusline+=%=
+    
+    " Status line right side.
+    "set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+    
+    " Show the status on the second to last line.
+    set laststatus=2
     '';
   };
 
@@ -70,4 +88,5 @@
       "inlayHint.enable": false,
     }
   '';
+  environment.variables.EDITOR = "neovim";
 }
