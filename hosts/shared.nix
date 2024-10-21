@@ -18,6 +18,10 @@
     mplus-outline-fonts.githubRelease
   ];
 
+  # Editor
+  environment.variables.EDITOR = "neovim";
+
+  # Packages
   environment.systemPackages = with pkgs; [
     # Shell, Terminal, Text Editor etc.
     vim 

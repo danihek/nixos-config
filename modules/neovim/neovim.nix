@@ -88,5 +88,4 @@
       "inlayHint.enable": false,
     }
   '';
-  environment.variables.EDITOR = "neovim";
 }
