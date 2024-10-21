@@ -19,7 +19,7 @@
   ];
 
   # Editor
-  environment.variables.EDITOR = "neovim";
+  environment.variables.EDITOR = "nvim";
 
   # Packages
   environment.systemPackages = with pkgs; [
