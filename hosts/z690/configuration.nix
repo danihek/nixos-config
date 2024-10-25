@@ -26,7 +26,7 @@ in
     shell = pkgs.bash;
     isNormalUser = true;
     description = "${USERNAME}";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" "video" ];
     packages = with pkgs; [];
   };
 
