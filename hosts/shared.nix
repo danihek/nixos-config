@@ -18,9 +18,6 @@
     mplus-outline-fonts.githubRelease
   ];
 
-  # Editor
-  environment.variables.EDITOR = "nvim";
-
   # Packages
   environment.systemPackages = with pkgs; [
     # Shell, Terminal, Text Editor etc.
@@ -100,8 +97,7 @@
     libnotify
     pavucontrol
     brightnessctl
-    #cinnamon.nemo
-    xfce.thunar
+    xfce.thunar xfce.thunar-archive-plugin 
 
     # Polkit
     lxqt.lxqt-policykit
@@ -184,6 +180,11 @@
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
   ];
+
+  # Env Variables 
+  environment.variables = {
+    EDITOR = "nvim";
+  };
 
   # Nix
   programs.nix-ld.enable = true;

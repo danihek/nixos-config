@@ -1,19 +1,27 @@
 { pkgs, ... }:
 
 {
-  xdg.mimeApps.defaultApplications = {
-    "image/*" = [ "sxiv.desktop" ];
-    "video/*" = [ "mpv.desktop" ];
-    "video/png" = [ "mpv.desktop" ];
-    "video/jpg" = [ "mpv.desktop" ];
-    "text/plain" = [ "neovide.desktop" ];
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "image/*"                       = [ "sxiv.desktop" ];
+      "video/*"                       = [ "mpv.desktop" ];
+      "text/*"                        = [ "neovide.desktop" ];
 
-    "text/html"                     = [ "firefox.desktop" ];
-    "default-web-browser"           = [ "firefox.desktop" ];
-    "x-scheme-handler/http"         = [ "firefox.desktop" ];
-    "x-scheme-handler/https"        = [ "firefox.desktop" ];
-    "x-scheme-handler/about"        = [ "firefox.desktop" ];
-    "x-scheme-handler/unknown"      = [ "firefox.desktop" ];
-    "application/pdf" = ["zathura.desktop" "evince.desktop" "firefox.desktop"];
+      "application/pdf"               = ["firefox.desktop"];
+      "text/html"                     = [ "firefox.desktop" ];
+      "default-web-browser"           = [ "firefox.desktop" ];
+      "x-scheme-handler/http"         = [ "firefox.desktop" ];
+      "x-scheme-handler/https"        = [ "firefox.desktop" ];
+      "x-scheme-handler/about"        = [ "firefox.desktop" ];
+      "x-scheme-handler/unknown"      = [ "firefox.desktop" ];
+      "x-scheme-handler/mailto"       = [ "thunderbird.desktop" ];
+
+      "inode/directory"               = [ "thunar" ];
+      "application/zip"               = [ "thunar" ];
+      "application/rar"               = [ "thunar" ];
+      "application/7z"                = [ "thunar" ];
+      "application/*tar"              = [ "thunar" ];
+    };
   };
 }
