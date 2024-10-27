@@ -21,9 +21,10 @@ let
 
     swww img $wallpaper_path/$wallpaper \
       --transition-type="grow" \
-      --invert-y \
       --transition-duration 2 \
-      --transition-fps 165
+      --transition-fps 165 \
+      --resize="crop" \
+      --invert-y
 
     wbar-reload
     themecord
