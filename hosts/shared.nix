@@ -156,7 +156,6 @@
     librecad
     vscodium
     kdenlive
-    kdeconnect # watch and mobile
     obs-studio
     imagemagick
     android-tools #gradle sdkmanager flutter
