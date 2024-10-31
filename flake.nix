@@ -69,7 +69,7 @@
           ./hosts/shared.nix
           ./hosts/z690/configuration.nix
           inputs.home-manager.nixosModules.default
-          themecord.packages.x86_64-linux.default
+          themecord.packages.nixosModules.default
           
           ({ config, pkgs, ... }: {
             environment.systemPackages = with pkgs; [
