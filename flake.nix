@@ -31,7 +31,7 @@
     self,
     dpcs,
     nixpkgs,
-     themecord,
+    themecord,
     home-manager,
     ... 
   } 
