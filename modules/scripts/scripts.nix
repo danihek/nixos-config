@@ -7,6 +7,7 @@ let
 
     wallpaper_path=${wallpapers_path}
     pywal="wal -i"
+    wallust="wallust run"
 
     if [ "$1" != "" ]; then
       wallpaper="$1"
@@ -29,6 +30,8 @@ let
     wbar-reload
     themecord
     pywalfox update
+
+    wallust &
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''

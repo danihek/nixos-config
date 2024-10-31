@@ -16,7 +16,7 @@
     };
 
     themecord = {
-      url = "github:danihek/Themecord";
+      url = "github:danihek/Themecord/wallust";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

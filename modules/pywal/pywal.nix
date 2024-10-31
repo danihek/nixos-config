@@ -127,6 +127,6 @@ in {
     #".config/wal/templates/colors-wofi.css".text = ''${wofi-colors}''; #somehow broken
     ".config/wal/templates/colors-waybar.css".text = ''${waybar-colors}'';
     ".config/wal/templates/colors-hyprland.conf".text = ''${hypr-colors}'';
-    ".config/wal/templates/colors-discord.css".text = ''${discord-colors}'';
+    #".config/wal/templates/colors-discord.css".text = ''${discord-colors}'';
   };
 }
