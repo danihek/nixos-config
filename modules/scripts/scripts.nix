@@ -18,6 +18,7 @@ let
     rm $HOME/.cache/current_wall.jpg
     cp $wallpaper_path/$wallpaper $HOME/.cache/current_wall.jpg
 
+    wallust $wallpaper_path/$wallpaper &
     $pywal $wallpaper_path/$wallpaper
 
     swww img $wallpaper_path/$wallpaper \
@@ -30,8 +31,6 @@ let
     wbar-reload
     themecord
     pywalfox update
-
-    wallust &
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
