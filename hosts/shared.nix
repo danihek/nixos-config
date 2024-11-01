@@ -143,7 +143,7 @@
     kicad
     cobalt #mdbook mdbook-katex
     scrcpy
-    bitwig-studio reaper ffmpeg # audio, video
+    reaper ffmpeg # audio, video
     pstree
     zoxide
     weylus

@@ -25,9 +25,13 @@ in
     shell = pkgs.bash;
     isNormalUser = true;
     description = "${USERNAME}";
-    extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" ];
+    extraGroups = [ "networkmanager" "wheel" "dialout" "plugdev" "video" ];
     packages = with pkgs; [];
   };
+
+  services.udev.extraRules = ''
+    SUBSYSTEM=="usb", ATTR{idVendor}=="04e8", MODE="0666", GROUP="plugdev"
+  '';
 
   # Bootloader.
   boot.loader.grub.enable = true;
