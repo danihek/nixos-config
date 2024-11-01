@@ -7,7 +7,6 @@ let
 
     wallpaper_path=${wallpapers_path}
     pywal="wal -i"
-    wallust="wallust run"
 
     if [ "$1" != "" ]; then
       wallpaper="$1"
@@ -18,7 +17,7 @@ let
     rm $HOME/.cache/current_wall.jpg
     cp $wallpaper_path/$wallpaper $HOME/.cache/current_wall.jpg
 
-    wallust $wallpaper_path/$wallpaper &
+    wallust run $wallpaper_path/$wallpaper &
     $pywal $wallpaper_path/$wallpaper
 
     swww img $wallpaper_path/$wallpaper \
