@@ -20,7 +20,7 @@
       set -g status-justify centre
       set -g status-left-length 20
       set -g status-right-length 140
-      set -g status-left '#[fg=green]#H #[fg=black]• #[fg=green,bright]#(uname -r | cut -c 1-6)#[default]'
+      set -g status-left '#[fg=green,bright]#(whoami)@#[fg=cyan]#H #[fg=black]• #[default]'
       set -g status-right '#[fg=green,bg=default,bright]#(tmux-mem-cpu-load) #[fg=red,dim,bg=default]#(uptime | cut -f 4-5 -d " " | cut -f 1 -d ",") #[fg=white,bg=default]%l:%M:%S %p#[default] #[fg=blue]%Y-%m-%d'
       
       set -g base-index 1
