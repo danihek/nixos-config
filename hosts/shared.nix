@@ -52,6 +52,8 @@
     gdb
     git
     lua
+    lua.dev
+    gcc
     udev
     sfml
     csfml
