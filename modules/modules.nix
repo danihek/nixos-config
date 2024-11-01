@@ -17,10 +17,10 @@
       ./cava/cava.nix
       ./rofi/rofi.nix
       ./emacs/emacs.nix
-      ./pywal/pywal.nix
+      #./pywal/pywal.nix
       ./neovim/neovim.nix
       ./waybar/waybar.nix
-      ./wallust/wallust.nix
+      #./wallust/wallust.nix
       #./firefox/firefox.nix
       ./discord/discord.nix
       ./pywalfox/pywalfox.nix
