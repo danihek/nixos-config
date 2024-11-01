@@ -51,7 +51,7 @@
     # Dev
     gdb
     git
-    lua lua5_3_compat
+    lua lua54Packages.lua
     gcc
     udev
     sfml
