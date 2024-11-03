@@ -11,7 +11,7 @@
       
       set-option -g display-panes-active-colour colour33
       set-option -g display-panes-colour colour166 
-      set-option -g default-shell /usr/bin/env bash
+      set-option -g default-shell "/usr/bin/env bash"
 
       set-window-option -g clock-mode-colour green 
       set-window-option -g window-status-style fg=colour244,bg=default,dim
