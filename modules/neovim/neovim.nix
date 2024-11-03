@@ -85,15 +85,27 @@
 
 
       " Status Bar
-      set statusline=%f                 " File path
-      set statusline+=%y                " File type
-      set statusline+=%m                " Modified flag
-      set statusline+=%r                " Read-only flag
-      set statusline+=%h                " Help file flag
-      set statusline+=%=%{getcwd()}     " Current working directory
-      set statusline+=%p%%              " Percent through file
-      set statusline+=\ [%l:%c]         " Line and column
-      set laststatus=2                  " Always show status line
+      set laststatus=2  " Always show the status line
+      set statusline=%f                   " Filename
+      set statusline+=\ [%{&filetype}]    " Filetype
+      set statusline+=\ [%{&ff}]          " File format
+      set statusline+=\ [%{&encoding}]    " Encoding
+      set statusline+=\ %m                " Modified flag
+      set statusline+=\ %r                " Readonly flag
+      set statusline+=\ %y                " File type name
+      set statusline+=\ %{getfsize("%") > 0 ? '✔️' : '❌'} " File exists check
+      set statusline+=\ %{line('.')}:%{line('$')} " Line number
+      set statusline+=\ %p%%              " Percentage through file
+      set statusline+=\ \ %l/%L           " Current line / total lines
+      set statusline+=\ %a                " Current mode (insert, normal, etc.)
+      
+      " Make the status line more visible
+      highlight StatusLine cterm=bold ctermfg=White ctermbg=DarkBlue
+      highlight StatusLineNC ctermfg=Gray ctermbg=Black
+      
+      " Optional: Show the ruler and set ruler format
+      set ruler
+      set rulerformat=%l:%c
       '';
     };
 
