@@ -41,6 +41,12 @@
       highlight CursorLine cterm=NONE ctermbg=238
 
       colorscheme pywal
+
+      "While searching and go C-d C-u its centred
+      nnoremap n nzz
+      nnoremap N Nzz
+      nnoremap <C-d> <C-d>zz
+      nnoremap <C-u> <C-u>zz
       
       "Conquer of Completion
       inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
@@ -82,7 +88,6 @@
 
       "Compile Mode | Something like emacs I guess???
       nnoremap <silent> <M-m> :Make<CR>
-
 
       " Status Line
       set laststatus=2
