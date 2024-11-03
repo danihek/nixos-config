@@ -14,8 +14,10 @@
       mini-nvim
       pywal-nvim
       coc-clangd
-      plenary-nvim
       vim-polyglot
+      vim-dispatch
+      asyncrun-vim
+      plenary-nvim
       vim-css-color
       nvim-autopairs
       nvim-lspconfig
@@ -94,6 +96,14 @@
       
       " Show the status on the second to last line.
       set laststatus=2
+
+      " Compile mode
+      function! CompileAndRun()
+      execute 'AsyncRun make'
+          lua require'custom_floating_output'.open()
+        endfunction
+        
+        nnoremap <silent> <F5> :call CompileAndRun()<CR>
       '';
     };
 
