@@ -86,33 +86,35 @@
 
       " Status Line
       set laststatus=2
+      
+      if has('termguicolors')
+        set termguicolors
+      endif
+      
+      highlight StatusLine guifg=#ffcc00 guibg=#1e1e1e
+      highlight StatusLineNC guifg=#666666 guibg=#1e1e1e
+      highlight StatusAccent guifg=#ff66a5 guibg=#1e1e1e
+      
+      function! JapaneseDate()
+        return strftime("⏰ %H:%M %p 日付 %Y年%m月%d日")
+      endfunction
+      
       set statusline=
-      
-      let g:light_sep = '>'
-      let g:dark_sep = '|'
-      
-      let g:status_file = '[File]'
-      let g:status_code = '[Code]'
-      
       set statusline+=%#StatusLine#
-      set statusline+=%{g:status_file}
-      set statusline+=\ %{expand('%:t')}
-      set statusline+=%m
-      
-      set statusline+=%=%{g:dark_sep}
-      
-      set statusline+=%#StatusLineAccent#
-      set statusline+=\ %{g:light_sep}
-      
-      set statusline+=%#StatusLineFileType#
-      set statusline+=%{g:status_code}\ %Y
+      set statusline+=\ %f                        " File name
+      set statusline+=%#StatusLineNC#
+      set statusline+=%m                          " Modified flag
+      set statusline+=%r                          " Read-only flag
+      set statusline+=%#StatusAccent#
+      set statusline+=\ %{JapaneseDate()}         " Japanese date and time
       set statusline+=%#StatusLine#
-      set statusline+=%l:%c
+      set statusline+=%=                          " Right-align
+      set statusline+=\ %y                        " File type
+      set statusline+=\ %p%%                      " Percentage through file
+      set statusline+=\ |                         " Separator
+      set statusline+=\ %l:%c                     " Line and column number
       
-      highlight StatusLine guifg=#D0D0D0 guibg=#3C3836
-      highlight StatusLineAccent guifg=#FFFFFF guibg=#505050
-      highlight StatusLineFileType guifg=#EAD0A6 guibg=#3C3836
-      highlight StatusLineModified guifg=#FF5F5F guibg=#3C3836
+      set noshowmode
 '';
     };
 
