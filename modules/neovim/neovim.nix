@@ -94,8 +94,6 @@
       set statusline+=%p%%              " Percent through file
       set statusline+=\ [%l:%c]         " Line and column
       set laststatus=2                  " Always show status line
-      laststatus = 2                    -- Always show status line
-      statusline = '%f %y %m %r %h %= %p%% [%l:%c]'
       '';
     };
 
