@@ -103,8 +103,8 @@
       
       set statusline+=%#StatusLineAccent#           " Custom highlight group
       set statusline+=\ %{g:light_sep}\             " Separator with arrow
-      set statusline+=%{strftime('📅 %Y年%m月%d日')} " Date with Japanese year/month/day symbols
-      set statusline+=\ %{strftime('🕒 %H:%M')}\    " Time
+      set statusline+=%{strftime("📅 %Y年%m月%d日")} " Date with Japanese year/month/day symbols
+      set statusline+=\ %{strftime("🕒 %H:%M")}\    " Time
       set statusline+=%{g:dark_sep}                 " Separator with accent
       
       " Add filetype and cursor position
