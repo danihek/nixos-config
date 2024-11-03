@@ -104,9 +104,6 @@
       set statusline+=%#StatusLineAccent#
       set statusline+=\ %{g:light_sep}
       
-      set statusline+=%{strftime("%Y年%m月%d日")}
-      set statusline+=\ %{strftime("%H:%M")}
-      
       set statusline+=%#StatusLineFileType#
       set statusline+=%{g:status_code}\ %Y
       set statusline+=%#StatusLine#
