@@ -32,7 +32,7 @@
           owner = "ej-shafran";
           repo = "compile-mode.nvim";
           rev = "v5.*";
-          sha256 = "";
+          sha256 = "390bcb60e5118f075d272a69819c8dce5d16b794";
         };
         dependencies = [ pkgs.vimPlugins.plenary-nvim ];
       })
