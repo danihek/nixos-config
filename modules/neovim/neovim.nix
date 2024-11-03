@@ -86,7 +86,6 @@
       " Compile mode
       function! CompileAndRun()
         execute 'AsyncRun make'
-        lua require'custom_floating_output'.open()
        endfunction
         
       nnoremap <silent> <M-m> :call CompileAndRun()<CR>
