@@ -81,7 +81,7 @@
       " Show the status on the second to last line.
       set laststatus=2
 
-      nnoremap <silent> <M-m> :call Make()<CR>
+      nnoremap <silent> <M-m> :Make<CR>
       '';
     };
 
