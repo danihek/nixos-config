@@ -26,20 +26,6 @@
       nvim-treesitter.withAllGrammars
     ];
 
-    extraPackages = with pkgs.vimPlugins; [
-      (pkgs.neovimUtils.buildNeovimPlugin {
-        pname = "compile-mode.nvim";
-        version = "v5.*";
-        src = pkgs.fetchFromGitHub {
-          owner = "ej-shafran";
-          repo = "compile-mode.nvim";
-          rev = "v5.*";
-          sha256 = "bb5e614bbfe8bc85dd9195767603ed2efb451750";
-        };
-        dependencies = [ pkgs.vimPlugins.plenary-nvim ];
-      })
-    ];
-
     extraConfig = ''
       syntax on
       filetype plugin indent on
