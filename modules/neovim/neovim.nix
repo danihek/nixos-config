@@ -24,6 +24,16 @@
       nvim-treesitter.withAllGrammars
     ];
 
+    compilation_mode = pkgs.vimUtils.buildVimPlugin {
+      name = "compile-mode";
+      src = pkgs.fetchFromGitHub {
+        owner = "ej-shafran";
+        repo = "compile-mode.nvim";
+        rev = "d0c36a77cc63c22648e792796b1815b44164653a";
+        sha256 = "bb5e614bbfe8bc85dd9195767603ed2efb451750";
+      };
+    };
+
   extraConfig = ''
     syntax on
     filetype plugin indent on
