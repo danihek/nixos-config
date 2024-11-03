@@ -1,25 +1,5 @@
 { pkgs, ... }:
 
-let
-  myOverlay = final: prev: {
-    compile-mode-nvim = prev.neovimUtils.buildNeovimPlugin {
-      pname = "compile-mode.nvim";
-      version = "v5.*";
-      src = prev.fetchFromGitHub {
-        owner = "ej-shafran";
-        repo = "compile-mode.nvim";
-        rev = "v5.*"; # Replace with specific commit hash if needed
-        sha256 = "your-sha256-hash-here"; # Replace with actual SHA256
-      };
-      dependencies = with final.vimPlugins; [ plenary-nvim ]; # Add plenary.nvim
-    };
-  };
-
-  # Add overlay to Nixpkgs
-  customPkgs = import <nixpkgs> {
-    overlays = [ myOverlay ];
-  };
-in
 {
   programs.neovim = {
     enable = true;
@@ -44,7 +24,19 @@ in
       nvim-treesitter.withAllGrammars
     ];
 
-    extraPackages = with customPkgs; [ compile-mode-nvim plenary-nvim ];
+    extraPackages = with pkgs.vimPlugins; [
+      (pkgs.neovimUtils.buildNeovimPlugin {
+        pname = "compile-mode.nvim";
+        version = "v5.*";
+        src = pkgs.fetchFromGitHub {
+          owner = "ej-shafran";
+          repo = "compile-mode.nvim";
+          rev = "v5.*";
+          sha256 = "";
+        };
+        dependencies = [ pkgs.vimPlugins.plenary-nvim ];
+      })
+    ];
 
     extraConfig = ''
       syntax on
