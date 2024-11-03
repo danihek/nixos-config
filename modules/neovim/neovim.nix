@@ -86,7 +86,7 @@
 
       " Status Line
       set laststatus=2
-      
+
       if has('termguicolors')
         set termguicolors
       endif
@@ -101,20 +101,18 @@
       
       set statusline=
       set statusline+=%#StatusLine#
-      set statusline+=\ %f                        " File name
+      set statusline+=\ %f
       set statusline+=%#StatusLineNC#
-      set statusline+=%m                          " Modified flag
-      set statusline+=%r                          " Read-only flag
+      set statusline+=%m
+      set statusline+=%r
       set statusline+=%#StatusAccent#
-      set statusline+=\ %{JapaneseDate()}         " Japanese date and time
+      set statusline+=\ %{JapaneseDate()}
       set statusline+=%#StatusLine#
-      set statusline+=%=                          " Right-align
-      set statusline+=\ %y                        " File type
-      set statusline+=\ %p%%                      " Percentage through file
-      set statusline+=\ |                         " Separator
-      set statusline+=\ %l:%c                     " Line and column number
-      
-      set noshowmode
+      set statusline+=%=                     " Right-align section starts here
+      set statusline+=\ %l:%c                " Move line and column number closer
+      set statusline+=\ |                    " Separator
+      set statusline+=\ %y                   " File type
+      set statusline+=\ %p%%                 " Percentage through file
 '';
     };
 
