@@ -84,28 +84,40 @@
       nnoremap <silent> <M-m> :Make<CR>
 
 
-      " Status Bar
-      set laststatus=2  " Always show the status line
-      set statusline=%f                   " Filename
-      set statusline+=\ [%{&filetype}]    " Filetype
-      set statusline+=\ [%{&ff}]          " File format
-      set statusline+=\ [%{&encoding}]    " Encoding
-      set statusline+=\ %m                " Modified flag
-      set statusline+=\ %r                " Readonly flag
-      set statusline+=\ %y                " File type name
-      set statusline+=\ %{getfsize("%") > 0 ? '✔️' : '❌'} " File exists check
-      set statusline+=\ %{line('.')}:%{line('$')} " Line number
-      set statusline+=\ %p%%              " Percentage through file
-      set statusline+=\ \ %l/%L           " Current line / total lines
-      set statusline+=\ %a                " Current mode (insert, normal, etc.)
+      " Status Line
+      set laststatus=2    " Always show status line
+      set statusline=
       
-      " Make the status line more visible
-      highlight StatusLine cterm=bold ctermfg=White ctermbg=DarkBlue
-      highlight StatusLineNC ctermfg=Gray ctermbg=Black
+      let g:light_sep = '➤'
+      let g:dark_sep = '⮚'
       
-      " Optional: Show the ruler and set ruler format
-      set ruler
-      set rulerformat=%l:%c
+      let g:status_file = '📄'   " General file icon
+      let g:status_code = '💻'   " Code icon
+      
+      " Statusline elements
+      set statusline+=%#StatusLine#                 " Highlight group for regular text
+      set statusline+=%{g:status_file}              " File icon at start
+      set statusline+=\ %{expand('%:t')}\           " Filename
+      set statusline+=%m                             " Modified flag
+      set statusline+=%=%{g:dark_sep}               " Right-align separator
+      
+      set statusline+=%#StatusLineAccent#           " Custom highlight group
+      set statusline+=\ %{g:light_sep}\             " Separator with arrow
+      set statusline+=%{strftime('📅 %Y年%m月%d日')} " Date with Japanese year/month/day symbols
+      set statusline+=\ %{strftime('🕒 %H:%M')}\    " Time
+      set statusline+=%{g:dark_sep}                 " Separator with accent
+      
+      " Add filetype and cursor position
+      set statusline+=%#StatusLineFileType#         " Highlight group for filetype
+      set statusline+=%{g:status_code}\ %Y          " Filetype icon and filetype
+      set statusline+=%#StatusLine#\                " Switch back to normal
+      set statusline+=%l:%c                         " Line and column numbers
+    
+      " Statusline colors
+      highlight StatusLine guifg=#D0D0D0 guibg=#3C3836
+      highlight StatusLineAccent guifg=#FFFFFF guibg=#505050
+      highlight StatusLineFileType guifg=#EAD0A6 guibg=#3C3836
+      highlight StatusLineModified guifg=#FF5F5F guibg=#3C3836
       '';
     };
 
