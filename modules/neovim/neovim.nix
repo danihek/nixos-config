@@ -35,6 +35,8 @@ in
       nvim-treesitter.withAllGrammars
     ];
 
+    extraPackages = [ neovim ];
+
     extraConfig = ''
       syntax on
       filetype plugin indent on
