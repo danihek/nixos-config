@@ -137,7 +137,7 @@
     tlrc
     file
     zola
-    gimp mypaint
+    gimp pinta
     wine
     p7zip
     unzip
