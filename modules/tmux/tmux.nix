@@ -41,7 +41,6 @@
       setw -g monitor-activity on
 
       bind l display-popup "dpcs"
-
     '';
   };
 }

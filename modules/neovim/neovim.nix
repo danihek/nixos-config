@@ -34,13 +34,15 @@
       set wildmode=list:longest
       set number relativenumber
       set nu rnu
-
       set tabstop=4
       set shiftwidth=4
       set expandtab
+      set cursorline
+      highlight CursorLine cterm=NONE ctermbg=238
 
       colorscheme pywal
       
+      "Conquer of Completion
       inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
       inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
       inoremap <silent><expr> <down> coc#pum#visible() ? coc#pum#next(0) : "\<down>"
@@ -55,33 +57,45 @@
       inoremap <silent><expr> <cr> "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
       inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<tab>"
 
+      " Codeuim
       let g:codeium_enabled = v:false
       let g:codeium_disable_bindings = 1
       let g:vim_markdown_folding_disabled = 1
-
       imap <script><silent><nowait><expr> <C-j> codeium#Accept()
       imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
       imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
       imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
-      set cursorline
-      highlight CursorLine cterm=NONE ctermbg=238
+     " set statusline=
 
-      set statusline=
+     " " Status line left side.
+     " set statusline+=\ %F\ %M\ %Y\ %R
+     " 
+     " " Use a divider to separate the left side from the right side.
+     " set statusline+=%=
+     " 
+     " " Status line right side.
+     " "set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
+     " 
+     " " Show the status on the second to last line.
+     " set laststatus=2
 
-      " Status line left side.
-      set statusline+=\ %F\ %M\ %Y\ %R
-      
-      " Use a divider to separate the left side from the right side.
-      set statusline+=%=
-      
-      " Status line right side.
-      "set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
-      
-      " Show the status on the second to last line.
-      set laststatus=2
-
+      "Compile Mode | Something like emacs I guess???
       nnoremap <silent> <M-m> :Make<CR>
+
+
+      " Status Bar
+      set statusline=%f                 " File path
+      set statusline+=%y                " File type
+      set statusline+=%m                " Modified flag
+      set statusline+=%r                " Read-only flag
+      set statusline+=%h                " Help file flag
+      set statusline+=%=%{getcwd()}     " Current working directory
+      set statusline+=%p%%              " Percent through file
+      set statusline+=\ [%l:%c]         " Line and column
+      set laststatus=2                  " Always show status line
+      vim.opt.laststatus = 2  -- Always show status line
+      vim.opt.statusline = '%f %y %m %r %h %= %p%% [%l:%c]'
       '';
     };
 
