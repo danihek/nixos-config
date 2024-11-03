@@ -16,8 +16,6 @@
       coc-clangd
       vim-polyglot
       vim-dispatch
-      asyncrun-vim
-      plenary-nvim
       vim-css-color
       nvim-autopairs
       nvim-lspconfig
@@ -83,12 +81,7 @@
       " Show the status on the second to last line.
       set laststatus=2
 
-      " Compile mode
-      function! CompileAndRun()
-        execute 'AsyncRun make'
-       endfunction
-        
-      nnoremap <silent> <M-m> :call CompileAndRun()<CR>
+      nnoremap <silent> <M-m> :call Make()<CR>
       '';
     };
 
