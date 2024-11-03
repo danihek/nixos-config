@@ -1,5 +1,16 @@
 { pkgs, ... }:
 
+let
+  neovim = pkgs.neovim.override {
+    configure = {
+      packages.myPlugins = with pkgs.vimPlugins; [
+        lazy.nvim
+        plenary-nvim
+        compile-mode-nvim
+      ];
+    };
+  };
+in
 {
   programs.neovim = {
     enable = true;
@@ -20,7 +31,6 @@
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
-      compile-mode-neovim
       tailwindcss-colors-nvim
       nvim-treesitter.withAllGrammars
     ];
