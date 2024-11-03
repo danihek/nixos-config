@@ -20,7 +20,7 @@
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
-      compile-mode-nvim
+      compile-mode
       tailwindcss-colors-nvim
       nvim-treesitter.withAllGrammars
     ];
