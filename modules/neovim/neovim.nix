@@ -85,40 +85,38 @@
 
 
       " Status Line
-      set laststatus=2    " Always show status line
+      set laststatus=2
       set statusline=
       
-      let g:light_sep = '➤'
-      let g:dark_sep = '⮚'
+      let g:light_sep = '>'
+      let g:dark_sep = '|'
       
-      let g:status_file = '📄'   " General file icon
-      let g:status_code = '💻'   " Code icon
+      let g:status_file = '[File]'
+      let g:status_code = '[Code]'
       
-      " Statusline elements
-      set statusline+=%#StatusLine#                 " Highlight group for regular text
-      set statusline+=%{g:status_file}              " File icon at start
-      set statusline+=\ %{expand('%:t')}\           " Filename
-      set statusline+=%m                             " Modified flag
-      set statusline+=%=%{g:dark_sep}               " Right-align separator
+      set statusline+=%#StatusLine#
+      set statusline+=%{g:status_file}
+      set statusline+=\ %{expand('%:t')}
+      set statusline+=%m
       
-      set statusline+=%#StatusLineAccent#           " Custom highlight group
-      set statusline+=\ %{g:light_sep}\             " Separator with arrow
-      set statusline+=%{strftime("📅 %Y年%m月%d日")}" Date with Japanese year/month/day symbols
-      set statusline+=\ %{strftime("🕒 %H:%M")}\    " Time
-      set statusline+=%{g:dark_sep}                 " Separator with accent
+      set statusline+=%=%{g:dark_sep}
       
-      " Add filetype and cursor position
-      set statusline+=%#StatusLineFileType#         " Highlight group for filetype
-      set statusline+=%{g:status_code}\ %Y          " Filetype icon and filetype
-      set statusline+=%#StatusLine#\                " Switch back to normal
-      set statusline+=%l:%c                         " Line and column numbers
-    
-      " Statusline colors
+      set statusline+=%#StatusLineAccent#
+      set statusline+=\ %{g:light_sep}
+      
+      set statusline+=%{strftime("%Y年%m月%d日")}
+      set statusline+=\ %{strftime("%H:%M")}
+      
+      set statusline+=%#StatusLineFileType#
+      set statusline+=%{g:status_code}\ %Y
+      set statusline+=%#StatusLine#
+      set statusline+=%l:%c
+      
       highlight StatusLine guifg=#D0D0D0 guibg=#3C3836
       highlight StatusLineAccent guifg=#FFFFFF guibg=#505050
       highlight StatusLineFileType guifg=#EAD0A6 guibg=#3C3836
       highlight StatusLineModified guifg=#FF5F5F guibg=#3C3836
-      '';
+'';
     };
 
     xdg.configFile."nvim/coc-settings.json".text = ''
