@@ -39,12 +39,11 @@
       set expandtab
       set cursorline
 
+      colorscheme pywal
       highlight CursorLineNr guifg=#ffcc00 guibg=None
       highlight StatusLine guifg=#ffcc00 guibg=#1e1e1e
       highlight StatusLineNC guifg=#666666 guibg=#1e1e1e
       highlight StatusAccent guifg=#ff66a5 guibg=#1e1e1e
-      colorscheme pywal
-
 
       "While searching and go C-d C-u its centred
       nnoremap n nzz
