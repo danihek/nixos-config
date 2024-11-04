@@ -38,9 +38,13 @@
       set shiftwidth=4
       set expandtab
       set cursorline
-      highlight CursorLine cterm=NONE ctermbg=238
 
+      highlight CursorLineNr guifg=#ffcc00 guibg=None
+      highlight StatusLine guifg=#ffcc00 guibg=#1e1e1e
+      highlight StatusLineNC guifg=#666666 guibg=#1e1e1e
+      highlight StatusAccent guifg=#ff66a5 guibg=#1e1e1e
       colorscheme pywal
+
 
       "While searching and go C-d C-u its centred
       nnoremap n nzz
@@ -48,6 +52,35 @@
       nnoremap <C-d> <C-d>zz
       nnoremap <C-u> <C-u>zz
       
+     "Compile Mode | Something like emacs I guess???
+      nnoremap <silent> <M-m> :Make<CR>
+
+      " Status Line
+      set laststatus=2
+
+      if has('termguicolors')
+        set termguicolors
+      endif 
+      
+      function! JapaneseDate()
+        return strftime("%H:%M | %d日%m月%Y年")
+      endfunction
+      
+      set statusline=
+      set statusline+=%#StatusLine#
+      set statusline+=\ %f
+      set statusline+=%#StatusLineNC#
+      set statusline+=%m
+      set statusline+=%r
+      set statusline+=%#StatusAccent#
+      set statusline+=\ %{JapaneseDate()}
+      set statusline+=%#StatusLine#
+      set statusline+=%=                     " Right-align section starts here
+      set statusline+=\ %l:%c                " Move line and column number closer
+      set statusline+=\ |                    " Separator
+      set statusline+=\ %y                   " File type
+      set statusline+=\ %p%%                 " Percentage through file
+
       "Conquer of Completion
       inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
       inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
@@ -72,52 +105,7 @@
       imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
       imap <C-x>   <Cmd>call codeium#Clear()<CR>
 
-     " set statusline=
-
-     " " Status line left side.
-     " set statusline+=\ %F\ %M\ %Y\ %R
-     " 
-     " " Use a divider to separate the left side from the right side.
-     " set statusline+=%=
-     " 
-     " " Status line right side.
-     " "set statusline+=\ ascii:\ %b\ hex:\ 0x%B\ row:\ %l\ col:\ %c\ percent:\ %p%%
-     " 
-     " " Show the status on the second to last line.
-     " set laststatus=2
-
-      "Compile Mode | Something like emacs I guess???
-      nnoremap <silent> <M-m> :Make<CR>
-
-      " Status Line
-      set laststatus=2
-
-      if has('termguicolors')
-        set termguicolors
-      endif
-      
-      highlight StatusLine guifg=#ffcc00 guibg=#1e1e1e
-      highlight StatusLineNC guifg=#666666 guibg=#1e1e1e
-      highlight StatusAccent guifg=#ff66a5 guibg=#1e1e1e
-      
-      function! JapaneseDate()
-        return strftime("⏰ %H:%M %p 日付 %Y年%m月%d日")
-      endfunction
-      
-      set statusline=
-      set statusline+=%#StatusLine#
-      set statusline+=\ %f
-      set statusline+=%#StatusLineNC#
-      set statusline+=%m
-      set statusline+=%r
-      set statusline+=%#StatusAccent#
-      set statusline+=\ %{JapaneseDate()}
-      set statusline+=%#StatusLine#
-      set statusline+=%=                     " Right-align section starts here
-      set statusline+=\ %l:%c                " Move line and column number closer
-      set statusline+=\ |                    " Separator
-      set statusline+=\ %y                   " File type
-      set statusline+=\ %p%%                 " Percentage through file
+ 
 '';
     };
 
