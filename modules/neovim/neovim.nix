@@ -44,6 +44,7 @@
       highlight StatusLine guifg=#ffcc00 guibg=#1e1e1e
       highlight StatusLineNC guifg=#666666 guibg=#1e1e1e
       highlight StatusAccent guifg=#ff66a5 guibg=#1e1e1e
+      highlight StatusAccent2 guifg=#cfff99 guibg=#1e1e1e
 
       "While searching and go C-d C-u its centred
       nnoremap n nzz
@@ -66,20 +67,25 @@
       endfunction
       
       set statusline=
+      set statusline+=%#StatusAccent2#
+      set statusline+=\ [
       set statusline+=%#StatusLine#
       set statusline+=\ %f
+      set statusline+=%#StatusAccent2#
+      set statusline+=\ ]
       set statusline+=%#StatusLineNC#
       set statusline+=%m
       set statusline+=%r
-      set statusline+=%#StatusAccent#
-      set statusline+=\ %{JapaneseDate()}
       set statusline+=%#StatusLine#
-      set statusline+=%=                     " Right-align section starts here
-      set statusline+=\ %l:%c                " Move line and column number closer
+      set statusline+=\ %l:%c
       set statusline+=\ |                    " Separator
       set statusline+=\ %y                   " File type
       set statusline+=\ %p%%                 " Percentage through file
 
+      set statusline+=%=                     " Right-align section starts here
+      set statusline+=%#StatusAccent#
+      set statusline+=\ %{JapaneseDate()}
+      
       "Conquer of Completion
       inoremap <silent><expr> <C-n> coc#pum#visible() ? coc#pum#next(1) : "\<C-n>"
       inoremap <silent><expr> <C-p> coc#pum#visible() ? coc#pum#prev(1) : "\<C-p>"
@@ -103,8 +109,6 @@
       imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
       imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
       imap <C-x>   <Cmd>call codeium#Clear()<CR>
-
- 
 '';
     };
 
