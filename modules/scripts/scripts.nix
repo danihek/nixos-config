@@ -17,7 +17,7 @@ let
     rm $HOME/.cache/current_wall.jpg
     cp $wallpaper_path/$wallpaper $HOME/.cache/current_wall.jpg
 
-    wallust run $wallpaper_path/$wallpaper &
+    #wallust run $wallpaper_path/$wallpaper &
     $pywal $wallpaper_path/$wallpaper
 
     swww img $wallpaper_path/$wallpaper \
