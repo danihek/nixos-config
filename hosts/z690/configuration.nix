@@ -101,7 +101,6 @@ in
   hardware.ckb-next.enable = true;
   
   # GPU 
-  services.xserver.enable = true;
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.opengl.extraPackages = with pkgs; [
     amdvlk
