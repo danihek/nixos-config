@@ -100,6 +100,15 @@ in
   # Corsair Keyboard
   hardware.ckb-next.enable = true;
   
+  # GPU 
+  services.xserver.enable = true;
+  services.xserver.videoDrivers = [ "amdgpu" ];
+  hardware.graphics.enable = true;
+  hardware.opengl.extraPackages = with pkgs; [
+    amdvlk
+    rocmPackages.clr.icd
+  ];
+  
   # Services
   services.minecraft-server = {
     enable = false;

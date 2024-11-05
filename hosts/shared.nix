@@ -55,6 +55,7 @@
     gcc
     udev
     sfml
+    hplip 
     csfml
     cmake
     clang clang-tools
@@ -241,10 +242,6 @@
   services.gnome.gnome-keyring.enable = true;
   services.avahi = { enable = true; nssmdns4 = true; openFirewall = true; };
   services.printing.drivers = [ pkgs.hplip ];
-
-
-  # Hardware 
-  hardware.graphics.enable = true;
 
   system.stateVersion = "24.05";
 }
