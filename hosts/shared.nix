@@ -232,6 +232,8 @@
     enable = true;
     enableSSHSupport = true;
   };
+
+  hardware.graphics.enable = true;
   
   # Services
   services.gvfs.enable = true;
