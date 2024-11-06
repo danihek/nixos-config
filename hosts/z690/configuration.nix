@@ -84,9 +84,12 @@ in
     enable = true;
     enable32Bit = true;
   };
+  services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.graphics.extraPackages = with pkgs; [
     amdvlk
+    rocmPackages.clr.icd
   ];
+ 
 
   # Virtualization
   programs.virt-manager.enable = true;
@@ -99,14 +102,7 @@ in
 
   # Corsair Keyboard
   hardware.ckb-next.enable = true;
-  
-  # GPU 
-  services.xserver.videoDrivers = [ "amdgpu" ];
-  hardware.graphics.extraPackages = with pkgs; [
-    amdvlk
-    rocmPackages.clr.icd
-  ];
-  
+   
   # Services
   services.minecraft-server = {
     enable = false;
