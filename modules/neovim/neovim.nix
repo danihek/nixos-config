@@ -44,6 +44,9 @@
       set expandtab
       set cursorline
 
+      let g:vim_markdown_folding_disabled = 1
+      let g:gruvbox_invert_selection = 0
+
       "colorscheme pywal
       "colorscheme peachpuff
       colorscheme gruvbox
@@ -63,7 +66,7 @@
       nnoremap <C-d> <C-d>zz
       nnoremap <C-u> <C-u>zz
       
-     "Compile Mode | Something like emacs I guess???
+     "Compile Mode | Something like emacs has I guess??? It's useful for me
       nnoremap <silent> <M-m> :Make<CR>
 
       " Status Line
@@ -78,25 +81,26 @@
       endfunction
       
       set statusline=
-     "set statusline+=%#StatusAccent3#
+      set statusline+=%#GruvboxGreen#
       set statusline+=\ %y                   " File type
-     "set statusline+=%#StatusAccent2#
+      set statusline+=%#GruvboxBlue#
       set statusline+=\ [
-      set statusline+=%#StatusLine#
+      set statusline+=%#GruvboxYellow#
       set statusline+=\ %f
-     "set statusline+=%#StatusAccent2#
+      set statusline+=%#GruvboxBlue#
       set statusline+=\ ]
 
-     " set statusline+=%#StatusLineNC#
+       set statusline+=%#GruvboxFg4#
       set statusline+=%m
       set statusline+=%r
 
-     "set statusline+=%#StatusLine#
-      set statusline+=\ %l:%c
+      set statusline+=%#GruvboxYellow#
+      set statusline+=\ (%l:%c)
       set statusline+=\ %p%%                 " Percentage through file
 
       set statusline+=%=                     " Right-align section starts here
-     "set statusline+=%#StatusAccent#
+      set statusline+=\ Welcome to vimacs! |
+      set statusline+=%#GruvboxAqua#
       set statusline+=\ %{JapaneseDate()}
       
       "Conquer of Completion
@@ -113,15 +117,6 @@
 
       inoremap <silent><expr> <cr> "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
       inoremap <silent><expr> <tab> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<tab>"
-
-      " Codeuim
-      let g:codeium_enabled = v:false
-      let g:codeium_disable_bindings = 1
-      let g:vim_markdown_folding_disabled = 1
-      imap <script><silent><nowait><expr> <C-j> codeium#Accept()
-      imap <C-;>   <Cmd>call codeium#CycleCompletions(1)<CR>
-      imap <C-,>   <Cmd>call codeium#CycleCompletions(-1)<CR>
-      imap <C-x>   <Cmd>call codeium#Clear()<CR>
 '';
     };
 
