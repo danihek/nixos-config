@@ -99,7 +99,7 @@
       set statusline+=\ %p%%                 " Percentage through file
 
       set statusline+=%=                     " Right-align section starts here
-      set statusline+=\ Welcome to vimacs!
+      set statusline+=\ vimacs69
       set statusline+=%#GruvboxAqua#
       set statusline+=\ %{JapaneseDate()}
       
