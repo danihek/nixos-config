@@ -9,10 +9,15 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      codeium-vim
-      coc-nvim
-      mini-nvim
+      sonokai
+      gruvbox
       pywal-nvim
+      dracula-vim
+      aquarium-vim
+      tokyonight-nvim
+      papercolor-theme
+
+      mini-nvim
       coc-clangd
       vim-polyglot
       vim-dispatch
@@ -20,7 +25,6 @@
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
-      tailwindcss-colors-nvim
       nvim-treesitter.withAllGrammars
     ];
 
