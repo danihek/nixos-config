@@ -42,11 +42,11 @@
       "colorscheme pywal
       colorscheme peachpuff
 
-      highlight StatusLine    guifg=#ffcc00 guibg=#b8b4b4
-      highlight StatusLineNC  guifg=#666666 guibg=#b8b4b4
-      highlight StatusAccent  guifg=#fcc6f9 guibg=#b8b4b4
-      highlight StatusAccent2 guifg=#cfff99 guibg=#b8b4b4
-      highlight StatusAccent3 guifg=#81f787 guibg=#b8b4b4
+      highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
+      highlight StatusLineNC  guifg=#666666 guibg=#1c1c1c
+      highlight StatusAccent  guifg=#fcc6f9 guibg=#1c1c1c
+      highlight StatusAccent2 guifg=#cfff99 guibg=#1c1c1c
+      highlight StatusAccent3 guifg=#81f787 guibg=#1c1c1c
 
       set list
       set listchars=space:·,tab:→\ ,trail:·
