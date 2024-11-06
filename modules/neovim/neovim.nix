@@ -77,7 +77,7 @@
       endif 
       
       function! JapaneseDate()
-        return strftime("%H:%M | %d日%m月%Y年")
+        return strftime("[%H:%M | %d日%m月%Y年"])
       endfunction
       
       set statusline=
@@ -99,7 +99,7 @@
       set statusline+=\ %p%%                 " Percentage through file
 
       set statusline+=%=                     " Right-align section starts here
-      set statusline+=\ 'Welcome to vimacs! |'
+      set statusline+=\ printf("Welcome to vimacs!")
       set statusline+=%#GruvboxAqua#
       set statusline+=\ %{JapaneseDate()}
       
