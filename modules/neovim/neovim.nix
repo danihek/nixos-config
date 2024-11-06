@@ -90,7 +90,7 @@
       set statusline+=%#GruvboxBlue#
       set statusline+=\ ]
 
-       set statusline+=%#GruvboxFg4#
+      set statusline+=%#GruvboxFg4#
       set statusline+=%m
       set statusline+=%r
 
@@ -99,7 +99,7 @@
       set statusline+=\ %p%%                 " Percentage through file
 
       set statusline+=%=                     " Right-align section starts here
-      set statusline+=\ printf("Welcome to vimacs!")
+      set statusline+=\ "Welcome to vimacs!"
       set statusline+=%#GruvboxAqua#
       set statusline+=\ %{JapaneseDate()}
       
