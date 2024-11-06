@@ -14,6 +14,7 @@
       pywal-nvim
       dracula-vim
       iceberg-vim
+      rose-pine-vim
       tokyonight-nvim
       papercolor-theme
 
