@@ -16,6 +16,7 @@
       tokyonight-nvim
       papercolor-theme
       gruvbox-material gruvbox
+      gruvbox-material-light gruvbox-light
 
       coc-nvim
       mini-nvim
