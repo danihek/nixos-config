@@ -77,7 +77,7 @@
       endif 
       
       function! JapaneseDate()
-        return strftime("[%H:%M | %d日%m月%Y年"])
+        return strftime("%H:%M | %d日%m月%Y年")
       endfunction
       
       set statusline=
