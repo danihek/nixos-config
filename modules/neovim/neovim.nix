@@ -51,12 +51,6 @@
       "colorscheme peachpuff
       colorscheme gruvbox
 
-      "highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
-      "highlight StatusLineNC  guifg=#666666 guibg=#1c1c1c
-      "highlight StatusAccent  guifg=#fcc6f9 guibg=#1c1c1c
-      "highlight StatusAccent2 guifg=#cfff99 guibg=#1c1c1c
-      "highlight StatusAccent3 guifg=#81f787 guibg=#1c1c1c
-
       set list
       set listchars=space:·,tab:→\ ,trail:·
 
@@ -94,13 +88,13 @@
       set statusline+=%m
       set statusline+=%r
 
-      set statusline+=%#GruvboxBlue#
+      set statusline+=%#GruvboxAqua#
       set statusline+=\ (%l:%c)
       set statusline+=%#GruvboxYellow#
       set statusline+=\ %p%%                 " Percentage through file
 
       set statusline+=%=                     " Right-align section starts here
-      set statusline+=\ vimacs69}
+      set statusline+=\ vimacs69
       set statusline+=%#GruvboxAqua#
       set statusline+=\ %{JapaneseDate()}
       
