@@ -10,13 +10,14 @@
 
     plugins = with pkgs.vimPlugins; [
       sonokai
-      gruvbox
       pywal-nvim
       dracula-vim
       iceberg-vim
       tokyonight-nvim
       papercolor-theme
+      gruvbox-material gruvbox
 
+      coc-nvim
       mini-nvim
       coc-clangd
       vim-polyglot
