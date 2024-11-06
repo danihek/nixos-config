@@ -47,7 +47,7 @@
       "colorscheme peachpuff
       colorscheme gruvbox
 
-      highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
+      "highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
       highlight StatusLineNC  guifg=#666666 guibg=#1c1c1c
       highlight StatusAccent  guifg=#fcc6f9 guibg=#1c1c1c
       highlight StatusAccent2 guifg=#cfff99 guibg=#1c1c1c
