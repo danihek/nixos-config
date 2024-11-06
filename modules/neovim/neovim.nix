@@ -39,12 +39,17 @@
       set expandtab
       set cursorline
 
-      colorscheme pywal
-      highlight StatusLine    guifg=#ffcc00 guibg=#1e1e1e
-      highlight StatusLineNC  guifg=#666666 guibg=#1e1e1e
-      highlight StatusAccent  guifg=#fcc6f9 guibg=#1e1e1e
-      highlight StatusAccent2 guifg=#cfff99 guibg=#1e1e1e
-      highlight StatusAccent3 guifg=#81f787 guibg=#1e1e1e
+      "colorscheme pywal
+      colorscheme peachpuff
+
+      highlight StatusLine    guifg=#ffcc00 guibg=#b8b4b4
+      highlight StatusLineNC  guifg=#666666 guibg=#b8b4b4
+      highlight StatusAccent  guifg=#fcc6f9 guibg=#b8b4b4
+      highlight StatusAccent2 guifg=#cfff99 guibg=#b8b4b4
+      highlight StatusAccent3 guifg=#81f787 guibg=#b8b4b4
+
+      set list
+      set listchars=space:·,tab:→\ ,trail:·
 
       "While searching and go C-d C-u its centred
       nnoremap n nzz
