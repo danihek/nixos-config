@@ -44,6 +44,7 @@
       set cursorline
 
       "colorscheme pywal
+      colorscheme peachpuff
       colorscheme gruvbox
 
       "highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
