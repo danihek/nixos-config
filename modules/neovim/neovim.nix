@@ -44,15 +44,15 @@
       set expandtab
       set cursorline
 
-      colorscheme pywal
+      "colorscheme pywal
       "colorscheme peachpuff
       colorscheme gruvbox
 
-      highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
-      highlight StatusLineNC  guifg=#666666 guibg=#1c1c1c
-      highlight StatusAccent  guifg=#fcc6f9 guibg=#1c1c1c
-      highlight StatusAccent2 guifg=#cfff99 guibg=#1c1c1c
-      highlight StatusAccent3 guifg=#81f787 guibg=#1c1c1c
+      "highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
+      "highlight StatusLineNC  guifg=#666666 guibg=#1c1c1c
+      "highlight StatusAccent  guifg=#fcc6f9 guibg=#1c1c1c
+      "highlight StatusAccent2 guifg=#cfff99 guibg=#1c1c1c
+      "highlight StatusAccent3 guifg=#81f787 guibg=#1c1c1c
 
       set list
       set listchars=space:·,tab:→\ ,trail:·
@@ -78,25 +78,25 @@
       endfunction
       
       set statusline=
-      set statusline+=%#StatusAccent3#
+     "set statusline+=%#StatusAccent3#
       set statusline+=\ %y                   " File type
-      set statusline+=%#StatusAccent2#
+     "set statusline+=%#StatusAccent2#
       set statusline+=\ [
       set statusline+=%#StatusLine#
       set statusline+=\ %f
-      set statusline+=%#StatusAccent2#
+     "set statusline+=%#StatusAccent2#
       set statusline+=\ ]
 
-      set statusline+=%#StatusLineNC#
+     " set statusline+=%#StatusLineNC#
       set statusline+=%m
       set statusline+=%r
 
-      set statusline+=%#StatusLine#
+     "set statusline+=%#StatusLine#
       set statusline+=\ %l:%c
       set statusline+=\ %p%%                 " Percentage through file
 
       set statusline+=%=                     " Right-align section starts here
-      set statusline+=%#StatusAccent#
+     "set statusline+=%#StatusAccent#
       set statusline+=\ %{JapaneseDate()}
       
       "Conquer of Completion
