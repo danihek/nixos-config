@@ -13,6 +13,7 @@
       gruvbox
       pywal-nvim
       dracula-vim
+      aquarium-nvim
       tokyonight-nvim
       papercolor-theme
 
