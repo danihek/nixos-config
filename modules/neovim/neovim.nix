@@ -16,7 +16,6 @@
       tokyonight-nvim
       papercolor-theme
       gruvbox-material gruvbox
-      gruvbox-light
 
       coc-nvim
       mini-nvim
@@ -47,7 +46,7 @@
 
       colorscheme pywal
       "colorscheme peachpuff
-      "colorscheme gruvbox
+      colorscheme gruvbox
 
       highlight StatusLine    guifg=#ffcc00 guibg=#1c1c1c
       highlight StatusLineNC  guifg=#666666 guibg=#1c1c1c
