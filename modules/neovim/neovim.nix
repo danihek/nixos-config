@@ -29,34 +29,16 @@
       (nvim-treesitter.withPlugins (_: nvim-treesitter.allGrammars ++ [
       (pkgs.tree-sitter.buildGrammar {
         language = "c3";
-        version = "8af0aab";
         src = pkgs.fetchFromGitHub {
           owner = "c3lang";
           repo = "tree-sitter-c3";
           rev = "aacd11f4f8ff77b73506627cf0f52042b1a1bc69";
-          sha256 = "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=";
         };
       })
     ]))
     ];
 
     extraLuaConfig = ''
-        vim.filetype.add({
-          extension = {
-            c3 = "c3",
-            c3i = "c3",
-            c3t = "c3",
-          },
-        })
-        
-        local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-        parser_config.c3 = {
-          install_info = {
-            url = "https://github.com/c3lang/tree-sitter-c3",
-            files = {"src/parser.c", "src/scanner.c"},
-            branch = "main",
-          },
-        }
         '';
 
     extraConfig = ''
