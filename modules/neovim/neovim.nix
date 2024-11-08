@@ -26,8 +26,18 @@
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
-      nvim-treesitter.c3lang
-      nvim-treesitter.withAllGrammars
+      (nvim-treesitter.withPlugins (_: nvim-treesitter.allGrammars ++ [
+      (pkgs.tree-sitter.buildGrammar {
+        language = "c3";
+        version = "8af0aab";
+        src = pkgs.fetchFromGitHub {
+          owner = "c3lang";
+          repo = "tree-sitter-c3";
+          rev = "aacd11f4f8ff77b73506627cf0f52042b1a1bc69";
+          sha256 = "sha256-hYKFidN3LHJg2NLM1EiJFki+0nqi1URnoLLPknUbFJY=";
+        };
+      })
+    ]))
     ];
 
     extraLuaConfig = ''
