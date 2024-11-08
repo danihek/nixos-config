@@ -26,7 +26,7 @@
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
-      nvim-treesitter.c3
+      nvim-treesitter.c3lang
       nvim-treesitter.withAllGrammars
     ];
 
