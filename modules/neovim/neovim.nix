@@ -34,7 +34,7 @@
           owner = "c3lang";
           repo = "tree-sitter-c3";
           rev = "aacd11f4f8ff77b73506627cf0f52042b1a1bc69";
-          sha256 = "sha256-fZ3lKWptjCY9DANE2QDm9Se+z1mG1Z9wj+ufpeAFmZQ="
+          sha256 = "sha256-fZ3lKWptjCY9DANE2QDm9Se+z1mG1Z9wj+ufpeAFmZQ=";
         };
       })
     ]))
