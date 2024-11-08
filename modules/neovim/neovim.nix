@@ -29,6 +29,7 @@
       (nvim-treesitter.withPlugins (_: nvim-treesitter.allGrammars ++ [
       (pkgs.tree-sitter.buildGrammar {
         language = "c3";
+        version = "0.2.1";
         src = pkgs.fetchFromGitHub {
           owner = "c3lang";
           repo = "tree-sitter-c3";
