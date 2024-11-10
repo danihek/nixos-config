@@ -11,15 +11,14 @@
       };
 
       cursor = {
+          blink_interval = 350;
 	      style = {
 	        shape = "Block";
 	        blinking = "Always";
-            blink_interval = 350;
 	      };
           vi_mode_style = {
             shape = "Block";
 	        blinking = "Always";
-            blink_interval = 250;
           };
       };
 
