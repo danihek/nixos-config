@@ -2,20 +2,25 @@
   programs.alacritty = {
     settings = {
       window = {
-        padding.x = 15;
-   	    padding.y = 15;
-   	    decorations = "none";
-   	    startup_mode = "Windowed";
-   	    dynamic_title = true;
-   	    opacity = 0.6;
-        #background = "#0f1210";
+        padding.x = 1;
+        padding.y = 1;
+        decorations = "none";
+        dynamic_title = true;
+        opacity = 0.6;
+        #startup_mode = "Windowed";
       };
 
       cursor = {
 	      style = {
 	        shape = "Beam";
 	        blinking = "Always";
+            interval = 0.3;
 	      };
+          vi_mode_style = {
+            shape = "Block";
+	        blinking = "Always";
+            interval = 0.3;
+          };
       };
 
       mouse = {
@@ -24,7 +29,6 @@
 
       font = {
         normal = {
-          #family = "Source Code Pro";
           family = "JetBrains Mono Medium";
         };
       };
