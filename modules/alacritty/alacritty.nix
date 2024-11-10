@@ -14,11 +14,11 @@
           blink_interval = 350;
 	      style = {
 	        shape = "Block";
-	        blinking = "Always";
+            #blinking = "Always";
 	      };
           vi_mode_style = {
             shape = "Block";
-	        blinking = "Always";
+            #blinking = "Always";
           };
       };
 
