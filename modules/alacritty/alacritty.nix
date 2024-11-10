@@ -12,14 +12,14 @@
 
       cursor = {
 	      style = {
-	        shape = "Beam";
+	        shape = "Block";
 	        blinking = "Always";
-            interval = 0.3;
+            blink_interval = 350;
 	      };
           vi_mode_style = {
             shape = "Block";
 	        blinking = "Always";
-            interval = 0.3;
+            blink_interval = 250;
           };
       };
 
