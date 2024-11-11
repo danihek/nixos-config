@@ -11,7 +11,8 @@ let cfg = config.modules.editors.emacs;
        ]);
 in {
   options.modules.editors.emacs = {
-    enable = mkBoolOpt false;
+    #enable = mkBoolOpt false;
+    #
     # doom = rec {
     #   enable = mkBoolOpt false;
     #   forgeUrl = mkOpt types.str "https://github.com";
