@@ -21,9 +21,6 @@ in {
   };
 
   config = cfg.enable {
-    nixpkgs.overlays = [
-      hey.inputs.emacs-overlay.overlays.default
-    ];
 
     user.packages = with pkgs; [
       (mkLauncherEntry "Emacs (Debug Mode)" {
