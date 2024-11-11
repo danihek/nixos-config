@@ -13,7 +13,7 @@
        #font = "JetBrainsMono Nerd Font:size=11";
        font  = "JetBrains Mono Medium:size=11";
 
-       dpi-aware = "yes";
+       #dpi-aware = "yes";
        pad = "0x0";
      };
 
