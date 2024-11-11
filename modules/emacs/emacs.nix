@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-  programs.nix-doom-emacs = {
+  programs.emacs = {
     enable = true;
     extraPackages = (
       epkgs:
