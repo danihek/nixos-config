@@ -209,6 +209,11 @@
     LC_TIME = "pl_PL.UTF-8";
   };
 
+  # Nix-ld
+   programs.nix-ld = {
+     libraries = pkgs.steam-run.fhsenv.args.multiPkgs pkgs;
+   }; 
+
   # Sec
   security.rtkit.enable = true;
   security.polkit.enable = true;
