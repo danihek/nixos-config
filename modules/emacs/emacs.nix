@@ -20,7 +20,7 @@ in {
     # };
   };
 
-  config = mkIf cfg.enable {
+  config = cfg.enable {
     nixpkgs.overlays = [
       hey.inputs.emacs-overlay.overlays.default
     ];
