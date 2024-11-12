@@ -29,6 +29,8 @@
   home.file.".emacs.d/init.el".text = ''
     (use-package gruber-darker-theme
       :ensure t)
+    (load-theme 'gruber-darker t)
+    
     (scroll-bar-mode -1)
     (menu-bar-mode -1)
     (tool-bar-mode -1)
