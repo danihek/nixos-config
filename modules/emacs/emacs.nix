@@ -15,6 +15,8 @@
         epkgs.melpaPackages.smex
         epkgs.melpaPackages.rainbow-delimiters
 
+	epkgs.melpaPackages.gruber-darker-theme
+
         epkgs.melpaPackages.markdown-mode
         epkgs.melpaPackages.rust-mode
         epkgs.melpaPackages.toml-mode
@@ -25,6 +27,8 @@
   };
 
   home.file.".emacs.d/init.el".text = ''
+    (use-package gruber-darker-theme
+      :ensure t)
     (scroll-bar-mode -1)
     (menu-bar-mode -1)
     (tool-bar-mode -1)
