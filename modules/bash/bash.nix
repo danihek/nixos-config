@@ -29,8 +29,13 @@
     initExtra = ''
       # fzf - Completion & Keybindings
       if command -v fzf-share >/dev/null; then
-        source "$(fzf-share)/key-bindings.bash"
-        source "$(fzf-share)/completion.bash"
+        if [ -f $(fzf-share)/key-bindings.bash ]; then
+            source "$(fzf-share)/key-bindings.bash"
+        fi
+        
+        if [ -f $(fzf-share)/completion.bash ]; then
+            source "$(fzf-share)/completion.bash"
+        fi
       fi
 
       # Pywal colors
@@ -39,9 +44,9 @@
       # Prompt 
       PS1='\[\033[36m\]\u\[\033[35m\]@\[\033[31m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
 
-       # Keybindings
-          bind '"\e[1;5A": history-search-backward'
-          bind '"\e[1;5B": history-search-forward'
+      # Keybindings
+      bind '"\e[1;5A": history-search-backward'
+      bind '"\e[1;5B": history-search-forward'
     '';
     
     sessionVariables = {
