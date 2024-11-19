@@ -49,21 +49,21 @@
       set ts=3 sts=2 sw=2 et ai si
       set incsearch
       set ignorecase
-      set wildmenu
-      set wildmode=list:longest
       set number relativenumber
       set nu rnu
       set tabstop=4
       set shiftwidth=4
       set expandtab
       set cursorline
+      set wildmode=longest:full,full "replacement for glourius ido mode
 
       let g:vim_markdown_folding_disabled = 1
       let g:gruvbox_invert_selection = 0
 
       "colorscheme pywal
       "colorscheme peachpuff
-      colorscheme gruvbox
+      "colorscheme gruvbox
+      colorscheme gruvbox-material
 
       set list
       set listchars=space:·,tab:→\ ,trail:·
