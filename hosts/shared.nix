@@ -48,6 +48,10 @@
     # Mail
     thunderbird
 
+    # Doc
+    pkgs.man-pages
+    pkgs.man-pages-posix
+
     # Dev
     gdb
     git
@@ -211,7 +215,6 @@
 
   # Doc
   documentation.dev.enable = true;
-  environment.systemPackages = ++[ pkgs.man-pages pkgs.man-pages-posix ];
 
   # Sec
   security.rtkit.enable = true;
