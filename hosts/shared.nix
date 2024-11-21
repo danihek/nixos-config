@@ -211,7 +211,7 @@
 
   # Doc
   documentation.dev.enable = true;
-  environment.systemPackages = [ pkgs.man-pages pkgs.man-pages-posix ];
+  environment.systemPackages = ++[ pkgs.man-pages pkgs.man-pages-posix ];
 
   # Sec
   security.rtkit.enable = true;
