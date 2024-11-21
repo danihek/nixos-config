@@ -209,6 +209,10 @@
     LC_TIME = "pl_PL.UTF-8";
   };
 
+  # Doc
+  documentation.dev.enable = true;
+  environment.systemPackages = [ pkgs.man-pages pkgs.man-pages-posix ];
+
   # Sec
   security.rtkit.enable = true;
   security.polkit.enable = true;
