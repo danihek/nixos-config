@@ -116,7 +116,6 @@
     # Music
     mpd
     moc
-    cava
     cmus
     spotify spicetify-cli
     ncmpcpp
