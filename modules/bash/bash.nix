@@ -39,7 +39,10 @@
       fi
 
       # Pywal colors
-      [ -d "$HOME/.cache/wal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
+      #[ -d "$HOME/.cache/wal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
+
+      # Hellwal colors
+      [ -d "$HOME/.cache/hellwal" ] && eval "$(cat $HOME/.cache/wal/colors.sh)"
 
       # Prompt 
       PS1='\[\033[36m\]\u\[\033[35m\]@\[\033[31m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
