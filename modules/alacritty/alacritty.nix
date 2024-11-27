@@ -6,8 +6,7 @@
         padding.y = 1;
         decorations = "none";
         dynamic_title = true;
-        opacity = 0.6;
-        #startup_mode = "Windowed";
+        #opacity = 0.6;
       };
 
       cursor = {

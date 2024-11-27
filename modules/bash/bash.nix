@@ -11,13 +11,13 @@
       ls = "eza";
       lf = "yazi"; #xd
       tm = "tmux";
-      l = "ls -l";
+      l = "lsd -l";
       tree = "tree";
       ll = "ls -lh";
       nv = "neovide";
       la = "ls -alh";
       lla = "ls -alh";
-      cl = "clear & l";
+      cl = "clear ; l";
       fucking = "sudo";
       mkcl = "make clean";
       nrun = "nix-shell -p"; 
