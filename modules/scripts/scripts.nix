@@ -5,36 +5,23 @@ let
   setwall = pkgs.writeShellScriptBin "setwall" ''
     #!/usr/bin/env sh
 
-    wallpaper_path=${wallpapers_path}
-    #pywal="wal -i" #depracated
+    #wallpaper_path=${wallpapers_path}
+    ##pywal="wal -i" #depracated
 
-    if [ "$1" != "" ]; then
-      wallpaper="$1"
-    else
-      wallpaper=$(echo $(ls $wallpaper_path -1 | grep ".jpg\|.png" | shuf | head -n 1))
-    fi
+    #if [ "$1" != "" ]; then
+    #  wallpaper="$1"
+    #else
+    #  wallpaper=$(echo $(ls $wallpaper_path -1 | grep ".jpg\|.png" | shuf | head -n 1))
+    #fi
 
-    rm $HOME/.cache/current_wall.jpg
-    cp $wallpaper_path/$wallpaper $HOME/.cache/current_wall.jpg
+    #rm $HOME/.cache/current_wall.jpg
+    #cp $wallpaper_path/$wallpaper $HOME/.cache/current_wall.jpg
 
     #wallust run $wallpaper_path/$wallpaper &
     #$pywal $wallpaper_path/$wallpaper
     hellwal --image $wallpaper_path/ --random
 
-    source ~/.cache/hellwal/variables.sh
-
-    swww img $wallpaper_path/$wallpaper \
-      --transition-type="grow" \
-      --transition-duration 2 \
-      --transition-fps 165 \
-      --resize="crop" \
-      --invert-y
-
-    wbar-reload
-    themecord
-    pywalfox update
-
-    ./hellwal --image $wallpaper_path --random -f ./templates/
+    themecord -p ~/.cache/hellwal/discord-colors.css
     source ~/.cache/hellwal/variables.sh
 
     swww img $wallpaper \
@@ -44,7 +31,9 @@ let
       --resize="crop" \
       --invert-y
 
-    themecord -p ~/.cache/hellwal/discord-colors.css
+    wbar-reload
+    #themecord
+    #pywalfox update
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
