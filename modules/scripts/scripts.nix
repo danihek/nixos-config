@@ -21,7 +21,7 @@ let
     #$pywal $wallpaper_path/$wallpaper
 
     # TODO: TEMOPORARY SOLUTION
-    ./home/dh/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
+    /home/dh/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
 
     themecord -p ~/.cache/hellwal/discord-colors.css
     source ~/.cache/hellwal/variables.sh
