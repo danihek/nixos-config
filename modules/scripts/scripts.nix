@@ -19,7 +19,9 @@ let
 
     #wallust run $wallpaper_path/$wallpaper &
     #$pywal $wallpaper_path/$wallpaper
-    hellwal --image $wallpaper_path/ --random
+
+    # TODO: TEMOPORARY SOLUTION
+    /home/$USER/code/c/helltheme/hellwal --image $wallpaper_path/ --random
 
     themecord -p ~/.cache/hellwal/discord-colors.css
     source ~/.cache/hellwal/variables.sh
