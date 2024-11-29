@@ -6,7 +6,7 @@ let
     #!/usr/bin/env sh
 
     wallpaper_path=${wallpapers_path}
-    pywal="wal -i"
+    #pywal="wal -i" #depracated
 
     if [ "$1" != "" ]; then
       wallpaper="$1"
@@ -18,7 +18,10 @@ let
     cp $wallpaper_path/$wallpaper $HOME/.cache/current_wall.jpg
 
     #wallust run $wallpaper_path/$wallpaper &
-    $pywal $wallpaper_path/$wallpaper
+    #$pywal $wallpaper_path/$wallpaper
+    hellwal --image $wallpaper_path/ --random
+
+    source ~/.cache/hellwal/variables.sh
 
     swww img $wallpaper_path/$wallpaper \
       --transition-type="grow" \
@@ -30,6 +33,18 @@ let
     wbar-reload
     themecord
     pywalfox update
+
+    ./hellwal --image $wallpaper_path --random -f ./templates/
+    source ~/.cache/hellwal/variables.sh
+
+    swww img $wallpaper \
+      --transition-type="grow" \
+      --transition-duration 2 \
+      --transition-fps 165 \
+      --resize="crop" \
+      --invert-y
+
+    themecord -p ~/.cache/hellwal/discord-colors.css
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
