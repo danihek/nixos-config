@@ -33,9 +33,9 @@ let
       --resize="crop" \
       --invert-y
 
-    wbar-reload
     cp ~/.cache/hellwal/colors.css ~/.cache/wal/
     pywalfox update
+    wbar-reload
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
