@@ -34,8 +34,8 @@ let
       --invert-y
 
     wbar-reload
-    #themecord
-    #pywalfox update
+    cp ~/.cache/hellwal/colors.css ~/.cache/wal/
+    pywalfox update
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
