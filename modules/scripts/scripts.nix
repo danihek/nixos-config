@@ -33,7 +33,7 @@ let
       --resize="crop" \
       --invert-y
 
-    cp ~/.cache/hellwal/colors.css ~/.cache/wal/
+    cp ~/.cache/hellwal/colors.json ~/.cache/wal/
     pywalfox update
     wbar-reload
   '';
