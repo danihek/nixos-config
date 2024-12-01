@@ -1,21 +1,6 @@
 { config, lib, pkgs, ... }:
 
 {
-  fonts.packages = with pkgs; [
-    dina-font
-    fira-code
-    noto-fonts
-    minecraftia
-    proggyfonts
-    font-awesome
-    jetbrains-mono
-    liberation_ttf
-    noto-fonts-emoji
-    fira-code-symbols
-    noto-fonts-cjk-sans
-    mplus-outline-fonts.githubRelease
-  ];
-
   # Packages
   environment.systemPackages = with pkgs; [
     # Shell, Terminal, Text Editor etc.
