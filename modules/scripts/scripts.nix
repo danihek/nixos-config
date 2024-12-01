@@ -4,20 +4,30 @@ let
 
   setwall = pkgs.writeShellScriptBin "setwall" ''
 
+    # generate palette and templates from random image
     /home/dh/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
+
+    # source variables so you have accesss to $colors and $wallpaper
     source ~/.cache/hellwal/variables.sh
-
+    
+    # update discord colors
     themecord
-
+    
+    # apply wallpaper
     swww img "$wallpaper" \
       --transition-type="grow" \
       --transition-duration 2 \
       --transition-fps 165 \
       --resize="crop" \
       --invert-y
-
+    
+    # copy generated hellwal colors to pywal location, so pywalfox can understand it
     cp ~/.cache/hellwal/colors.json ~/.cache/wal/
+    
+    # update pywalfox
     pywalfox update
+    
+    # reload waybar with new colors
     wbar-reload
   '';
 
