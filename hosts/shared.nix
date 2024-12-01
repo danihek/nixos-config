@@ -22,7 +22,7 @@
     vim 
     foot
     kitty
-    hyprlock
+    neovide
     obsidian
     alacritty #ueberzugpp # yazi support
     vimPlugins.vim-plug 
