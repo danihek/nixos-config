@@ -4,7 +4,6 @@
   fonts.packages = with pkgs; [
     dina-font
     fira-code
-    nerdfonts
     noto-fonts
     minecraftia
     proggyfonts
@@ -12,9 +11,9 @@
     jetbrains-mono
     liberation_ttf
     noto-fonts-emoji
-    terminus-nerdfont
     fira-code-symbols
     noto-fonts-cjk-sans
+    nerd-fonts.jetbrains-mono
     mplus-outline-fonts.githubRelease
   ];
 
@@ -170,16 +169,15 @@
     # Fun
     osu-lazer-bin
 
-    # Flex
+    ## Flex
     cowsay
     cbonsai
     cmatrix
     fortune
     pipes-rs
 
-    # Rest..
+    ## Rest..
     xdg-utils
-    nerd-fonts
     gnome-keyring
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
