@@ -4,6 +4,7 @@
   fonts.packages = with pkgs; [
     dina-font
     fira-code
+    nerdfonts
     noto-fonts
     minecraftia
     proggyfonts
@@ -11,6 +12,7 @@
     jetbrains-mono
     liberation_ttf
     noto-fonts-emoji
+    terminus-nerdfont
     fira-code-symbols
     noto-fonts-cjk-sans
     mplus-outline-fonts.githubRelease
