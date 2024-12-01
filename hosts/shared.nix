@@ -12,7 +12,6 @@
     liberation_ttf
     noto-fonts-emoji
     fira-code-symbols
-    terminus-nerdfont
     noto-fonts-cjk-sans
     mplus-outline-fonts.githubRelease
   ];
