@@ -17,11 +17,11 @@
       "x-scheme-handler/unknown"      = [ "firefox.desktop" ];
       "x-scheme-handler/mailto"       = [ "thunderbird.desktop" ];
 
-      "inode/directory"               = [ "thunar" ];
-      "application/zip"               = [ "thunar" ];
-      "application/rar"               = [ "thunar" ];
-      "application/7z"                = [ "thunar" ];
-      "application/*tar"              = [ "thunar" ];
+      "inode/directory"               = [ "thunar.desktop" ];
+      "application/zip"               = [ "thunar.desktop" ];
+      "application/rar"               = [ "thunar.desktop" ];
+      "application/7z"                = [ "thunar.desktop" ];
+      "application/*tar"              = [ "thunar.desktop" ];
     };
   };
 }
