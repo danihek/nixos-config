@@ -4,7 +4,6 @@
   fonts.packages = with pkgs; [
     dina-font
     fira-code
-    nerdfonts
     noto-fonts
     minecraftia
     proggyfonts
@@ -180,6 +179,7 @@
 
     # Rest..
     xdg-utils
+    nerd-fonts
     gnome-keyring
     libsForQt5.qt5ct
     libsForQt5.qtstyleplugin-kvantum
