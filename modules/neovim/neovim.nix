@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 let
-  vim-better-whitespace = pkgs.vimUtils.buildVimPlugin {
+  hellwal-vim = pkgs.vimUtils.buildVimPlugin {
     name = "hellwal-vim";
     src = pkgs.fetchFromGitHub {
       owner = "danihek";
