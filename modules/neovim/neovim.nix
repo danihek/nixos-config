@@ -9,14 +9,14 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      (pkgs.vimUtils.buildVimPluginFrom2Nix {
-          pname = "hellwal-vim";
-          version = "latest";
-          src = builtins.fetchGit {
-              url = "https://github.com/danihek/hellwal-vim";
-              rev = "main";
-          };
-      })
+      #(pkgs.vimUtils.buildVimPluginFrom2Nix {
+      #    pname = "hellwal-vim";
+      #    version = "latest";
+      #    src = builtins.fetchGit {
+      #        url = "https://github.com/danihek/hellwal-vim";
+      #        rev = "main";
+      #    };
+      #})
       sonokai
       pywal-nvim
       dracula-vim
