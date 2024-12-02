@@ -9,7 +9,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      (pkgs.vimUtils.buildVimPluginFrom2Nix {
+      (pkgs.vimUtils.buildVimPlugin {
           pname = "hellwal-vim";
           version = "latest";
           src = builtins.fetchGit {
