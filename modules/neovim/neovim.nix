@@ -14,6 +14,7 @@
           version = "latest";
           src = builtins.fetchGit {
               url = "https://github.com/danihek/hellwal-vim";
+              sha256 = "";
           };
       })
       sonokai
