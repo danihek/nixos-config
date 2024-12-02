@@ -1,3 +1,5 @@
 { pkgs, ... }
 
-services.xserver.windowManager.dwm.enable = true;
+{
+  services.xserver.windowManager.dwm.enable = true;
+}
