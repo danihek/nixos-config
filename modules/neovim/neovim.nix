@@ -21,6 +21,8 @@ in
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
+      hellwal-vim
+
       sonokai
       pywal-nvim
       dracula-vim
