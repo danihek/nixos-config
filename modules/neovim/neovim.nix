@@ -6,11 +6,10 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "danihek";
       repo = "hellwal-vim";
-      rev = "9807646d04e5d26ea5d1ae07e2ae7d896e874823";
+      rev = "main";
       sha256 = "sha256-Zl+psyKXfIPzVSBXrxvEBFlce4adN/KzhfnH0fN4GbA=";
     };
   };
-
 in 
 {
   programs.neovim = {
