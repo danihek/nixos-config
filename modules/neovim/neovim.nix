@@ -6,7 +6,7 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "danihek";
       repo = "hellwal-vim";
-      rev = "1jdrj5nn4vfysprnd769wdfmq0l70q4mixnjgmx4np6x1i29dml5";
+      rev = "9807646d04e5d26ea5d1ae07e2ae7d896e874823";
       sha256 = "";
     };
   };
