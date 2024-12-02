@@ -3,6 +3,7 @@
 {
   imports = [
     # Enabled
+      ./dwm/dwm.nix
       ./gtk/gtk.nix
       ./git/git.nix
       ./zsh/zsh.nix
