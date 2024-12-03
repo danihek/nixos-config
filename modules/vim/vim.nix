@@ -14,10 +14,7 @@ in
 {
   programs.vim = {
     enable = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
-    defaultEditor = true;
+    defaultEditor = false;
 
     plugins = with pkgs.vimPlugins; [
       hellwal-vim

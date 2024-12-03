@@ -14,9 +14,9 @@ in
 {
   programs.neovim = {
     enable = true;
-    viAlias = true;
-    vimAlias = true;
-    vimdiffAlias = true;
+    viAlias = false;
+    vimAlias = false;
+    vimdiffAlias = false;
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
