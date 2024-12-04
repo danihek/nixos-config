@@ -6,7 +6,7 @@ let
 
     if [ "$1" != "" ] ; then 
         # generate palette and templates from given image
-        /home/dh/code/c/helltheme/hellwal --image "$1"
+        /home/dh/code/c/helltheme/hellwal --image "~/pics/wallpapers/$1"
     else
         # generate palette and templates from random image
         /home/dh/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
