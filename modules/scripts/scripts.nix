@@ -4,8 +4,14 @@ let
 
   setwall = pkgs.writeShellScriptBin "setwall" ''
 
-    # generate palette and templates from random image
-    /home/dh/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
+    if [ "$1" != "" ] ; then 
+        # generate palette and templates from given image
+        /home/dh/code/c/helltheme/hellwal --image "$1"
+    else
+        # generate palette and templates from random image
+        /home/dh/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
+    fi
+
 
     # source variables so you have accesss to $colors and $wallpaper
     source ~/.cache/hellwal/variables.sh
