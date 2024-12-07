@@ -172,30 +172,6 @@ window#waybar {
     color: @color15;
 }
 
-#waybar-custom-music[tooltip] {
-    position: relative;
-}
-
-#waybar-custom-music[tooltip]:hover::after {
-    content: attr(tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.7);
-    color: @foreground;
-    padding: 5px;
-    border-radius: 3px;
-    font-size: 11px;
-    white-space: nowrap;
-}
-
-@media (max-width: 600px) {
-    #waybar-custom-music {
-        font-size: 10px;
-    }
-}
-
 
 #battery {
 	border: solid 2px @foreground;
