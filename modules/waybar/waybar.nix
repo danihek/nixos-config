@@ -158,7 +158,6 @@ window#waybar {
 }
 
 #waybar-custom-music {
-    display: flex;
     align-items: center;
     font-family: 'Arial', sans-serif;
     font-size: 12px;
