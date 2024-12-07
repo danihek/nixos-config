@@ -164,7 +164,6 @@ window#waybar {
     padding: 0 8px;
     background-color: @background;
     border-radius: 5px;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
