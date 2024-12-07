@@ -9,7 +9,7 @@
       layer = "top";
       position = "top";
       modules-center = [ "hyprland/window" ];
-      modules-left = [ "hyprland/workspaces" "custom/music" ];
+      modules-left = [ "hyprland/workspaces" "music" ];
       modules-right = [
         "pulseaudio"
         "battery"
@@ -50,7 +50,7 @@
           "5" = [];
         };
       };
-      "custom/music" = {
+      "music" = {
         format = " 𝄞 {}";
         escape = true;
         interval = 1;
@@ -157,9 +157,7 @@ window#waybar {
 	color: @background;
 }
 
-#waybar-custom-music {
-    font-family: 'Arial', sans-serif;
-    font-size: 12px;
+#music {
     color: @foreground;
     padding: 0 8px;
     background-color: @background;
@@ -167,7 +165,7 @@ window#waybar {
     transition: background-color 0.3s, color 0.3s;
 }
 
-#waybar-custom-music:hover {
+#music:hover {
     background-color: @color7;
     color: @color15;
 }
