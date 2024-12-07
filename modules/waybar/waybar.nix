@@ -156,6 +156,13 @@ window#waybar {
 	background: @foreground;
 	color: @background;
 }
+
+custom#music {
+	border: solid 2px @foreground;
+	background: @foreground;
+	color: @background;
+}
+
 #battery {
 	border: solid 2px @foreground;
 	background: @foreground;
