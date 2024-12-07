@@ -157,11 +157,48 @@ window#waybar {
 	color: @background;
 }
 
-#music {
-	border: solid 2px @foreground;
-	background: @foreground;
-	color: @background;
+#waybar-custom-music {
+    display: flex;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 12px;
+    color: @foreground;
+    padding: 0 8px;
+    background-color: @background;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+#waybar-custom-music:hover {
+    background-color: @color7;
+    color: @color15;
+}
+
+#waybar-custom-music[tooltip] {
+    position: relative;
+}
+
+#waybar-custom-music[tooltip]:hover::after {
+    content: attr(tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: @foreground;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+@media (max-width: 600px) {
+    #waybar-custom-music {
+        font-size: 10px;
+    }
+}
+
 
 #battery {
 	border: solid 2px @foreground;
