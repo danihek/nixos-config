@@ -157,7 +157,7 @@ window#waybar {
 	color: @background;
 }
 
-custom#music {
+#music {
 	border: solid 2px @foreground;
 	background: @foreground;
 	color: @background;
