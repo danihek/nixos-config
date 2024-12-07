@@ -9,7 +9,7 @@
       layer = "top";
       position = "top";
       modules-center = [ "hyprland/window" ];
-      modules-left = [ "hyprland/workspaces" "music" ];
+      modules-left = [ "hyprland/workspaces" "custom/music" ];
       modules-right = [
         "pulseaudio"
         "battery"
@@ -50,7 +50,7 @@
           "5" = [];
         };
       };
-      "music" = {
+      "custom/music" = {
         format = " 𝄞 {}";
         escape = true;
         interval = 1;
