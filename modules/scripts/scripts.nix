@@ -40,8 +40,9 @@ let
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
     #!/usr/bin/env bash
     waybarPID=$(pgrep waybar)
-    kill -HUP $waybarPID
-    waybar
+    kill $waybarPID
+    nohup waybar > /dev/null 2>&1 &
+    echo "waybar reloaded!"
   '';
 
   sysconfupdate = pkgs.writeShellScriptBin "sysconfupdate" ''
