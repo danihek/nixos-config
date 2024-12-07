@@ -157,7 +157,7 @@ window#waybar {
 	color: @background;
 }
 
-#music {
+#custom music {
     color: @foreground;
     padding: 0 8px;
     background-color: @background;
@@ -165,7 +165,7 @@ window#waybar {
     transition: background-color 0.3s, color 0.3s;
 }
 
-#music:hover {
+#custom music:hover {
     background-color: @color7;
     color: @color15;
 }
