@@ -177,6 +177,7 @@
     pipes-rs
 
     ## Rest..
+    glib
     xdg-utils
     gnome-keyring
     libsForQt5.qt5ct
