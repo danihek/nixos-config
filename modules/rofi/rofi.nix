@@ -14,7 +14,7 @@
 
     # Custom font for better aesthetics
     font = "MesloLGS Nerd Font Mono 12"; # Larger font for better readability
-    theme = "${config.xdg.cacheHome}/hellwal/rofi-colors.rasi";
+    #theme = "${config.xdg.cacheHome}/hellwal/rofi-colors.rasi";
 
     extraConfig = {
       show-icons = true;
