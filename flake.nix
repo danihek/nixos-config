@@ -4,6 +4,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    hellwal.url = "path:../../home/dh/code/git/hellwal/";
 
     dpcs = {
       url = "github:danihek/dpcs";
