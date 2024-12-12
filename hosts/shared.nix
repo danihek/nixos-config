@@ -170,6 +170,7 @@
     osu-lazer-bin
 
     ## Flex
+    wpgtk
     cowsay
     cbonsai
     cmatrix
