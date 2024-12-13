@@ -1,16 +1,16 @@
 { pkgs, ... }:
 
-let
-  hellwal-vim = pkgs.vimUtils.buildVimPlugin {
-    name = "hellwal-vim";
-    src = pkgs.fetchFromGitHub {
-      owner = "danihek";
-      repo = "hellwal-vim";
-      rev = "main";
-      sha256 = "sha256-Zl+psyKXfIPzVSBXrxvEBFlce4adN/KzhfnH0fN4GbA=";
-    };
-  };
-in 
+#let
+#  hellwal-vim = pkgs.vimUtils.buildVimPlugin {
+#    name = "hellwal-vim";
+#    src = pkgs.fetchFromGitHub {
+#      owner = "danihek";
+#      repo = "hellwal-vim";
+#      rev = "main";
+#      sha256 = "sha256-Zl+psyKXfIPzVSBXrxvEBFlce4adN/KzhfnH0fN4GbA=";
+#    };
+#  };
+#in 
 {
   programs.neovim = {
     enable = true;
