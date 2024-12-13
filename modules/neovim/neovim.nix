@@ -20,7 +20,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      hellwal-vim
+      #hellwal-vim
       vim-multiple-cursors
 
       sonokai

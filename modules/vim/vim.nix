@@ -17,7 +17,7 @@
     defaultEditor = false;
 
     plugins = with pkgs.vimPlugins; [
-      hellwal-vim
+      #hellwal-vim
 
       sonokai
       pywal-nvim
