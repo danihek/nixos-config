@@ -19,6 +19,10 @@
 
   # Packages
   environment.systemPackages = with pkgs; [
+    ## HELL
+    hellwal
+
+
     # Shell, Terminal, Text Editor etc.
     vim 
     foot
