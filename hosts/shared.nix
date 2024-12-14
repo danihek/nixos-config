@@ -20,7 +20,7 @@
   # Packages
   environment.systemPackages = with pkgs; [
     ## HELL
-    hellwal
+    #hellwal
 
 
     # Shell, Terminal, Text Editor etc.
