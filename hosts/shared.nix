@@ -2,6 +2,7 @@
 
 {
   fonts.packages = with pkgs; [
+    inputs.nixpkgs-small.legacyPackages.x86_64-linux.hellwal
     dina-font
     fira-code
     noto-fonts

@@ -3,8 +3,8 @@
   description = "danihek's NixOS config";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
-    inputs.nixpkgs-small.legacyPackages.x86_64-linux.hellwal;
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
 
     dpcs = {
       url = "github:danihek/dpcs";
