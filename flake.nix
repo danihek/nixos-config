@@ -4,6 +4,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable-small";
+    inputs.nixpkgs-small.legacyPackages.x86_64-linux.hellwal;
 
     dpcs = {
       url = "github:danihek/dpcs";
