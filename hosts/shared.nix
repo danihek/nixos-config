@@ -2,7 +2,6 @@
 
 {
   fonts.packages = with pkgs; [
-    inputs.nixpkgs-small.legacyPackages.x86_64-linux.hellwal
     dina-font
     fira-code
     noto-fonts
@@ -22,6 +21,7 @@
   environment.systemPackages = with pkgs; [
     ## HELL
     #hellwal
+    inputs.nixpkgs-small.legacyPackages.x86_64-linux.hellwal
 
 
     # Shell, Terminal, Text Editor etc.
