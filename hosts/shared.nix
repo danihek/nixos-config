@@ -144,7 +144,7 @@
     tlrc
     file
     zola
-    gimp pinta
+    gimp pinta upscayl
     wine
     p7zip
     unzip
