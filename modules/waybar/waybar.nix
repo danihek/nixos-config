@@ -188,6 +188,6 @@
 #  border-color: #4CAF50;
 #  color: #4CAF50;
 #}
-       '';
+#       '';
   };
 }
