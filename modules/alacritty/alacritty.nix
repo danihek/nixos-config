@@ -6,7 +6,7 @@
         padding.y = 1;
         decorations = "none";
         dynamic_title = true;
-        #opacity = 0.6;
+        opacity = 0.6;
       };
 
       cursor = {
