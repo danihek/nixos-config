@@ -181,6 +181,17 @@
                   "icon-size" = 18;
       # "spacing" = 10;
   };
+        arrow1 = { format = ""; tooltip = false; };
+      arrow2 = { format = ""; tooltip = false; };
+      arrow3 = { format = ""; tooltip = false; };
+      arrow4 = { format = ""; tooltip = false; };
+      arrow5 = { format = ""; tooltip = false; };
+      arrow6 = { format = ""; tooltip = false; };
+      arrow7 = { format = ""; tooltip = false; };
+      arrow8 = { format = ""; tooltip = false; };
+      arrow9 = { format = ""; tooltip = false; };
+      arrow92 = { format = ""; tooltip = false; };
+      arrow10 = { format = ""; tooltip = false; };
 }];
 
     style = ''
