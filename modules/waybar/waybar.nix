@@ -13,6 +13,7 @@
           "custom/arrow10"
           #"hyprland/workspaces"
           "custom/music"
+          "custom/arrow72"
       ];
 
       modules-center = [ 
@@ -179,7 +180,7 @@
 
               tray = {
                   "icon-size" = 18;
-      # "spacing" = 10;
+                  # "spacing" = 10;
   };
       "custom/arrow1" = { format = ""; tooltip = false; };
       "custom/arrow2" = { format = ""; tooltip = false; };
@@ -190,6 +191,7 @@
       "custom/arrow7" = { format = ""; tooltip = false; };
       "custom/arrow8" = { format = ""; tooltip = false; };
       "custom/arrow9" = { format = ""; tooltip = false; };
+      "custom/arrow72" = { format = ""; tooltip = false; };
       "custom/arrow92" = { format = ""; tooltip = false; };
       "custom/arrow10" = { format = ""; tooltip = false; };
 }];
@@ -207,21 +209,21 @@
 }
 
 /* Assigning colors to various variables */
-@define-color warning      @color11;  /* bryellow */
-@define-color critical     @color1;   /* red */
-@define-color mode         @color0;   /* black */
-@define-color unfocused    @color14;  /* bg2 */
-@define-color focused      @color14;  /* braqua */
-@define-color inactive     @color5;   /* purple */
-@define-color sound        @color13;  /* brpurple */
-@define-color network      @color5;   /* purple */
-@define-color memory       @color14;  /* braqua */
-@define-color cpu          @color2;   /* green */
-@define-color temp         @color10;  /* brgreen */
-@define-color layout       @color11;  /* bryellow */
-@define-color battery      @color6;   /* aqua */
-@define-color date         @color0;   /* black */
-@define-color time         @color15;  /* white */
+@define-color warning      @color11;
+@define-color critical     @color1;
+@define-color mode         @color0;
+@define-color unfocused    @color14;
+@define-color focused      @color14;
+@define-color inactive     @color5;
+@define-color sound        @color13;
+@define-color network      @color5;
+@define-color memory       @color14;
+@define-color cpu          @color2;
+@define-color temp         @color10;
+@define-color layout       @color11;
+@define-color battery      @color6;
+@define-color date         @color0;
+@define-color time         @color15;
 
 /* Reset all styles */
 * {
@@ -250,6 +252,7 @@
 #cpu,
 #language,
 #memory,
+#custom-music
 #network,
 #pulseaudio,
 #temperature,
@@ -322,6 +325,12 @@
     color: @color15;
 }
 
+/* Style when cursor is on the button */
+#custom-music button:hover {
+    background: @color0;
+    color: @color15;
+}
+
 #custom-window {
     background: @color13;
     color: @color0;
@@ -338,6 +347,11 @@
 }
 
 #memory {
+    background: @color14;
+    color: @color0;
+}
+
+#custom-music {
     background: @color14;
     color: @color0;
 }
@@ -413,6 +427,12 @@
 }
 
 #custom-arrow7 {
+    font-size: 11pt;
+    color: @color14;
+    background: @color5;
+}
+
+#custom-arrow72 {
     font-size: 11pt;
     color: @color14;
     background: @color5;
