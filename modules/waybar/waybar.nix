@@ -346,7 +346,7 @@
 }
 
 #custom-music {
-    background: @color15;
+    background: @color13;
     color: @color0;
 }
 
@@ -428,7 +428,7 @@
 
 #custom-arrow72 {
     font-size: 11pt;
-    color: @color5;
+    color: @color13;
     background: @color0;
 }
 
