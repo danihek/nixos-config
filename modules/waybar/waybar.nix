@@ -5,21 +5,23 @@
     enable = true;
 
     settings = [{
-      height = 30;
       layer = "top";
       position = "top";
-      modules-center = [ 
-          "custom/arrow9"
-          "custom/window"
-          "custom/arrow92"
-          #"hyprland/window"
-      ];
+
       modules-left = [ 
           "custom/workspaces"
           "custom/arrow10"
           #"hyprland/workspaces"
           "custom/music"
       ];
+
+      modules-center = [ 
+          "custom/arrow9"
+          "custom/window"
+          "custom/arrow92"
+          #"hyprland/window"
+      ];
+
       modules-right = [
         "custom/arrow9"
         "pulseaudio"
@@ -40,6 +42,8 @@
         "custom/arrow1"
         "clock#time"
       ];
+
+     # Modules here
 
     "custom/workspaces" = {
         exec = "cat /tmp/hellwm/workspace";
