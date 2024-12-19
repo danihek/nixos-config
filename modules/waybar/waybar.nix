@@ -325,12 +325,6 @@
     color: @color15;
 }
 
-/* Style when cursor is on the button */
-#custom-music button:hover {
-    background: @color0;
-    color: @color15;
-}
-
 #custom-window {
     background: @color13;
     color: @color0;
@@ -352,7 +346,7 @@
 }
 
 #custom-music {
-    background: @color14;
+    background: @color15;
     color: @color0;
 }
 
@@ -434,8 +428,8 @@
 
 #custom-arrow72 {
     font-size: 11pt;
-    color: @color14;
-    background: @color5;
+    color: @color5;
+    background: @color0;
 }
 
 #custom-arrow8 {
