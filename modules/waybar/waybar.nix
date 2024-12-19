@@ -177,7 +177,7 @@
                   "icon-size" = 18;
       # "spacing" = 10;
   };
-    }];
+}];
 
     style = ''
 @import '../../.cache/hellwal/waybar-colors.css';
