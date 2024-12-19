@@ -429,7 +429,7 @@
 #custom-arrow72 {
     font-size: 11pt;
     color: @color13;
-    background: @color0;
+    background: transparent;
 }
 
 #custom-arrow8 {
