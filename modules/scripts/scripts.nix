@@ -6,10 +6,10 @@ let
 
     if [ "$1" != "" ] ; then 
         # generate palette and templates from given image
-        hellwal --image "~/pics/wallpapers/$1"
+        $HOME/c/code/hellwal --image "~/pics/wallpapers/$1"
     else
         # generate palette and templates from random image
-        hellwal --image ~/pics/wallpapers --random
+        $HOME/c/code/hellwal --image ~/pics/wallpapers --random
     fi
 
 
