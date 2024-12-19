@@ -10,7 +10,7 @@
 
       modules-left = [ 
           "custom/workspaces"
-          "custom/arrow10"
+          "custom/arrow100"
           #"hyprland/workspaces"
           "custom/music"
           "custom/arrow72"
@@ -194,6 +194,7 @@
       "custom/arrow72" = { format = ""; tooltip = false; };
       "custom/arrow92" = { format = ""; tooltip = false; };
       "custom/arrow10" = { format = ""; tooltip = false; };
+      "custom/arrow100" = { format = ""; tooltip = false; };
 }];
 
     style = ''
@@ -346,7 +347,7 @@
 }
 
 #custom-music {
-    background: @color13;
+    background: @color12;
     color: @color0;
 }
 
@@ -428,7 +429,7 @@
 
 #custom-arrow72 {
     font-size: 11pt;
-    color: @color13;
+    color: @color12;
     background: transparent;
 }
 
@@ -454,6 +455,11 @@
     font-size: 11pt;
     color: @color14;
     background: transparent;
+}
+#custom-arrow100 {
+    font-size: 11pt;
+    color: @color14;
+    background: @color12;
 }'';
   };
 }
