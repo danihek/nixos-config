@@ -174,6 +174,10 @@
     # Fun
     osu-lazer-bin
 
+    # PORTALS
+    xdg-desktop-portal
+    xdg-desktop-portal-wlr
+
     ## Flex
     wpgtk
     cowsay
