@@ -20,12 +20,7 @@ let
     themecord
     
     # apply wallpaper
-    swww img "$wallpaper" \
-      --transition-type="grow" \
-      --transition-duration 2 \
-      --transition-fps 165 \
-      --resize="crop" \
-      --invert-y
+    swww img "$wallpaper" --transition-step 1 --transition-duration 0.5 --transition-fps 255
     
     # copy generated hellwal colors to pywal location, so pywalfox can understand it
     cp ~/.cache/hellwal/colors.json ~/.cache/wal/
