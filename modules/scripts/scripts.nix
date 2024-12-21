@@ -6,7 +6,7 @@ let
 
     if [ "$1" != "" ] ; then 
         # generate palette and templates from given image
-        $HOME/code/c/helltheme/hellwal --image "~/pics/wallpapers/$1"
+        $HOME/code/c/helltheme/hellwal --image "$1"
     else
         # generate palette and templates from random image
         $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
@@ -19,7 +19,7 @@ let
     themecord
     
     # apply wallpaper
-    swww img "~/pics/wallpapers$wallpaper" -t random --transition-step 1 --transition-duration 0.4 --transition-fps 255
+    swww img "$wallpaper" -t random --transition-step 1 --transition-duration 0.4 --transition-fps 255
     
     # copy generated hellwal colors to pywal location, so pywalfox can understand it
     cp ~/.cache/hellwal/colors.json ~/.cache/wal/
