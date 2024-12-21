@@ -12,7 +12,6 @@ let
         $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
     fi
 
-
     # source variables so you have accesss to $colors and $wallpaper
     source ~/.cache/hellwal/variables.sh
     
@@ -20,7 +19,7 @@ let
     themecord
     
     # apply wallpaper
-    swww img "$wallpaper" -t random --transition-step 1 --transition-duration 0.5 --transition-fps 255
+    swww img "~/pics/wallpapers$wallpaper" -t random --transition-step 1 --transition-duration 0.4 --transition-fps 255
     
     # copy generated hellwal colors to pywal location, so pywalfox can understand it
     cp ~/.cache/hellwal/colors.json ~/.cache/wal/
