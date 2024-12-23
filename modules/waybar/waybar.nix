@@ -13,7 +13,7 @@
       {
         layer = "top";
         position = "top";
-        output: [
+        output = [
             "DP-1"
         ];
 
