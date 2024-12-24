@@ -180,6 +180,7 @@
 
     ## Flex
     wpgtk
+    mission-center
     cowsay
     cbonsai
     cmatrix
