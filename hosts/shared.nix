@@ -156,7 +156,7 @@
     zoxide
     weylus
     busybox
-    arduino
+    arduino arduino-cli
     ani-cli manga-tui
     killall
     ripgrep
@@ -164,7 +164,7 @@
     librecad
     vscodium
     kdenlive
-    obs-studio
+    obs-studio wf-recorder
     imagemagick
     android-tools #gradle sdkmanager flutter
     markdown-oxide
@@ -179,13 +179,15 @@
     xdg-desktop-portal-wlr
 
     ## Flex
+    cava
     wpgtk
-    mission-center
+    figlet
     cowsay
     cbonsai
     cmatrix
     fortune
     pipes-rs
+    mission-center
 
     ## Rest..
     glib
