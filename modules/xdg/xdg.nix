@@ -24,4 +24,16 @@
       "application/*tar"              = [ "thunar.desktop" ];
     };
   };
+
+  xdg.portal = {
+    enable = true;
+    config.common.default = "*";
+    extraPortals = with pkgs; [
+      xdg-desktop-portal-gtk
+      xdg-desktop-portal-wlr
+      #xdg-desktop-portal-hyprland
+    ];
+  };
+  home.sessionVariables.MOZ_ENABLE_WAYLAND = "1";
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
 }
