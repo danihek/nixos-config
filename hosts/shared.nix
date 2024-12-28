@@ -172,6 +172,7 @@
     libreoffice-qt6-still
 
     # Fun
+    steam
     osu-lazer-bin
 
     # PORTALS
