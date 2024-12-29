@@ -327,6 +327,8 @@
       #mpris {
           padding-left: 8pt;
           padding-right: 8pt;
+          font-family: JetBrains Mono, Siji;
+          font-size: 10pt;
       }
 
       /* Each critical module */
