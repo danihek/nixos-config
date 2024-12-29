@@ -117,7 +117,7 @@
         #  };
         #};
         "custom/music" = {
-          format = " 𝄞 {}";
+          format = " ♪ {}";
           escape = true;
           interval = 1;
           tooltip = false;
@@ -412,7 +412,7 @@
           background: @color12;
           color: @color0;
           font-family: JetBrains Mono, Siji;
-          font-size: 8.5pt;
+          font-size: 10pt;
       }
 
       #cpu {
