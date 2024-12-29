@@ -316,7 +316,6 @@
       #cpu,
       #language,
       #memory,
-      #custom-music
       #network,
       #pulseaudio,
       #temperature,
@@ -327,8 +326,6 @@
       #mpris {
           padding-left: 8pt;
           padding-right: 8pt;
-          font-family: JetBrains Mono, Siji;
-          font-size: 10pt;
       }
 
       /* Each critical module */
@@ -414,6 +411,8 @@
       #custom-music {
           background: @color12;
           color: @color0;
+          font-family: JetBrains Mono, Siji;
+          font-size: 5pt;
       }
 
       #cpu {
