@@ -412,7 +412,7 @@
           background: @color12;
           color: @color0;
           font-family: JetBrains Mono, Siji;
-          font-size: 10pt;
+          font-size: 9pt;
       }
 
       #cpu {
