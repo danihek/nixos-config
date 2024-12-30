@@ -30,7 +30,7 @@
     xwayland.enable = true;
     
     extraConfig = ''
-      source = /home/${USERNAME}/.cache/wal/colors-hyprland.conf
+      source = /home/${USERNAME}/.cache/hellwal/colors-hyprland.conf
     '';
 
     settings = {
