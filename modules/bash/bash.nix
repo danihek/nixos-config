@@ -8,8 +8,9 @@
     shellAliases = {
       g = "git";
       sl = "ls";
+      nd= "nix develop";
       ls = "eza";
-      lf = "yazi"; #xd
+      lf = "yazi"; #xd - only for image support
       tm = "tmux";
       l = "lsd -l";
       tree = "tree";
