@@ -190,7 +190,7 @@
     pipes-rs
     mission-center
 
-    teamviewer
+    anydesk
     ## Rest..
     glib
     xdg-utils
