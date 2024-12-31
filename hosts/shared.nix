@@ -190,7 +190,7 @@
     pipes-rs
     mission-center
 
-    anydesk
+    anydesk gtk3
     ## Rest..
     glib
     xdg-utils
