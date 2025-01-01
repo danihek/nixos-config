@@ -184,14 +184,13 @@
     wpgtk
     figlet
     cowsay
-    openrgb
     cbonsai
     cmatrix
     fortune
     pipes-rs
     mission-center
+    openrgb-with-all-plugins
 
-    anydesk gtk3
     ## Rest..
     glib
     xdg-utils
