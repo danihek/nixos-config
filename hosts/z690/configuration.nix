@@ -103,6 +103,8 @@ in
 
   # Corsair Keyboard
   hardware.ckb-next.enable = true;
+
+  services.hardware.openrgb.enable = true;
    
   # Services
   services.minecraft-server = {
