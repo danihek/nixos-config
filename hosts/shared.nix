@@ -184,6 +184,7 @@
     wpgtk
     figlet
     cowsay
+    openrgb
     cbonsai
     cmatrix
     fortune
