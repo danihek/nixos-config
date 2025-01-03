@@ -105,6 +105,8 @@ in
   hardware.ckb-next.enable = true;
 
   services.hardware.openrgb.enable = true; 
+
+  services.xserver.enable = true;
   services.xserver.displayManager.sddm = {
        enable = true;
        autoNumlock = true;
