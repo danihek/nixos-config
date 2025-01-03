@@ -172,7 +172,7 @@
     libreoffice-qt6-still
 
     # Fun
-    steam
+    steam gamescope gdm
     osu-lazer-bin
 
     # PORTALS
