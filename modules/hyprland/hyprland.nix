@@ -35,7 +35,7 @@
 
     settings = {
       monitor = [
-        "DP-1,2560x1440@165,0x50,1"
+        "DP-1,1024x960@165,0x50,1"
         "DP-2,2560x1440@165,2560x0,1,transform,1"
         "LVDS-1,1920x1080@60,0x0,1" # my T430 with fhd ips B)
       ];
