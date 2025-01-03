@@ -104,8 +104,13 @@ in
   # Corsair Keyboard
   hardware.ckb-next.enable = true;
 
-  services.hardware.openrgb.enable = true;
-  services.xserver.displayManager.sddm.wayland.enable = true;
+  services.hardware.openrgb.enable = true; 
+  services.xserver.displayManager.sddm = {
+       enable = true;
+       autoNumlock = true;
+       wayland.enable = true;
+       theme = "${pkgs.sddm-chili-theme}/share/themes/chili/Main.qml";
+   };
    
   # Services
   services.minecraft-server = {
