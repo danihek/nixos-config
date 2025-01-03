@@ -154,7 +154,7 @@
     reaper ffmpeg # audio, video
     pstree
     zoxide
-    weylus
+    #weylus
     busybox
     arduino arduino-cli
     ani-cli manga-tui
