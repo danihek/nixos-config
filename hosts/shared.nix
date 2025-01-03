@@ -21,7 +21,7 @@
   environment.systemPackages = with pkgs; [
     ## HELL
     #hellwal
-    inputs.nixpkgs-small.legacyPackages.x86_64-linux.hellwal
+    hellwal
 
 
     # Shell, Terminal, Text Editor etc.
