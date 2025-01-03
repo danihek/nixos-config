@@ -76,6 +76,14 @@ in
     rpcs3
     lact
   ];
+  
+  services.displayManager = {
+      enable = true;
+  };
+  services.xserver = {
+      displayManager = {
+          lightdm.enable = true;
+      };
  
   powerManagement.cpuFreqGovernor = "performance";
   systemd.packages = with pkgs; [ lact ];
@@ -105,14 +113,6 @@ in
   hardware.ckb-next.enable = true;
 
   services.hardware.openrgb.enable = true; 
-
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm = {
-       enable = true;
-       autoNumlock = true;
-       wayland.enable = true;
-       theme = "${pkgs.sddm-chili-theme}/share/themes/chili/Main.qml";
-   };
    
   # Services
   services.minecraft-server = {
