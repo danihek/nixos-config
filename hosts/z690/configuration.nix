@@ -105,6 +105,7 @@ in
   hardware.ckb-next.enable = true;
 
   services.hardware.openrgb.enable = true;
+  services.xserver.displayManager.sddm.wayland.enable = true;
    
   # Services
   services.minecraft-server = {
