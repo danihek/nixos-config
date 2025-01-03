@@ -97,7 +97,7 @@ in
   services.xserver.videoDrivers = [ "amdgpu" ];
   hardware.graphics.extraPackages = with pkgs; [
     amdvlk
-    rocmPackages.clr.icd
+    #rocmPackages.clr.icd
   ];
  
 
