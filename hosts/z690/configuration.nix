@@ -84,6 +84,7 @@ in
       displayManager = {
           lightdm.enable = true;
       };
+  };
  
   powerManagement.cpuFreqGovernor = "performance";
   systemd.packages = with pkgs; [ lact ];
