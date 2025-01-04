@@ -172,6 +172,7 @@
     libreoffice-qt6-still
 
     # Fun
+    prismlauncher
     steam gamescope
     osu-lazer-bin
 
