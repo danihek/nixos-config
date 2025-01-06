@@ -144,7 +144,7 @@ in
 
   services.samba = {
       enable = true;
-      securityType = "dh";
+      securityType = "user";
       openFirewall = true;
       settings = {
         "public" = {
