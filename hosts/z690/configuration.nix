@@ -149,12 +149,12 @@ in
       settings = {
         "public" = {
             "path" = "/home/dh/dox/tata/";
+            "valid user" = "dh";
             "browseable" = "yes";
             "read only" = "no";
             "guest ok" = "yes";
-            "create mask" = "0644";
-            "directory mask" = "0755";
-            "force user" = "dh";
+            "create mask" = "0660";
+            "directory mask" = "0770";
         };
     };
   };
