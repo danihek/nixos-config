@@ -144,7 +144,7 @@ in
 
   services.samba = {
       enable = true;
-      securityType = "user";
+      securityType = "dh";
       openFirewall = true;
       settings = {
         "public" = {
@@ -154,6 +154,7 @@ in
             "guest ok" = "yes";
             "create mask" = "0644";
             "directory mask" = "0755";
+            "force user" = "dh";
         };
     };
   };
