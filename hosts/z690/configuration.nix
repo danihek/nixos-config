@@ -142,6 +142,22 @@ in
     jvmOpts = "-Xms4092M -Xmx4092M -XX:+UseG1GC";
   };
 
+  services.samba = {
+      enable = true;
+      securityType = "user";
+      openFirewall = true;
+      settings = {
+        "public" = {
+            "path" = "/home/dh/dox/tata/";
+            "browseable" = "yes";
+            "read only" = "no";
+            "guest ok" = "yes";
+            "create mask" = "0644";
+            "directory mask" = "0755";
+        };
+    };
+  };
+
   services.mpd = {
     enable = true;
     extraConfig = ''
