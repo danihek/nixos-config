@@ -71,7 +71,7 @@
     cargo
     rustup
     libgcc
-    libGLU
+    libGLU libglvnd.override { enable32Bit = true; } mesa mesa.override { enable32Bit = true; }
     pixman
     python3
     godot_4
