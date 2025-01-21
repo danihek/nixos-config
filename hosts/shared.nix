@@ -257,7 +257,7 @@
   hardware.graphics.enable = true;
 
   virtualisation.waydroid.enable = false;
-  
+
   # Services
   services.gvfs.enable = true;
   services.upower.enable = true;
@@ -267,6 +267,12 @@
   services.gnome.gnome-keyring.enable = true;
   services.avahi = { enable = true; nssmdns4 = true; openFirewall = true; };
   services.printing.drivers = [ pkgs.hplip ];
+
+  # For bt kbd
+  boot.kernelModules = [ "hid" "hid_generic" "usbhid" ];
+  services.udev.extraRules = ''
+    ACTION=="add", SUBSYSTEM=="bluetooth", ATTRS{idVendor}=="<vendor_id>", ATTRS{idProduct}=="<product_id>", RUN+="/usr/bin/hciconfig hci0 sspmode 0"
+  '';
 
   system.stateVersion = "24.05";
 }
