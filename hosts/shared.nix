@@ -270,9 +270,6 @@
 
   # For bt kbd
   boot.kernelModules = [ "hid" "hid_generic" "usbhid" ];
-  services.udev.extraRules = ''
-    ACTION=="add", SUBSYSTEM=="bluetooth", ATTRS{idVendor}=="<vendor_id>", ATTRS{idProduct}=="<product_id>", RUN+="/usr/bin/hciconfig hci0 sspmode 0"
-  '';
 
   system.stateVersion = "24.05";
 }
