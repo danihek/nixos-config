@@ -256,7 +256,7 @@
 
   hardware.graphics.enable = true;
 
-  virtualisation.waydroid.enable = true;
+  virtualisation.waydroid.enable = false;
   
   # Services
   services.gvfs.enable = true;
