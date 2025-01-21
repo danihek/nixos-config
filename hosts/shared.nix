@@ -71,7 +71,7 @@
     cargo
     rustup
     libgcc
-    libGLU libglvnd.override { enable32Bit = true; } mesa mesa.override { enable32Bit = true; }
+    libGLU
     pixman
     python3
     godot_4
@@ -100,6 +100,7 @@
     imv
     mako
     wofi
+    waydroid
     mupdf zathura 
     yt-dlp
     upower
