@@ -100,7 +100,6 @@
     imv
     mako
     wofi
-    waydroid
     mupdf zathura 
     yt-dlp
     upower
@@ -256,6 +255,8 @@
   };
 
   hardware.graphics.enable = true;
+
+  virtualisation.waydroid.enable = true;
   
   # Services
   services.gvfs.enable = true;
