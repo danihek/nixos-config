@@ -77,16 +77,6 @@ in
     lact
   ];
   
-  services.displayManager = {
-      enable = true;
-  };
-  services.xserver = {
-      enable = true;
-      displayManager = {
-          gdm.enable = true;
-      };
-  };
- 
   powerManagement.cpuFreqGovernor = "performance";
   systemd.packages = with pkgs; [ lact ];
   systemd.services.lactd.wantedBy = ["multi-user.target"];

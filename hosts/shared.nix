@@ -112,7 +112,7 @@
     lxqt.lxqt-policykit
 
     # Media
-    #viber
+    viber
     vesktop
     element-desktop
 
