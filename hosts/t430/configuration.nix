@@ -87,11 +87,11 @@ in
     settings = {
       Input = {
         UserspaceHID = true;
-      }
+      };
       General = {
           Experimental = true;
-      }
-    }
+      };
+    };
   };
 
   hardware.bluetooth.settings = {
