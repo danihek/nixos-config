@@ -80,11 +80,10 @@ in
   };
 
   # Bluetooth
-  services.blueman.enable = true;
-  hardware.bluetooth.enable = true; # enables support for Bluetooth
-  hardware.bluetooth.powerOnBoot = false; # powers up the default Bluetooth controller on boot
-  hardware.bluetooth= {
+  hardware.bluetooth = {
     enable = true;
+    powerOnBoot = false; # powers up the default Bluetooth controller on boot
+
     extraConfig = ''
       [Input]
       UserspaceHID=true
