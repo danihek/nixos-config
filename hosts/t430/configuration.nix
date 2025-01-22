@@ -84,10 +84,9 @@ in
     enable = true;
     powerOnBoot = false; # powers up the default Bluetooth controller on boot
 
-    settings = ''
-      [Input]
-      UserspaceHID=true
-    '';
+    settings = {
+      UserspaceHID = true;
+    }
   };
 
   hardware.bluetooth.settings = {
