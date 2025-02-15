@@ -173,6 +173,7 @@
     libreoffice-qt6-still
 
     # Fun
+    darling
     prismlauncher
     steam gamescope
     osu-lazer-bin
@@ -256,8 +257,6 @@
   };
 
   hardware.graphics.enable = true;
-
-  virtualisation.waydroid.enable = false;
 
   # Services
   services.gvfs.enable = true;

@@ -95,6 +95,7 @@ in
   programs.virt-manager.enable = true;
   virtualisation.docker.enable = true;
   virtualisation.libvirtd.enable = true;
+  virtualisation.waydroid.enable = true;
 
   # Bluetooth
   #services.blueman.enable = true;
