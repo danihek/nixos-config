@@ -161,6 +161,7 @@
     ani-cli manga-tui
     killall
     ripgrep
+    unityhub
     openscad
     librecad
     vscodium
@@ -173,7 +174,6 @@
     libreoffice-qt6-still
 
     # Fun
-    darling
     prismlauncher
     steam gamescope
     osu-lazer-bin
