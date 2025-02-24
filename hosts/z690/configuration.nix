@@ -70,7 +70,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    nemo dolphin
+    nemo
     ckb-next
     amdvlk
     rpcs3
