@@ -13,7 +13,7 @@
     textColor = "#baa09e";
     borderColor = "#CDfBff";
     progressColor = "over #612821";
-    iconPath = "${pkgs.breeze-icons}/share/icons/breeze-dark";
+    #iconPath = "${pkgs.breeze-icons}/share/icons/breeze-dark";
     maxIconSize = 24;
   };
 }
