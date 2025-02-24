@@ -165,7 +165,7 @@
     openscad
     librecad
     vscodium
-    kdenlive
+    libsForQt5.kdenlive
     obs-studio wf-recorder
     imagemagick
     android-tools #gradle sdkmanager flutter
