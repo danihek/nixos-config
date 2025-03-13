@@ -7,6 +7,8 @@
       [templates]
       themecord.template = "colors-discord.css"
       themecord.target = '~/.cache/wallust/colors-discord.css'
+      colorsjson.template = "colors.json"
+      colorsjson.target = '~/.cache/wallust/colors.json'
   '';
 
   home.file.".config/wallust/templates/colors-discord.css" .text = ''
