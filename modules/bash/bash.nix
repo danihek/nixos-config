@@ -22,7 +22,6 @@
       fucking = "sudo";
       mkcl = "make clean";
       nrun = "nix-shell -p"; 
-      neofetch = "fastfetch";
       TODO = "vim ~/.TODO.md";
       cpl = "make clean ; clear; make";
     };
