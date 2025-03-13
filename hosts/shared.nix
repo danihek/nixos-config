@@ -27,6 +27,7 @@
     # Shell, Terminal, Text Editor etc.
     vim 
     foot
+    neofetch
     kitty
     neovide
     obsidian
