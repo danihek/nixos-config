@@ -20,7 +20,7 @@
         modules-left = [
           "custom/workspaces"
           "custom/arrow100"
-          #"hyprland/workspaces"
+          "hyprland/workspaces"
           "custom/music"
           "custom/arrow72"
         ];
@@ -29,7 +29,7 @@
           "custom/arrow9"
           "custom/window"
           "custom/arrow92"
-          #"hyprland/window"
+          "hyprland/window"
         ];
 
         modules-right = [
@@ -92,30 +92,30 @@
           tooltip = false;
         };
 
-        #"hyprland/workspaces" = {
-        #  format = "{icon}";
-        #  #active-only = true;
-        #  all-outputs = false;
-        #  format-icons = {
-        #    "1" = "一";
-        #    "2" = "二";
-        #    "3" = "三";
-        #    "4" = "四";
-        #    "5" = "五";
-        #    "6" = "六";
-        #    "7" = "七";
-        #    "8" = "八";
-        #    "9" = "九";
-        #    "10"= "十";
-        #  };
-        #  persistent-workspaces = {
-        #    "1" = [];
-        #    "2" = [];
-        #    "3" = [];
-        #    "4" = [];
-        #    "5" = [];
-        #  };
-        #};
+        "hyprland/workspaces" = {
+          format = "{icon}";
+          #active-only = true;
+          all-outputs = false;
+          format-icons = {
+            "1" = "一";
+            "2" = "二";
+            "3" = "三";
+            "4" = "四";
+            "5" = "五";
+            "6" = "六";
+            "7" = "七";
+            "8" = "八";
+            "9" = "九";
+            "10"= "十";
+          };
+          persistent-workspaces = {
+            "1" = [];
+            "2" = [];
+            "3" = [];
+            "4" = [];
+            "5" = [];
+          };
+        };
         "custom/music" = {
           format = " ♪ {}";
           escape = true;
