@@ -59,7 +59,8 @@ let
     # reload waybar with new colors
     wbar-reload
 
-    [ "$2" == "n" ] && imv "$wallpaper"
+    pkill imv
+    [ "$2" == "n" ] && imv "$wallpaper" &
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
