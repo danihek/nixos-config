@@ -176,6 +176,7 @@
 
     # Fun
     prismlauncher
+    heroic-games-launcher
     steam gamescope
     osu-lazer-bin
 
