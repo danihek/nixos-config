@@ -4,6 +4,10 @@
   programs.ssh = {
     enable = true;
     extraConfig = ''
+      Host aur.archlinux.org
+      IdentityFile ~/.ssh/id_rsa
+      User aur
+
       Host server 
       HostName 192.168.1.200
       User b1
