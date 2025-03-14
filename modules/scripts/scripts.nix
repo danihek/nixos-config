@@ -31,6 +31,35 @@ let
     wbar-reload
   '';
 
+  setwallp = pkgs.writeShellScriptBin "setwallp" ''
+
+    if [ "$1" == "n" ] ; then 
+        # generate palette and templates from given image
+        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random --neon-mode
+    else
+        # generate palette and templates from random image
+        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
+    fi
+
+    # source variables so you have accesss to $colors and $wallpaper
+    source ~/.cache/hellwal/variables.sh
+    
+    # update discord colors
+    themecord
+    
+    # apply wallpaper
+    swww img "$wallpaper" -t random --transition-step 1 --transition-duration 0.4 --transition-fps 255
+    
+    # copy generated hellwal colors to pywal location, so pywalfox can understand it
+    cp ~/.cache/hellwal/colors.json ~/.cache/wal/
+    
+    # update pywalfox
+    pywalfox update
+    
+    # reload waybar with new colors
+    wbar-reload
+  '';
+
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
     #!/usr/bin/env bash
     waybarPID=$(pgrep waybar)
