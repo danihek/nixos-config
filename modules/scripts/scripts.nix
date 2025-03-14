@@ -58,6 +58,8 @@ let
     
     # reload waybar with new colors
     wbar-reload
+
+    [ "$2" == "n" ] && imv "$wallpaper"
   '';
 
   wbar-reload = pkgs.writeShellScriptBin "wbar-reload" ''
@@ -161,6 +163,7 @@ in {
     packages = [
       # Pywal & Sww
       setwall
+      setwallp
 
       # Waybar
       wbar-reload
