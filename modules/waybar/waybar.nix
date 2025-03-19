@@ -253,6 +253,6 @@
 ##language {
 #	min-width: 20px;
 #}
-       '';
+#       '';
   };
 }
