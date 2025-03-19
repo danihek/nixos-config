@@ -120,6 +120,9 @@
         max-length = 50;
       };
 
+      reload_on_style_change = true;
+    }];
+
     style = ''
 @import '../../.cache/wal/colors-waybar.css';
 
@@ -250,10 +253,6 @@ tooltip label {
 #language {
 	min-width: 20px;
 }
-
        '';
-
-      reload_on_style_change = true;
-    }];
   };
 }
