@@ -45,7 +45,7 @@
 
       "hyprland/workspaces" = {
         format = "{icon}";
-        #active-only = true;
+        active-only = false;
         all-outputs = false;
         format-icons = {
           "1" = "一";
@@ -124,7 +124,7 @@
     }];
 
     style = ''
-@import './../.cache/wal/colors-waybar.css';
+@import '../.cache/wal/colors-waybar.css';
 
 * {
     border: none;
