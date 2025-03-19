@@ -121,7 +121,7 @@
       };
 
     style = ''
-        @import '../../../.cache/hellwal/waybar-colors.css';
+@import '../../.cache/wal/colors-waybar.css';
 
 * {
     border: none;
