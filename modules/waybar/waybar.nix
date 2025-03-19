@@ -5,27 +5,44 @@
     enable = true;
 
     settings = [{
-      height = 30;
       layer = "top";
       position = "top";
-      modules-center = [ "hyprland/window" ];
-      modules-left = [ "hyprland/workspaces" "custom/music" ];
-      modules-right = [
-        "pulseaudio"
-        "battery"
-        "clock"
+      spacing = 0;
+      height = 0;
+      margin-top = 8;
+      margin-right = 8;
+      margin-bottom = 0;
+      margin-left = 8;
+
+      modules-left = [
+        "custom/launcher"
+        "hyprland/workspaces"
       ];
-      battery = {
-        format = "{icon} {capacity}% ";
-        format-alt = "{icon} {time} ";
-        format-charging = " {capacity}%";
-        format-icons = [ "" "" "" "" "" ];
-        format-plugged = " {capacity}% ";
-        states = {
-          critical = 20;
-          warning = 30;
-        };
-      }; 
+
+      modules-center = [ "clock" ];
+
+      modules-right = [
+        "cpu_text"
+        "cpu"
+        "memory"
+        "battery"
+        "network"
+        "pulseaudio"
+      ];
+
+      "custom/launcher" = {
+        format = " ";
+        on-click = "rofi -show drun";
+        on-click-right = "killall rofi";
+        tooltip = false;
+      };
+
+      #"hyprland/workspaces" = {
+      #  disable-scroll = true;
+      #  all-outputs = true;
+      #  tooltip = false;
+      #};
+
       "hyprland/workspaces" = {
         format = "{icon}";
         #active-only = true;
@@ -43,6 +60,56 @@
           "10"= "十";
         };
       };
+
+      tray = {
+        spacing = 10;
+      };
+
+      clock = {
+        format = "{:%H:%M - %a, %d %b %Y}";
+        tooltip = false;
+      };
+
+      cpu = {
+        format = "cpu {usage}%";
+        interval = 2;
+        states = { critical = 95; };
+      };
+
+      memory = {
+        format = "mem {percentage}%";
+        interval = 2;
+        states = { critical = 98; };
+      };
+
+      battery = {
+        format = "bat {capacity}%";
+        interval = 5;
+        states = {
+          warning = 20;
+          critical = 10;
+        };
+        tooltip = false;
+      };
+
+      network = {
+        format-wifi = "wifi {bandwidthDownBits}";
+        format-ethernet = "enth {bandwidthDownBits}";
+        format-disconnected = "no network";
+        interval = 5;
+        tooltip = false;
+      };
+
+      pulseaudio = {
+        scroll-step = 5;
+        max-volume = 150;
+        format = "vol {volume}%";
+        format-bluetooth = "vol {volume}%";
+        nospacing = 1;
+        on-click = "pavucontrol";
+        tooltip = false;
+      };
+
       "custom/music" = {
         format = " 𝄞 {}";
         escape = true;
@@ -52,121 +119,141 @@
         on-click = "playerctl play-pause";
         max-length = 50;
       };
-      clock = {
-        format = "{:%H:%M}";
-        format-alt = "{:%Y-%m-%d}";
-        tooltip-format = "{:%Y-%m-%d | %H:%M}";
-      };
-      network = {
-        interval = 1;
-        format-alt = "{ifname}: {ipaddr}/{cidr}";
-        format-disconnected = "Disconnected ⚠";
-        format-ethernet = "{ifname}: {ipaddr}/{cidr}   up: {bandwidthUpBits} down: {bandwidthDownBits}";
-        format-linked = "{ifname} (No IP) ";
-        format-wifi = "{essid} ({signalStrength}%)  ";
-      };
-      pulseaudio = {
-        format = " {icon} {volume}% ";
-        format-bluetooth = " {icon} {volume}% {format_source} ";
-        format-bluetooth-muted = " {icon}  {format_source} ";
-        format-icons = {
-          car = "";
-          default = [ "" "" "" ];
-          handsfree = "";
-          headphones = "";
-          headset = "";
-          phone = "";
-          portable = "";
-        };
-        format-muted = "  {format_source} ";
-        format-source = " {volume}% " ;
-        format-source-muted = "";
-        on-click = "pavucontrol";
-      };
-      temperature = {
-        critical-threshold = 80;
-        format = " {icon}{temperatureC}°C ";
-        format-icons = [ "" "" "" ];
-      };
-    }];
 
     style = ''
-@import '../../.cache/wal/colors-waybar.css';
+        @import '../../../.cache/hellwal/waybar-colors.css';
 
 * {
-	border: none;
-   font-family: Jetbrains Mono;
-	font-size: 11px;
-	border-radius: 0;	
-	padding: 0px 0px 0px 0px;
+    border: none;
+    min-height: 0;
+    font-family: "JetBrains Nerd Font Mono";
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
 }
 
-#window {
-	color: @foreground;
-}
 window#waybar {
-   background: @background;
+    background: @background;
+    border: 2px solid @foreground;
+    border-radius: 4px;
 }
 
+tooltip {
+    background-color: @background;
+    border: 2px solid @color14;
+    font-size: 2px;
+}
+
+tooltip label {
+	margin: 8px;
+}
+
+#clock,
+#tray,
+#cpu,
+#memory,
+#battery,
+#network,
+#pulseaudio,
+#language {
+    margin: 6px 6px 6px 0px;
+    padding: 2px 8px;
+	border-radius: 4px;
+}
 
 #workspaces {
-	background: @background;
+    margin: 6px 0px 6px 6px;
+    border-radius: 4px;
 }
+
 #workspaces button {
-	color: @foreground;
-	background: @background;
-	padding: 0px 4px 0px 4px;
+    all: initial;
+    min-width: 0;
+    box-shadow: inset 0 -3px transparent;
+    padding: 2px 4px;
+    color: @color14;
+    background-color: @background;
+    border: 2px solid @color14;
+    border-radius: 4px;
+    margin-right: 2px;
 }
-#workspaces button:hover {
-	text-shadow: inherit;
-	box-shadow: inherit;
-	transition: none;
-   color: @color5;
-}
+
 #workspaces button.active {
-	color: @background;
-	background: @foreground;
+    color: #000000;
+    background-color: @color14;
 }
 
-
-#pulseaudio {
-	border: solid 2px @foreground;
-	background: @foreground;
-	color: @background;
+#workspaces button.urgent {
+    background-color: #a095f3;
+    color: #000000;
+	border: 2px solid #a095f3;
 }
+
 #clock {
-	border: solid 2px @foreground;
-	padding: 0px 5px 0px 0px;
-	background: @foreground;
-	color: @background;
+    background-color: @color14;
+    border: 2px solid @background;
+    color: #000000;
 }
+
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#battery,
+#tray,
+#language {
+    background-color: @background;
+    border: 2px solid @color14;
+    color: @color14;
+}
+
 #network {
-	border: solid 2px @foreground;
-	background: @foreground;
-	color: @background;
+	min-width: 100px;
 }
-#temperature {
-	border: solid 2px @foreground;
-	background: @foreground;
-	color: @background;
+
+#cpu,
+#memory,
+#battery,
+#pulseaudio {
+	min-width: 60px;
 }
-#battery {
-	border: solid 2px @foreground;
-	background: @foreground;
-	color: @background;
+
+#cpu.critical,
+#memory.critical {
+    color: #a095f3;
+    border: 2px solid #a095f3;
 }
-#battery.warning {
-  border-color: #EF6C00;
-  color: #EF6C00;
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+    color: #a095f3;
+    border: 2px solid #a095f3;
 }
-#battery.critical {
-  border-color: #D32F2F;
-  color: #D32F2F;
+
+#custom-launcher {
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 5px;
+	transition: none;
+	color: @color14;
 }
-#battery.charging {
-  border-color: #4CAF50;
-  color: #4CAF50;
+
+#custom-control {
+	font-size: 20px;
+	padding-left: 5px;
+	padding-right: 5px;
+	transition: none;
+	color: @color14;
 }
+
+#language {
+	min-width: 20px;
+}
+
        '';
+
+      reload_on_style_change = true;
+    }];
   };
 }
