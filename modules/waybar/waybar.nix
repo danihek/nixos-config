@@ -45,7 +45,7 @@
 
       "hyprland/workspaces" = {
         format = "{icon}";
-        active-only = false;
+        active-only = true;
         all-outputs = false;
         format-icons = {
           "1" = "一";
