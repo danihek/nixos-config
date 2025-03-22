@@ -25,7 +25,7 @@
 
 
     # Shell, Terminal, Text Editor etc.
-    vim 
+    vim emacs
     foot
     neofetch
     kitty
