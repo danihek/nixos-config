@@ -158,7 +158,7 @@
     zoxide
     #weylus
     busybox
-    arduino arduino-cli
+    arduino arduino-cli python312Packages.pyserial
     ani-cli manga-tui
     killall
     ripgrep
@@ -175,10 +175,10 @@
     libreoffice-qt6-still
 
     # Fun
-    prismlauncher
     heroic
-    steam gamescope
+    prismlauncher
     osu-lazer-bin
+    steam gamescope
 
     # PORTALS
     xdg-desktop-portal
