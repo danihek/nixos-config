@@ -97,7 +97,7 @@
     wlroots_0_18
     
     # Utility 
-    bluez bluez-tools
+    bluez bluez-tools blueman
     (mpv.override {scripts = [mpvScripts.mpris];}) # mpv
     imv
     mako
