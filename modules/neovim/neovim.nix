@@ -9,16 +9,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      (pkgs.vimUtils.buildVimPlugin {
-        pname = "hellwal";
-        src = pkgs.fetchFromGitHub {
-          owner = "danihek";
-          repo = "hellwal-vim";
-          rev = "main";
-        };
-      })
       vim-multiple-cursors
-
       sonokai
       pywal-nvim
       dracula-vim
@@ -36,7 +27,6 @@
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
-
 
       (nvim-treesitter.withPlugins (_: nvim-treesitter.allGrammars ++ [
       (pkgs.tree-sitter.buildGrammar {
@@ -56,6 +46,12 @@
         '';
 
     extraConfig = ''
+      call plug#begin('~/.vim/plugged')
+
+      Plug 'danihek/hellwal-vim' " idk how to add it with nix
+
+      call plug#end()
+
       syntax on
       filetype plugin indent on
       set ts=3 sts=2 sw=2 et ai si
