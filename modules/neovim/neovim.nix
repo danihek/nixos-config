@@ -46,12 +46,6 @@
         '';
 
     extraConfig = ''
-      call plug#begin('~/.vim/plugged')
-
-      Plug 'danihek/hellwal-vim' " idk how to add it with nix
-
-      call plug#end()
-
       syntax on
       filetype plugin indent on
       set ts=3 sts=2 sw=2 et ai si
@@ -71,8 +65,8 @@
       "colorscheme pywal
       "colorscheme peachpuff
       "colorscheme gruvbox
-      "colorscheme gruvbox-material
-      colorscheme hellwal
+      colorscheme gruvbox-material
+      "colorscheme hellwal
 
       set list
       set listchars=space:·,tab:→\ ,trail:·
