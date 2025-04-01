@@ -6,7 +6,7 @@ let
 
     if [ "$1" != "" ] ; then 
         # generate palette and templates from given image
-        $HOME/code/c/helltheme/hellwal --image "$1" --neon-mode -b .6 -d .1
+        $HOME/code/c/helltheme/hellwal --image "$1" --neon-mode --brightness-offset .6 -d .1
     else
         # generate palette and templates from random image
         $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random --neon-mode -b .6 -d .1
