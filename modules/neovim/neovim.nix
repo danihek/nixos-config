@@ -1,15 +1,5 @@
 { pkgs, ... }:
 
-let
-  hellwal-vim = pkgs.vimUtils.buildVimPlugin {
-    name = "hellwal-vim";
-    src = pkgs.fetchFromGitHub {
-      owner = "danihek";
-      repo = "hellwal-vim";
-      rev = "main";
-    };
-  };
-in 
 {
   programs.neovim = {
     enable = true;
@@ -19,7 +9,14 @@ in
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      hellwal-vim
+      (pkgs.vimUtils.buildVimPlugin {
+        pname = "hellwal";
+        src = pkgs.fetchFromGitHub {
+          owner = "danihek";
+          repo = "hellwal-vim";
+          rev = "main";
+        };
+      })
       vim-multiple-cursors
 
       sonokai
@@ -39,6 +36,8 @@ in
       nvim-autopairs
       nvim-lspconfig
       vim-unimpaired
+
+
       (nvim-treesitter.withPlugins (_: nvim-treesitter.allGrammars ++ [
       (pkgs.tree-sitter.buildGrammar {
         language = "c3";
