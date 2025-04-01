@@ -4,6 +4,8 @@ let
 
   setwall = pkgs.writeShellScriptBin "setwall" ''
 
+    set -xe
+
     if [ "$1" != "" ] ; then 
         # generate palette and templates from given image
         $HOME/code/c/helltheme/hellwal --image "$1" --neon-mode --brightness-offset .6 -d .1
