@@ -4,14 +4,12 @@ let
 
   setwall = pkgs.writeShellScriptBin "setwall" ''
 
-    set -xe
-
     if [ "$1" != "" ] ; then 
         # generate palette and templates from given image
-        $HOME/code/c/helltheme/hellwal --image "$1" --neon-mode -b .1
+        $HOME/code/c/helltheme/hellwal --image "$1" -b .1
     else
         # generate palette and templates from random image
-        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random --neon-mode -b .1
+        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random -b .5
     fi
 
     # source variables so you have accesss to $colors and $wallpaper
