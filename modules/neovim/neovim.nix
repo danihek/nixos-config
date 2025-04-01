@@ -20,7 +20,7 @@
     defaultEditor = true;
 
     plugins = with pkgs.vimPlugins; [
-      #hellwal-vim
+      hellwal-vim
       vim-multiple-cursors
 
       sonokai
@@ -77,7 +77,8 @@
       "colorscheme pywal
       "colorscheme peachpuff
       "colorscheme gruvbox
-      colorscheme gruvbox-material
+      "colorscheme gruvbox-material
+      colorscheme hellwal
 
       set list
       set listchars=space:·,tab:→\ ,trail:·
