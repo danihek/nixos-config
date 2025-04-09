@@ -9,15 +9,15 @@ let
         $HOME/code/c/helltheme/hellwal --image "$1"
     else
         # generate palette and templates from random image
-        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random
+        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random --neon-mode
     fi
 
     # source variables so you have accesss to $colors and $wallpaper
     source ~/.cache/hellwal/variables.sh
     
     # update discord colors
-    themecord
-    
+    /home/dh/code/git/Themecord/themecord
+
     # apply wallpaper
     swww img "$wallpaper" -t random --transition-step 1 --transition-duration 0.4 --transition-fps 255
     
