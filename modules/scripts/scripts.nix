@@ -9,7 +9,7 @@ let
         $HOME/code/c/helltheme/hellwal --image "$1"
     else
         # generate palette and templates from random image
-        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random --neon-mode
+        $HOME/code/c/helltheme/hellwal --image ~/pics/wallpapers --random -b 0.1
     fi
 
     # source variables so you have accesss to $colors and $wallpaper
