@@ -42,7 +42,7 @@
 
       #"$terminal" = ''footclient -o "include=/home/${USERNAME}/.cache/wal/colors-foot.ini"'';
       "$terminal" = "alacritty";
-      "$menu" = "rofi -show drun";
+      "$menu" = "fuzzel";
       "$lock" = "hyprlock";
 
       general = {

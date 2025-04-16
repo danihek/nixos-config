@@ -24,6 +24,12 @@ let
     # copy generated hellwal colors to pywal location, so pywalfox can understand it
     cp ~/.cache/hellwal/colors.json ~/.cache/wal/
     
+    # fuzzel
+    cp ~/.cache/hellwal/fuzzel-colors.ini ~/.config/fuzzel/fuzzel.ini
+
+    # mako
+    cp ~/.cache/hellwal/mako-colors ~/.config/mako/config
+    
     # update pywalfox
     pywalfox update
     
