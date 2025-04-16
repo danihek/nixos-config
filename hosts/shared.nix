@@ -101,7 +101,7 @@
     (mpv.override {scripts = [mpvScripts.mpris];}) # mpv
     imv
     mako
-    wofi
+    wofi rofi fuzzel
     mupdf zathura 
     yt-dlp
     upower
