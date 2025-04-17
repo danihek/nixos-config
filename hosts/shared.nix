@@ -22,6 +22,8 @@
     ## HELL
     #hellwal
     hellwal
+    lmms
+    audacity
 
     # Shell, Terminal, Text Editor etc.
     vim emacs
