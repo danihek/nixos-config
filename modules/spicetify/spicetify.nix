@@ -18,6 +18,6 @@ in
        shuffle # shuffle+ (special characters are sanitized out of extension names)
      ];
      theme = spicePkgs.themes.defaultDynamic;
-     colorScheme = "DefaultDynamic";
+     colorScheme = "defaultDynamic";
   };
 }
