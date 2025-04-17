@@ -14,6 +14,7 @@
       pywal-nvim
       dracula-vim
       iceberg-vim
+      vim-table-mode
       tokyonight-nvim
       papercolor-theme
       gruvbox-material gruvbox
