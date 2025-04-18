@@ -19,6 +19,8 @@
       papercolor-theme
       gruvbox-material gruvbox
 
+      nerdcommenter
+
       coc-nvim
       mini-nvim
       coc-clangd
