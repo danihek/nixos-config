@@ -45,11 +45,11 @@
       #[ -d "$HOME/.cache/hellwal" ] && eval "$(cat $HOME/.cache/hellwal/terminal.sh)"
 
       # Prompt 
-      # dh@nix:~ > neofetch
-      #PS1='\[\033[36m\]\u\[\033[35m\]@\[\033[31m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
+      # dh@nix:~ » neofetch
+      PS1='\[\033[36m\]\u\[\033[35m\]@\[\033[31m\]\h:\[\033[32m\]\w \[\033[33m\]>\[\033[37m\] '
 
       # ~ dh »
-      PS1='\[\033[36m\]\u \[\033[33m\]»\[\033[37m\] '
+      #PS1='\[\033[36m\]\u \[\033[33m\]»\[\033[37m\] '
 
       # Keybindings
       bind '"\e[1;5A": history-search-backward'
