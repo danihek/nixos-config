@@ -1,5 +1,14 @@
 { pkgs, ... }:
-
+let
+  hellwal-vim = pkgs.vimUtils.buildVimPlugin {
+    name = "hellwal-vim";
+    src = pkgs.fetchFromGitHub {
+      owner = "danihek";
+      repo = "hellwal-vim";
+      rev = "main";
+    };
+  };
+in 
 {
   programs.neovim = {
     enable = true;
