@@ -6,6 +6,7 @@ let
       owner = "danihek";
       repo = "hellwal-vim";
       rev = "main";
+      sha256 = "sha256-bT3pSCrJKQPwkyx2dENizQ0c7nN86mh6iOzu+doQpWk=";
     };
   };
 in 
