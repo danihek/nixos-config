@@ -79,8 +79,8 @@ in
       "colorscheme pywal
       "colorscheme peachpuff
       "colorscheme gruvbox
-      colorscheme gruvbox-material
-      "colorscheme hellwal
+      "colorscheme gruvbox-material
+      colorscheme hellwal
 
       set list
       set listchars=space:·,tab:→\ ,trail:·
