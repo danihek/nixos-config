@@ -5,7 +5,6 @@
     # Enabled
       ./gtk/gtk.nix
       ./git/git.nix
-      ./zsh/zsh.nix
       ./ssh/ssh.nix
       ./vim/vim.nix
       ./bash/bash.nix
